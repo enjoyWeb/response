@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<tempSuite>
+	<tempSuiteName>中共福建统战部</tempSuiteName>
+	<tempSuiteDesc>中共福建统战部</tempSuiteDesc>
+	<tempSuiteVersion>1.1</tempSuiteVersion>
+	<tempSuiteAuthor>zhong</tempSuiteAuthor>
+	<template><!--定义模板文件-->
+		<tempName><![CDATA[cms_example_首页]]></tempName><!--模板名-->
+		<tempType>index</tempType><!--模板类型-->
+		<tempExt><![CDATA[jsp]]></tempExt><!--模板导入系统后生成的文件格式-->
+		<fileName><![CDATA[index.html]]></fileName><!--模板文件名-->
+	</template>
+	<template>
+		<tempName><![CDATA[cms_example_列表页]]></tempName>
+		<tempType>list</tempType>
+		<tempExt><![CDATA[jsp]]></tempExt>
+		<fileName><![CDATA[list.html]]></fileName>
+	</template>
+	<template>
+		<tempName><![CDATA[cms_example_文章页]]></tempName>
+		<tempType>article</tempType>
+		<tempExt><![CDATA[jsp]]></tempExt>
+		<fileName><![CDATA[article.html]]></fileName>
+	</template>
+	<template>
+		<tempName><![CDATA[include]]></tempName>
+		<tempType>others</tempType>
+		<tempExt><![CDATA[jsp]]></tempExt>
+		<fileName><![CDATA[include.html]]></fileName>
+	</template>
+</tempSuite>

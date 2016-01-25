@@ -1,0 +1,210 @@
+/*
+lighten(@color, 10%);  返回的颜色在@color基础上变亮10% *
+darken(@color, 10%);  返回的颜色在@color基础上变暗10%*
+saturate(@color, 10%);   返回的颜色在@color基础上饱和度增加10% *
+desaturate(@color, 10%); 返回的颜色在@color基础上饱和度降低10%*
+spin(@color, 10);  返回的颜色在@color基础上色调增加10*
+spin(@color, -10);  返回的颜色在@color基础上色调减少10
+mix(@color1, @color2);  返回的颜色是@color1和@color2两者的混合色
+*/
+/*
+	RJ-CMS CSS Variables
+	其中的注释说明：
+	simple configuration 表示简易配置sponsive unique 响应试特有
+*/
+@charset "utf-8";
+
+/*************** 色调 ************************/
+
+/* 主色调 */
+@primary-color:#C92701;
+
+/* 辅色调（文字颜色） */
+@secondary-color: #333;
+
+/* 成功色调（与成功相关色调） */
+@success-color: #28B778;
+
+/* 信息色调（与信息相关色调） */
+@info-color: #2899FD;
+
+/* 警告色调（与警告相关色调） */
+@alet-color: #FF4200;
+
+/* 温暖色调（与暖和相关色调） */
+@warming-color: #333;
+
+/* 灰色 */
+@gray-color: #aaa;
+
+/* 黑色 */
+@black-color: #000;
+
+/* 白色 */
+@white-color: #fff;
+
+/*************** end 色调 ************************/
+
+
+
+/*************** 字体 ************************/
+
+/* 大于768下基础字体 */
+@body-font-family: "微软雅黑", Verdana;
+@body-font-size: 0.75rem;
+
+/* 小于768下基础字体 */
+@spbody-font-family: "微软雅黑", Helvetica;
+@spbody-font-size: 1rem;
+
+/* 基础字体大小,行高，宽度，字体颜色,字体链接色，链接背景颜色  */
+@base-font-size: 1rem;
+@base-line-height: 2rem;
+@base-font-weight: normal;
+@base-font-color: @secondary-color;
+@base-link-font-color: @primary-color;
+@base-link-active-bg: darken(@white-color, 10%);
+
+/* 强调的文字字体大小，行高，宽度 */
+@emphasize-font-size: 1.125rem;
+@emphasize-font-line-height: 2rem;
+@emphasize-font-weight: bold;
+
+/*************** end 字体 ************************/
+
+
+
+/*************** 背景 ************************/
+
+/* 背景色(可与主色一致) */
+@background-color: #fff;
+
+/* 背景色 */
+@body-bg-color: @background-color;
+
+/* 背景图片 */
+@body-bg-img: url(../images/body-bg-img.png);
+
+/* 背景图片 重复方式 */
+@background-repeat: no-repeat;
+
+/* 背景图片 展示方式 */
+@background-attachment: scroll;
+
+/* 背景图片 对齐方式 */
+@background-position: center top;
+
+/*************** end 背景 ************************/
+
+
+
+/*************** logo图片 ************************/
+
+/* PC版的头部logo */
+@t-logo: url(../images/logo.png) no-repeat;
+
+/* 手机版的头部logo */
+@t-logo-phone: url(../images/logo-pc.png) no-repeat;
+
+/* PAD版的头部logo */
+@t-logo-pad: url(../images/logo-pad.png) no-repeat;
+
+/*************** end LOGO图片 ************************/
+
+
+
+/*************** top-banner图片 ************************/
+
+/* 头部banner背景颜色 */
+@t-banner-color: lighten(@primary-color,24%);
+
+/* PC版的头部banner */
+@t-banner-pc: url(../images/banner-pc.png) no-repeat;
+
+/* 手机版的头部banner */
+@t-banner-phone: url(../images/banner-pc.png) no-repeat;
+
+/* PAD版的头部banner */
+@t-banner-pad: url(../images/banner-pad.png) no-repeat;
+
+/*************** end top-banner图片 ************************/
+
+
+
+/*************** 模块 ************************/
+
+/* 模块外框颜色 */
+@mod-color: darken(@panel-color,10%);
+
+/* 模块面板颜色 */
+@panel-color: @white-color;
+
+/*************** end 模块 ************************/
+
+
+
+/*************** 边框 ************************/
+
+/* 基础边框宽度 样式 颜色 */
+@base-border-color: darken(@panel-color,10%);
+@base-border-width: 1px;
+@base-border-style: solid;
+
+/* 辅助边框 宽度 颜色 */
+@secondary-border-color: lighten(@primary-color,50%);
+@secondary-border-width: 1px;
+
+/* 辅助边框 样式1 样式2 */
+@dashed-border-style: dashed;
+@dotted-border-style: dotted;
+
+/*************** end 边框 ************************/
+
+
+
+/****************** 间距 *********************/
+
+/* 通用间距 */
+@margin: 10px;
+
+/* 通用边距 */
+@padding: 10px;
+
+/*************** end 间距 ************************/
+
+
+
+/*************** end 标题 ************************/
+
+/* 主标题 */
+/* 主标题字体颜色 鼠标经过颜色 字体大小 行高 字体风格 字体宽度 */
+@header-font-color: @secondary-color;
+@header-font-hover-color: @secondary-color;
+@header-font-size: 1.8rem;
+@header-line-height: 2rem;
+@header-font-family: @body-font-family;
+@header-font-weight: 700;
+
+/* 副标题 */
+/* 副标题字体颜色 鼠标经过颜色 字体大小 行高 字体风格 字体宽度 */
+@subtitle-font-color: lighten(@header-font-color, 30%);
+@subtitle-font-hover-color: lighten(@header-font-color, 30%);
+@subtitle-font-size: 1.428rem;
+@subtitle-line-height: 2rem;
+@subtitle-font-family: @body-font-family;
+@subtitle-font-weight: 700;
+
+/*************** end 标题 ************************/
+
+
+
+/*************** 小图标 ************************/
+
+/* 热点小图标 */
+@hot-icon: "images/hot.gif";
+/* 最新消息小图标 */
+@new-icon: "images/new.gif";
+/* 排行小图标 */
+@ranking-icon: "images/ranking.gif";
+
+/*************** end 小图标 ************************/

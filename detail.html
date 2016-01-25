@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh" lang="zh">
+<!--在XML里，使用“xml:lang” 方便屏幕阅读器方便阅读-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+<meta http-equiv="keywords" content="符合无障碍标准" />
+<title>图文列表_福建省商务厅</title>
+<!--h1里面的内容应在title中体现-->
+<link rel="stylesheet" type="text/less" href="style/themes.less" />
+<link rel="stylesheet" type="text/less" href="style/master.less"/>
+<link rel="stylesheet" type="text/less" href="style/innerpage.less" />
+<script src="javascript/vendor/modernizr.js"></script><!--Modernizr HTML5元素兼容旧版本浏览器,并为移动设备提供检测。-->
+<script src="javascript/vendor/jquery.js"></script>
+<script src="javascript/AppendAround.js"></script><!--屏幕切换时，变换模块的位置的JS-->
+
+<script src="javascript/es5-shim-2.1.0.min.js"></script><!--LESS兼容在IE9以下下面使用JS-->
+<script src="javascript/less-1.4.2.min.js"></script><!--LESS用到的JS-->
+
+</head>
+<body>
+  <!--
+  <div id="progressBar" class="progressBar_bg">
+  <div  class="progressBar">
+    <p>数据加载中，请稍等...</p>
+  </div>
+</div>
+  -->
+<!--页面切换效果代码-->
+<div id="layout">
+  <div id="frame_background" class="background"><!--页面切换效果样式-->  
+  <!--header-->
+	<div class="row" id="frame_header" include="include.html">
+      <div class="large-12" id="frame_header_row1">
+     	 <!--头部工具条内容-->
+          <div class="tool-bar show-for-large clearfix " id="frame_header_tool">
+                <div class="tool-fl" id="data_home"><a href="index.html">www.fiet.gov.cn</a></div>
+                <div class="tool-fr" id="data_maininfo">·<a href="http://www.fiet.gov.cn/">网页版</a>·<a href="article.html">使用帮助</a></div>
+          </div>
+          <!--头部banner内容-->
+          <div class="top_banner show-for-large" id="frame_header_banner">
+					  <div id="data_header_banner">
+				  	  <span class="banner"></span>
+						</div>
+					</div>
+      </div>
+      <div class="row" id="frame_header_row2">
+        <div class="large-12 columns" id="frame_header_nav">
+          <div id="data_header_nav">
+            <nav class="top-bar" data-topbar role="navigation" aria-labelledby="sp_nav">
+              <h1 class="offscreen">福建省商务厅导航栏</h1><!--无障碍标签要求:NAV中的UL前至少要包含一个H1或者H2内容，样式设置超出屏幕-->            
+                <!-- 小于768下导航 -->
+              <ul class="title-area">
+                <li class="toggle-topbar menu-icon" title="弹出主菜单"></li>
+                <li class="name">
+                  <h1>福建省商务厅</h1>
+                  <!--无障碍标签要求：title中的内容应包含<h1></h1>中的内容--> 
+                </li>
+                <li class="search-icon" onClick="displaysearch()" title="进行搜索栏"></li>
+              </ul>
+              <!-- END 小于768下导航 -->
+               <!-- 大于768下导航 -->
+              <section class="top-bar-section"> 
+                <ul class="left" id="sp_nav">
+                  <li class="divider"></li>
+                  <li class="active"><a href="index.html">首页</a></li>
+                  <li class="divider"></li>
+                  <li><a href="infolist.html">走进外经贸厅</a></li>
+                  <li class="divider"></li>
+                  <li><a href="detail.html">信息公开</a> </li>
+                  <li class="divider"></li>
+                  <li><a href="piclist.html">在线办事</a></li>
+                  <li class="divider"></li>
+                  <li class="has-dropdown"><a href="votearticle.html">公众参与</a>
+                    <ul class="dropdown">
+                      <li><a href="infolist.html">通知通告</a></li>
+                      <li><a href="votearticle.html">公众参与</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </section>
+              <!-- 大于768下导航 -->
+            </nav>
+            <!-- 头部搜索 -->
+            <div class="topsearch" id="topsearch" role="search"><!--无障碍标签：role="search定义该内容为搜索区域-->
+              <form>
+                <div class="small-9 columns">
+                  <input class="top_s_input" type="text" placeholder="请输入关键字" accesskey="s" title="输入查询内容输入框" x-webkit-speech="" x-webkit-grammar="builtin:translate" lang="zh-CN"/>
+                  <!--placeholder="请输入关键字"为HTML5标签,x-webkit-speech=""谷歌云搜索；builtin:search"值使得语音输入的内容尽量靠近搜索内容;lang="zh-CN"设置语言为中文--> 
+                </div>
+                <div class="small-3 columns">
+                  <input class="button top_search" type="button"  onclick="window.location.href='http://192.168.14.97:8080/acc/search/searchlist.html'" value="搜 索"/>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	
+  <!-- main -->
+  <div class="row" id="frame_main">
+    <div class="conten conten_bg clearfix" id="frame_main_inner">
+        <div class="large-3 columns article_large" role="complementary" aria-label="左边区块" id="frame_main_left">
+          <div class="list-menu-addr" id="data_main_left">
+            <div class="dowmenu f-dropdown" data-set="menu_addr"> <!--左栏导航在大于768下面样式--></div>
+          </div>
+        </div>
+        <div class="large-9 columns article_small" id="frame_main_right" role="main"  aria-label="主体区块">
+				  <div id="frame_breadcrumbs">
+            <div class="breadcrumbs clearfix" id="frame_list_addr" func="curpage"> 
+							 <span class="f_drop_a" id="frame_span1">
+							 <div id="frame_dqwz"> 
+								 <div id="data_dqwz">
+								   <a  href="#" class="menulist_icon" data-dropdown="frame_down_pop">当前位置</a>
+								 </div>
+							 </div>
+            <!--左栏导航在小于768下面-->
+               <div class="downcon f-dropdown small-3" id="frame_down_pop" data-dropdown-content data-set="menu_addr">
+              <div id="mod_list_menu_2" class="sidenav">
+                <div class="modhead">
+                  <div class="modtitle"><h2>信息公开</h2></div>
+                  <div class="modmore" onClick="dis_menu()">栏目列表</div>
+                </div>
+                <div class="modcon">
+                  <div id="data_mucon" class="auto_list">
+                     <ul class="clearfix title">
+                          <li><span class="lmenu-preicon"></span><a title="政府信息公开专栏" href="infolist.html">政府信息公开专栏 </a></li>
+                          <li class="active" ><span class="lmenu-preicon"></span><a title="信息列表" href="infolist.html">信息列表</a></li>
+                          <li><span class="lmenu-preicon"></span><a title="图片列表"  href="piclist.html">图片列表</a></li>
+                          <li><span class="lmenu-preicon"></span><a title="图文列表" href="detail.html">图文列表</a></li>
+                          <li><span class="lmenu-preicon"></span><a title="视频列表" href="videolist.html">视频列表</a></li>
+                          <li><span class="lmenu-preicon"></span><a title="政务动态" href="detail.html">政务动态</a></li>
+                          <li><span class="lmenu-preicon"></span><a title="统计数据" href="infolist.html">统计数据</a></li>
+                          <li><span class="lmenu-preicon"></span><a title="市局动态"  href="detail.html">市局动态</a></li>
+                          <li><span class="lmenu-preicon"></span><a title="人事教育"  href="infolist.html">人事教育</a></li>
+                          <li><span class="lmenu-preicon"></span><a title="调研报告"  href="infolist.html">调研报告</a></li>
+                          <li><span class="lmenu-preicon"></span><a title="发展规划"  href="infolist.html">发展规划</a></li>
+                          <li><span class="lmenu-preicon"></span><a title="展会服务" href="infolist.html">展会服务</a></li>                 
+                          <li><span class="lmenu-preicon"></span><a title="福建企业黄页查询" href="infolist.html">福建企业黄页查询</a></li>
+                        </ul> 
+											<script>
+												/* 导航在不同分辨率下位置替换JS调用 */
+												$( ".sidenav" ).appendAround();
+											</script>
+                  </div>
+                </div>
+              </div>
+							 
+              <!--END 左栏导航在小于768下面-->
+            </div>
+								
+            </span>
+							 <span class="addr_now" id="frame_span2"> 
+							   <span class="addr_con" id="data_span2_link"> 
+							     <span class="show-for-large">当前位置：</span><a href="index.html"> 首页 </a> > <a href="infolist.html"> 政务公开 </a> > <a href="infolist.html"> 图文列表 </a> <span class="addr_rbg"></span> </span> 
+							 </span> 
+						</div>
+					</div>
+          <!--右栏内容块-->
+					<div id="frame_main_con">
+						<div class="mod_list" id="mod_pic_list">
+							<div class="modhead clearfix">
+								<div class="modtitle">
+									<h3>图文列表</h3>
+								</div>
+							</div>
+							<div class="modcon clearfix">
+								<div id="frame_detail">
+									<div id="data_detail">
+										<div class="topic_list" id="cms_detail_con">
+											<div class="row" >
+												<div class="large-12 block-grid two-up clearfix"> <a href="picarticle.html" title="5c才是Jony Ive想为iOS 7打造的专属iPhone"> <span class="small-3  columns"><img alt="图片信息简介"  src="images/43_2.jpg"/></span> <span class="small-9  columns">
+													<h2 class="title">5c才是Jony Ive想为iOS 7打造的专属siPhone</h2>
+													<p class="post_meta">林西抹抹茶• 国内创业公司 • 12分钟前 • 暂无评论</p>
+													<p class="desc">或许，苹果推出 5 种色彩的 5c 背后的真正原因是—Jony Ive。在包揽苹果软硬软硬件设计从这里了从这里大权后，由…<span class="p-color">继续阅读</span></p>
+													</span> </a> </div>
+											</div>
+											<div class="row">
+												<div class="large-12 block-grid two-up clearfix"> <a href="picarticle.html" title="指纹与密码：普通用户指南"> <span class="small-3  columns"><img alt="图片信息简介"  src="images/43_3.jpg"/><span class="video_play"><img alt="" src="images/play-on.png"/></span></span> <span class="small-9  columns">
+													<h2 class="title">指纹与密码：普通用户指南s</h2>
+													<p class="post_meta">Kryptoners • 专栏 • 1小时前 • 4条评论</p>
+													<p class="desc">这个对比图表到底说明了什么？指纹识别与密码验证究竟孰优孰劣？作为一个普通用户，你或许能从这里了解到更多…<span class="p-color">继续阅读</span></p>
+													</span> </a> </div>
+											</div>
+											<div class="row" >
+												<div class="large-12 block-grid two-up clearfix"> <a href="picarticle.html" title="RSS阅读器应用Reeder 2上架App Store"> <span class="small-3  columns"><img alt="图片信息简介"  src="images/43_3.jpg"/><span class="video_play"><img alt="" src="images/play-on.png"/></span></span> <span class="small-9  columns">
+													<h2 class="title">RSS阅读器应s用Reeder 2上架App Store</h2>
+													<p class="post_meta">园园 • 国外创业公司 • 6小时前 • 12条评论</p>
+													<p class="desc">这个对比图表到底说明了什么？指纹识别与密码验证究竟孰优孰劣？作为一个普通用户，你或许能从这里了解到更多…<span class="p-color">继续阅读</span></p>
+													</span> </a> </div>
+											</div>
+											<div class="row" >
+												<div class="large-12 block-grid two-up clearfix"> <a href="picarticle.html" title="5c才是Jony Ive想为iOS 7打造的专属iPhone"> <span class="small-3  columns"><img alt="图片信息简介"  src="images/43_2.jpg"/></span> <span class="small-9  columns">
+													<h2 class="title">5c才是Jony Ive想s为iOS 7打造的专属iPhone</h2>
+													<p class="post_meta">林西抹抹茶• 国内创业公司 • 12分钟前 • 暂无评论</p>
+													<p class="desc">这个对比图表到底说明了什么？指纹识别与密码验证究竟孰优孰劣？作为一个普通用户，你或许能从这里了解到更多…<span class="p-color">继续阅读</span></p>
+													</span> </a> </div>
+											</div>
+											<div class="row">
+												<div class="large-12 block-grid two-up no-border clearfix"> <a href="picarticle.html" title="指纹与密码：普通用户指南"> <span class="small-3  columns"><img alt="图片信息简介"  src="images/43_3.jpg"/><span class="video_play"><img alt="" src="images/play-on.png"/></span></span> <span class="small-9  columns">
+													<h2 class="title">指纹与密码：普s通用户指南</h2>
+													<p class="post_meta">Kryptoners • 专s栏 • 1小时前 • 4条评论</p>
+													<p class="desc">这个对比图表到底说明了什么？指纹识别与密码验证究竟孰优孰劣？作为一个普通用户，你或许能从这里了解到更多…<span class="p-color">继续阅读</span></p>
+													</span> </a> </div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div id="frame_page">
+									<div id="data_page">
+									<div class="btn-more btn-more_list"><a class="more" title="查看更多图文列表" id="detail_list_more" href="javascript:void(0)">查看更多</a></div>
+								</div>
+								</div>
+							</div>
+						</div>
+					</div>
+          <!--END右栏内容块-->
+        </div>
+    </div>
+  </div>
+  
+  <!-- footer-->
+  <footer class="row footer" role="contentinfo" id="frame_footer" include="include.html">
+    <div id="frame_footer_inner" class="large-l2">
+      <div id="data_row_fotter">
+        <div class="copyright clearfix">福建省商务厅<br/>
+          <span>Copyright &copy; 2004-2012</span> </div>
+        <div class="go-return"> <a title="返回顶部" class="go-top"></a> <a title="返回底部" class="go-bottom" ></a></div>
+      </div>
+    </div>
+  </footer>
+</div>
+</div>
+<script src="javascript/foundation/foundation.js"></script> <!--foundation框架用到的JS--> 
+<script src="javascript/foundation/foundation.topbar.js"></script><!--foundation头部菜单--> 
+<script src="javascript/foundation/foundation.dropdown.js"></script> <!--foundation下拉--> 
+<script src="javascript/foundation/foundation.clearing.js"></script><!--foundation图片点击全屏预览--> 
+<script src="javascript/main.js"></script><!--公共页面用到JS--> 
+<script src="javascript/loading_list.js"></script> <!--显示更多 JS--> 
+<!--初始化foundation组件--> 
+
+<script>
+	$(document).foundation();
+</script>
+</body>
+</html>

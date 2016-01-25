@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh" lang="zh">
+<!--在XML里，使用“xml:lang” 方便屏幕阅读器方便阅读-->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+    <meta http-equiv="keywords" content="符合无障碍标准" />
+	<title>昙石山文化遗址博物馆_福建省对外贸易经济合作厅</title>
+    <link rel="stylesheet" type="text/less" href="style/themes.less" />
+    <link rel="stylesheet" type="text/less" href="style/master.less" />
+    <link rel="stylesheet" type="text/less" href="style/innerpage.less" />
+    <link rel="stylesheet" href="style/clearing.css"/>
+    <link rel="stylesheet" type="text/less" href="style/scenicarticle.less" />
+    <script src="javascript/vendor/modernizr.js"></script><!--Modernizr HTML5元素兼容旧版本浏览器,并为移动设备提供检测。-->
+	<script src="javascript/vendor/jquery.js"></script>
+    <script src="javascript/AppendAround.js"></script><!--屏幕切换时，变换模块的位置的JS--><script src="javascript/main.js"></script> 
+    
+	<script src="javascript/es5-shim-2.1.0.min.js"></script><!--LESS兼容在IE9以下下面使用JS-->
+    <script src="javascript/less-1.4.2.min.js"></script><!--LESS用到的JS-->
+
+</head>
+<body>
+		<!--
+		  <div id="progressBar" class="progressBar_bg">
+			<div  class="progressBar">
+				<p>数据加载中，请稍等...</p>
+			</div>
+		</div>
+		-->
+<!--页面切换效果代码--> 
+  <div id="layout">
+    <div id="frame_background" class="background">
+  <!--header-->
+  <div class="row" id="frame_header" include="include.html">
+    <div class="large-12" id="frame_header_inner">
+       <div class="tool-bar show-for-large clearfix " id="frame_tool">
+                <div class="tool-fl" id="data_home"><a href="index.html">www.fiet.gov.cn</a></div>
+                <div class="tool-fr" id="data_maininfo">·<a href="http://www.fiet.gov.cn/">网页版</a>·<a href="article.html">使用帮助</a></div>
+          </div>
+			 <div id="frame_banner">
+            <div class="top_banner show-for-large" id="data_banner"><span class="banner"></span></div>
+					</div>
+    </div>
+    <div class="row" id="frame_header_con">
+      <div class="large-12 columns" id="frame_hc_inner">
+        <div id="data_nav">
+          <nav class="top-bar" data-topbar role="navigation" aria-labelledby="sp_nav">
+              <h1 class="offscreen">福建省商务厅导航栏</h1><!--无障碍标签要求:NAV中的UL前至少要包含一个H1或者H2内容，样式设置超出屏幕-->            
+                <!-- 小于768下导航 -->
+              <ul class="title-area">
+                <li class="toggle-topbar menu-icon" title="弹出主菜单"></li>
+                <li class="name">
+                  <h1>福建省商务厅</h1>
+                  <!--无障碍标签要求：title中的内容应包含<h1></h1>中的内容--> 
+                </li>
+                <li class="search-icon" onClick="displaysearch()" title="进行搜索栏"></li>
+              </ul>
+              <!-- END 小于768下导航 -->
+               <!-- 大于768下导航 -->
+              <section class="top-bar-section"> 
+                <ul class="left" id="sp_nav">
+                  <li class="divider"></li>
+                  <li class="active"><a href="index.html">首页</a></li>
+                  <li class="divider"></li>
+                  <li><a href="infolist.html">走进外经贸厅</a></li>
+                  <li class="divider"></li>
+                  <li><a href="detail.html">信息公开</a> </li>
+                  <li class="divider"></li>
+                  <li><a href="piclist.html">在线办事</a></li>
+                  <li class="divider"></li>
+                  <li class="has-dropdown"><a href="votearticle.html">公众参与</a>
+                    <ul class="dropdown">
+                      <li><a href="infolist.html">通知通告</a></li>
+                      <li><a href="votearticle.html">公众参与</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </section>
+              <!-- 大于768下导航 -->
+            </nav>
+            <!-- 头部搜索 -->
+          <div class="topsearch" id="topsearch" role="search"><!--无障碍标签：role="search定义该内容为搜索区域-->
+            <form>
+              <div class="small-9 columns">
+                <input class="top_s_input" type="text" placeholder="请输入关键字" accesskey="s" title="输入查询内容输入框" x-webkit-speech="" x-webkit-grammar="builtin:translate" lang="zh-CN"/>
+                <!--placeholder="请输入关键字"为HTML5标签,x-webkit-speech=""谷歌云搜索；builtin:search"值使得语音输入的内容尽量靠近搜索内容;lang="zh-CN"设置语言为中文--> 
+              </div>
+              <div class="small-3 columns">
+               <input class="button top_search" type="button"  onclick="window.location.href='http://192.168.14.97:8080/acc/search/searchlist.html'" value="搜 索"/>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!--main-->
+  <div role="main" class="conten"  id="frame_main">
+    <div class="row" id="frame_list_addr">
+      <div class="large-12" id="frame_la_inner">
+        <div class="breadcrumbs article_addr" id="data_list_addr" func="curpage">当前位置：<a href="index.html">首页</a> > <a href="infolist.html">信息公开</a> > <a href="infolist.html">政务公开</a></span></div>
+      </div>
+    </div>
+    <div class="row" id="frame_main_con">
+      <div class="large-8 column article_small" id="frame_main_left"><!--给区块添加role属性，说明区块的作用，查看http://www.taobaotest.com/acc/68-->
+        <div class="row" id="frame_ml_row1">
+				  <div id="frame_mlr1">
+            <div class="img_desc row" id="data_img_desc">
+            <h1 class="article-tit large-tit">昙石山文化遗址博物馆</h1>
+            <div class="large-6 columns m_imgbox">
+              <div class="img_box" title="查看组图"> <span class="slide_moreicon" ></span>
+                <ul class="clearing-feature clearing-thumbs" data-clearing>
+                  <li class="clearing-featured-img"><a class="th" href="images/img01.jpg"><img alt="昙石山文化遗址2" data-caption="昙石山文化遗址2<p>近旧的昙石山遗址博物馆相比，新馆主要有以下几个特色：环境优美，设备先进</p>"  src="images/img01.jpg"/></a></li>
+                  <li class=" "><a class="th" href="images/secion01.jpg"><img alt="遗址厅" data-caption="遗址厅<p>1998年，福建省昙石山遗址博物馆正式成立，这是福建省第一座依托于史前遗址的博物馆</p>" src="images/secion01.jpg"/></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="large-6 columns">
+              <div class="img_con">
+                <h1 class="article-tit small-tit">昙石山文化遗址博物馆</h1>
+                <ul>
+                  <li>开放时间：<span title=" 周二至周日9：00—16：00（周一闭馆整休） ">周二至周日9：00—16至周日9：00—16：00（周一闭…</span> </li>
+                  <li>门票价格：<span title=" 免票 ">免票</span> </li>
+                  <li>联系方式：<span title=" 0591-22988233 ">0591-22988233</span> </li>
+                  <li>最佳时间：<span title="  "></span> </li>
+                  <li>投诉电话：<span title="  "></span> </li>
+                  <li>单位地址：<span title="福建省闽侯县甘蔗街道昙石村330号 ">福建省闽侯县甘蔗街道昙石村330号</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+					</div>
+					<div id="frame_mlr2">
+					  <div id="data_mlr2">
+              <div class="row" id="aritcle_sec_banner" style="display:none;">
+            <div class="aritcle_sec_banner auto_list" data-magellan-expedition="fixed">
+              <div class="article_back"><a href="javascript:history.go(-1);" title="返回上个页面"><img src="images/article_back.png"/></a></div>
+              <span class="article_titile title"><a title="昙石山文化遗址博物馆">昙石山文化遗址博物馆</a></span> </div>
+          </div>
+				  	</div>
+					</div>
+        </div>
+        <div class="descscore_small" data-set="data_score_box" id="frame_ml_row2"> </div>
+        <div class="article-holder small" id="frame_article_con">
+          <div  role="main" aria-label="主体区块" id="frame_ac_inner">
+					  <div id="frame_vb_box">
+              <div class="m_view_brief m_box" id="mod_view_brief">
+              <div class="modhead">
+                <div class="modtitle">
+                  <h2>昙石山文化遗址博物馆简介</h2><span class="titbg1"></span>
+                </div>
+                <div class="modmore"> </div>
+              </div>
+              <div class="modcon">
+							  <div id="frame_vb_con">
+                  <div id="data_view_brief">
+                  <p>　　昙石山遗址位于闽江下游北岸，距离福州市区21公里。遗址发现于1954年，迄今已历经十次面积不等的考古发掘，发现了墓葬、灰坑、壕沟、陶窑等遗迹，以及陶器、石器、贝器和骨器等文物。2001年，昙石山遗址被国务院公布为全国重点文物保护单位。以昙石山遗址命名的昙石山文化，分布于闽江下游，直达沿海地区，具有鲜明的海洋文化特色，是先秦时期闽台两岸海洋文化的源头，在中国新石器时代文化群星璀璨的天空，它是崛起于东南沿海的一颗明星。 </p>
+                  <p>　　1998年，福建省昙石山遗址博物馆正式成立，这是福建省第一座依托于史前遗址的博物馆。2005年，福建省政府启动“昙石山遗址保护和博物馆建设”的省重点建设项目，2008年6月14日，遗址博物馆新馆落成并对外试运行。 </p>
+                  <p>　　近旧的昙石山遗址博物馆相比，新馆主要有以下几个特色：环境优美，设备先进。布局合理，展线顺畅。陈列突破了旧传统手法，使用了新展示手段、新材料、新工艺，在形式设计上有新创新。</p>
+                  <p>　　《海峡文明之根——昙石山文化陈列》是昙石山遗址博物馆新馆的基本陈列，展线长约220米，面积1460平方米，由序厅、第一展厅小序厅、第一展厅场景厅、休息厅、第二展厅等组成。 </p>
+                  <p>　　近览以半个多世纪以来考古发掘出土的昙石山文化遗物为陈列品，充分运用雕塑、仿真场景、多媒体、图片、文字资料和声光电等多种方式，多方位、生动地再现了五千年前昙石山人生产、生活的场景，还揭示了昙石山人的社会意识，昙石山文化的源流及与海峡对岸新石器时代文化的紧密联系。基本陈列反映了昙石山文化在中国新石器时代文化中的地位，在福建闽越文化中所留下的不可磨灭的烙印，对史前海峡两岸文化交流、闽台古文化渊源以及南岛语族的起源等课题研究所具有的重要意义。</p>
+                </div>
+								</div>
+								<div id="frame_vb_more">
+                  <div id="data_more1">
+                  <div class="btn-more" > <a class="rest" id="viewrestcon" href="javascript:void(0);">余下全文<span>2/4</span></a> <!--文字内容需要结合上下文才可以知道目标页面的，添加title属性，注明链接的目标--> 
+                  </div>
+                </div>
+								</div>
+              </div>
+            </div>
+						</div>
+				  	<div id="frame_evaluate">
+             <div class="evaluate m_box_2" id="mod_evaluate">
+              <div class="modhead clearfix">
+                <div class="modtitle"><h4><a href="#"> 旅客评价</a></h4> </div>
+                <div class="modmore"> </div>
+
+              </div>
+              <div class="modcon">
+							  <div id="frame_evalute">
+                  <div id="data_evalute" class="score pad-bottom clearfix">
+                  <div class="allscore_small clearfix">
+                    <div class="score_rater clearfix">
+                      <div class="scores"><em>7.</em>5<span>分</span></div>
+                      <ul>
+                        <li class="on"></li>
+                        <li class="on"></li>
+                        <li class="on"></li>
+                        <li class="half"></li>
+                        <li class="off"></li>
+                      </ul>
+                    </div>
+                    <div class="score_submit_small" data-set="score_submit" > </div>
+                  </div>
+                  <div class="sub_score_small"  data-set="sub_score"> </div>
+                </div>
+								</div>
+								<div id="frame_evalute_con">
+                  <div id="data_evalute_con" class="evalute_con">
+                  <div class="post_head clearfix">
+                    <div class="title">全部评价</div>
+                    <div class="sort">
+                    <label for="sect_down" class="offscreen">选择排列方式</label>
+                      <select class="sort_select" id="sect_down">
+                        <option value="javascript:;">按时间排序</option>
+                        <option value="javascript:;" selected="selected">按时间倒序</option>
+                        <option value="javascript:;">按好评度排序</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="post_body">
+                    <div class="post_name clearfix">
+                      <div class="name"> <a class="name_text" rel="nofollow" href="javascript:;">西瓜太郎</a> <span class="name_time" title="发表于2012-12-20 13:59:09">12月20日</span> </div>
+                      <div class="score">
+                        <div class="score_sub_rater">
+                          <ul>
+                            <li class="on"></li>
+                            <li class="on"></li>
+                            <li class="on"></li>
+                            <li class="half"></li>
+                            <li class="off"></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="post_content">
+                      <p>上个礼拜过去看了，还可以，和网络上宣传的一样</p>
+                    </div>
+                  </div>
+                  <div class="post_body">
+                    <div class="post_name clearfix">
+                      <div class="name"> <a class="name_text" rel="nofollow" href="javascript:;">匿名</a> <span class="name_time" title="发表于2012-12-20 13:59:09">12月20日</span> </div>
+                      <div class="score">
+                        <div class="score_sub_rater">
+                          <ul>
+                            <li class="on"></li>
+                            <li class="on"></li>
+                            <li class="on"></li>
+                            <li class="half"></li>
+                            <li class="off"></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="post_content">
+                      <p>很不错，空气挺好的，很适合和家里人去游玩</p>
+                    </div>
+                  </div>
+                  <div class="post_body">
+                    <div class="post_name clearfix">
+                      <div class="name"> <a class="name_text" rel="nofollow" href="javascript:;">blune</a> <span class="name_time" title="发表于2012-12-20 13:59:09">12月20日</span> </div>
+                      <div class="score">
+                        <div class="score_sub_rater">
+                          <ul>
+                            <li class="on"></li>
+                            <li class="on"></li>
+                            <li class="half"></li>
+                            <li class="off"></li>
+                            <li class="off"></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="post_content">
+                      <p>还可以吧，没去过的，可以去看看</p>
+                    </div>
+                  </div>
+                  <div class="post_body">
+                    <div class="post_name clearfix">
+                      <div class="name"> <a class="name_text" rel="nofollow" href="javascript:;">蓝天有多兰</a> <span class="name_time" title="发表于2012-12-20 13:59:09">12月20日</span> </div>
+                      <div class="score">
+                        <div class="score_sub_rater">
+                          <ul>
+                            <li class="on"></li>
+                            <li class="on"></li>
+                            <li class="on"></li>
+                            <li class="on"></li>
+                            <li class="off"></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="post_content">
+                      <p>不远,ok</p>
+                    </div>
+                  </div>
+                  <div class="post_body">
+                    <div class="post_name clearfix">
+                      <div class="name"> <a class="name_text" rel="nofollow" href="javascript:;">redred</a> <span class="name_time" title="发表于2012-12-20 13:59:09">12月20日</span> </div>
+                      <div class="score">
+                        <div class="score_sub_rater">
+                          <ul>
+                            <li class="on"></li>
+                            <li class="on"></li>
+                            <li class="on"></li>
+                            <li class="on"></li>
+                            <li class="off"></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="post_content">
+                      <p>在闽侯也不远,还可以</p>
+                    </div>
+                  </div>
+                </div>
+								</div>
+								<div id="frame_btn_mr2">
+                  <div id="data_more2">
+                    <div class="btn-more" > <a class="rest" id="commentrestcon" href="javascript:void(0);">余下评论<span>2/4</span></a> <!--文字内容需要结合上下文才可以知道目标页面的，添加title属性，注明链接的目标--> 
+                    </div>
+                  </div>
+									</div>
+              </div>
+            </div>
+            </div>
+				  </div>
+          <!--全网：相关新闻--> 
+        </div>
+      </div>
+      <div class="large-4 column  article_small padl-large"  role="complementary" aria-label="右边区域" id="frame_main_right">
+      <!--标记左边区域-->
+        <!--评分-->
+				<div id="frame_score_box">
+          <div class="score_box m_jdmap mart10 descscore_large " id="mod_score_box" >
+            <div class="modhead clearfix">
+            <div class="modtitle">
+              <h4><a href="#mod_evaluate">旅客评分</a></h4>
+            </div>
+            <div class="modmore"> <a href="#mod_evaluate">详情>></a></div>
+          </div>
+            <div class="score modcon">
+					  <div id="frame_sb_inner">
+            <div id="data_score_box">
+          	  <div class="descscore_large"  data-set="data_score_box">
+                <div id="descscore" class="descscore">
+                <div class="score_name">总 评 分：</div>
+                <div class="score_rater clearfix">
+                  <ul>
+                    <li class="on"></li>
+                    <li class="on"></li>
+                    <li class="on"></li>
+                    <li class="half"></li>
+                    <li class="off"></li>
+                  </ul>
+                  <div class="scores"><em>7.</em>5</div>
+                  <div class="fright"><a href="#mod_evaluate">评价>></a></div>
+                </div>
+              </div>
+              </div>
+              <div class="sub_score_large"  data-set="sub_score">
+                <div class="sub_score" id="sub_score">
+                  <div class="sub_list">
+                    <div class="score_name">性 价 比：</div>
+                    <div class="score_sub_rater">
+                      <ul>
+                        <li class="on"></li>
+                        <li class="on"></li>
+                        <li class="on"></li>
+                        <li class="half"></li>
+                        <li class="off"></li>
+                      </ul>
+                      <div class="scores"><em>7.</em>5</div>
+                    </div>
+                  </div>
+                  <div class="sub_list">
+                    <div class="score_name">交　　通：</div>
+                    <div class="score_sub_rater">
+                      <ul>
+                        <li class="on"></li>
+                        <li class="on"></li>
+                        <li class="on"></li>
+                        <li class="half"></li>
+                        <li class="off"></li>
+                      </ul>
+                      <div class="scores"><em>7.</em>5</div>
+                    </div>
+                  </div>
+                  <div class="sub_list">
+                    <div class="score_name">配套设置：</div>
+                    <div class="score_sub_rater">
+                      <ul>
+                        <li class="on"></li>
+                        <li class="on"></li>
+                        <li class="on"></li>
+                        <li class="half"></li>
+                        <li class="off"></li>
+                      </ul>
+                      <div class="scores"><em>7.</em>5</div>
+                    </div>
+                  </div>
+                  <div class="sub_list">
+                    <div class="score_name">景　　观： </div>
+                    <div class="score_sub_rater">
+                      <ul>
+                        <li class="on"></li>
+                        <li class="on"></li>
+                        <li class="on"></li>
+                        <li class="half"></li>
+                        <li class="off"></li>
+                      </ul>
+                      <div class="scores"><em>7.</em>5</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="score_submit_large" data-set="score_submit">
+                <div class="score_submit clearfix" id="score_submit">
+                  <div class="score_num fleft">8人参与评价</div>
+                  <input type="submit" class="service_bt button" onclick="subscoreup();" value="提 交" />
+                </div>
+              </div>
+              <script>
+				  /* 内容在不同分辨率下位置替换JS调用 */
+				  $( "#score_submit" ).appendAround();
+				  $( "#sub_score" ).appendAround();
+				  $( "#descscore" ).appendAround();
+			  </script> 
+            </div>
+						</div>
+          </div>
+          </div>
+				</div>
+				
+        <div class="r_bg mart10" id="frame_mr_others">
+        <!--景点地图-->
+				  <div id="frame_jddt">
+            <div id="mod_jddt" class="m_jdmap" >
+              <div class="modhead clearfix">
+              <div class="modtitle">
+                <h4><a href="#">景点地图</a></h4>
+              </div>
+            </div>
+              <div class="modcon">
+							  <div id="frame_pic_list">
+                <div class="" id="data_photo_list"> <img alt="昙石山文化遗址博物馆景点地图" src="images/jdmap.jpg"/> </div>
+								</div>
+            </div>
+            </div>
+					</div>
+					
+        <!--美食住宿-->
+			  	<div id="frame_mszs">
+            <div id="mod_mszs" class="m_jdmap mart10" >
+              <div class="modhead clearfix">
+              <div class="modtitle">
+                <h4><a href="piclist.html">美食住宿</a></h4>
+              </div>
+              <div class="modmore"><a title="查看更多美食住宿" href="piclist.html">更多</a></div>
+            </div>
+              <div class="modcon">
+						    <div id="frame_foot_list">
+                <div class="auto_list" id="data_foot_list">
+                  <ul class="title">
+                  <li><span class="time">[11-14]</span><a title="现代休闲甜品美食空间" href="photoarticle.html">现代休闲甜品美食空间</a></li>
+                  <li><span class="time">[11-12]</span><a title="温泉旅游节26日开幕　多个温泉景区推出优惠活动" href="photoarticle.html">温泉旅游节26日开幕　多个温泉景区推出优惠活动</a></li>
+                  <li><span class="time">[11-08]</span><a title="笋丝黄笋农擅种香丝竹 笋农妻盐水制" href="photoarticle.html">笋丝黄笋农擅种香丝竹 笋农妻盐水制</a></li>
+                  <li><span class="time">[10-02]</span><a title="现代休闲甜品美食空间" href="photoarticle.html">现代休闲甜品美食空间</a></li>
+                  <li><span class="time">[10-00]</span><a title="温泉旅游节26日开幕　多个温泉景区推出优惠活动" href="photoarticle.html">温泉旅游节26日开幕　多个温泉景区推出优惠活动</a></li>
+                  <li><span class="time">[08-02]</span><a title="笋丝黄笋农擅种香丝竹 笋农妻盐水制" href="photoarticle.html">笋丝黄笋农擅种香丝竹 笋农妻盐水制</a></li>
+                </ul>
+                </div>
+							</div>
+					  		<div id="frame_btn_more1">
+                <div class="btn-more" id="data_btn_more1"><a href="infolist.html"  title="查看更多美食住宿" >查看更多</a></div>
+							</div>
+              </div>
+            </div>
+					</div>
+					
+        <!--景区景点-->
+				  <div id="frame_jqjd">
+            <div id="mod_jqjd" class="mart10 m_jdmap topborder">
+              <div class="modhead clearfix">
+              <div class="modtitle">
+                <h4><a href="piclist.html">景区景点</a></h4>
+              </div>
+              <div class="modmore"><a title="查看更多景区景点" href="piclist.html">更多</a></div>
+            </div>
+              <div class="modcon">
+				  		  <div id="frame_photo_list">
+                <div class="auto_list" id="data_photo_list2">
+                  <div class="sys_data_numlist_trend">
+                  <ul class="auto_list list-info">
+                      <li>
+                        <div class="top-num top_01">1</div>
+                        <div class="clearfix title"><span class="count">98745</span> <a href="scenicarticle.html" title="开拓资金" >昙石山文化遗址博物馆昙石山文化遗址博物馆</a></div>
+                      </li>
+                      <li>
+                        <div class="top-num top_02">2</div>
+                        <div class="clearfix title"><span class="count">98745</span> <a href="scenicarticle.html" title="预警提示" >万佛寺</a></div>
+                      </li>
+                      <li>
+                        <div class="top-num top_03">3</div>
+                        <div class="clearfix title"><span class="count">98745</span> <a href="scenicarticle.html" title="自由贸易区服务网" >兔耳山</a></div>
+                      </li>
+                      <li>
+                        <div class="top-num top_04">4</div>
+                        <div class="clearfix title"><span class="count">98745</span> <a href="scenicarticle.html" title="出口基地建设" >白沙湾</a></div>
+                      </li>
+                    </ul>
+                </div>
+                </div>
+							</div>
+					  		<div id="frame_btn_more2">
+                <div class="btn-more" id="data_btn_more2"><a href="piclist.html"  title="查看更多景区景点" >查看更多</a></div>
+							</div>
+              </div>
+            </div>
+					</div>
+        </div>
+      </div>
+    </div>
+  </div>
+	
+  <!--footer-->
+  <footer class="row footer" id="frame_footer" include="include.html">
+    <div class="large-l2" id="frame_footer_inner">
+      <div id="data_row_fotter">
+        <div class="copyright clearfix">福建省对外贸易经济合作厅<br/>
+          Copyright © 2004-2012 </div>
+        <div class="go-return"> <a title="返回顶部" class="go-top"></a> <a title="返回底部" class="go-bottom" ></a> </div>
+      </div>
+    </div>
+  </footer>
+</div>
+  </div>
+
+<script src="javascript/foundation/foundation.js"></script> 
+<script src="javascript/foundation/foundation.clearing.js"></script> 
+<script src="javascript/foundation/foundation.topbar.js"></script> 
+<script src="javascript/foundation/foundation.magellan.js"></script> 
+<script src="javascript/main.js"></script> 
+<script src="javascript/loading_list.js"></script> 
+<!--初始化foundation组件--> 
+<script>
+    	$(document).foundation();//
+		
+		/*文章页悬浮*/
+	   $(document).ready(function () { 
+			  $(window).scroll(function () {
+			 if($(window).width()<768){
+                  var hight=$('#data_nav').height()+$('#data_img_desc').height()+$('#header_h').height()//顶部的高度
+				
+				
+				 /*$(window).scrollTop()这个方法是当前滚动条滚动的距离
+				 $(window).height()获取当前窗体的高度
+				 $(document).height()获取当前文档的高度*/
+	   
+				if (hight  > ($(window).scrollTop())) {
+					 /*顶部的高度>滚动的高度*/
+					$('#aritcle_sec_banner').css("display","none");
+				   
+			  }else{
+				  $('#aritcle_sec_banner').css("display","block");
+			  }}
+			  else if($(window).width()==768){
+				/*  alert($(window).width());//浏览器时下窗口文档body的高度*/ 
+                	   var hight=$('#data_nav').height()+$('#data_img_desc').height()+$('#header_h').height()//顶部的高度
+                	   if (hight  > ($(window).scrollTop())) {
+                          /* 顶部的高度>滚动的高度*/
+                          $('#aritcle_sec_banner').css("display","none");
+                         
+                    }else{
+                        $('#aritcle_sec_banner').css("display","block");
+                    }
+                      }
+
+
+			  else{
+			   $('#aritcle_sec_banner').css("display","none");
+			  }
+			 });
+		 });
+		 
+</script>
+</body>
+</html>

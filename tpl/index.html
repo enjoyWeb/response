@@ -1,0 +1,592 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>中共福建统战部</title>
+        <!--HTML页面统一使用uft-8编码格式-->
+		<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta http-equiv="Content-Language" content="zh-cn" />
+		<meta name="keywords" content=" " />
+        <!--
+            文件配置规范:
+            一、css文件，统一存放在style文件夹里；
+            二、js文件，统一存放在javascript文件夹里；
+            三、flash文件，统一存放在flash文件夹里；
+            四、图片文件，统一存放在images文件夹里；
+            五、源文件psd等，统一存放在source文件夹里;
+            六、模板配置文件命名template.xml，模板预览大图命名preview.jpg，模板预览小图命名preview_s.jpg;
+            七、将以上文件统一以zip的格式打包，并存放于根目录中。
+        -->
+		<meta name="description" content=" " />
+		<link href="style/themes.less" rel="stylesheet" type="text/less" />
+		<link href="style/layout.css" rel="stylesheet" type="text/css" />
+		<link href="style/master.css" rel="stylesheet" type="text/css" />
+		<script src="javascript/jquery-1.9.1.min.js" type="text/javascript"></script>
+        <!--模板共用的相关js代码-->
+		<script src="javascript/main.js" type="text/javascript"></script>
+        <!--tab切换调用的JS函数文件tab.exam.js-->
+        <script src="javascript/tab.exam.js" type="text/javascript"></script>
+        <!--模态窗口-->
+        <link href="style/popup.css" rel="stylesheet" type="text/css" />
+		<script src="javascript/reveal-model.js" type="text/javascript"></script>
+        <!--幻灯片-->
+		<script src="javascript/swfobject.js" type="text/javascript"></script>
+		<script src="javascript/scrollpic.js" type="text/javascript"></script>
+        <!--less文件-->
+		<script src="javascript/less-1.7.3.min.js" type="text/javascript"></script>
+	</head>
+	<body>
+        <!--布局规范layout（必写项；所有框架模块的外框；可设置网页背景样式；宽度为100%）-->
+        <div id="layout">
+            <!--特殊布局layout_自定义标识（非必写项；辅助设置网页背景样式等，如：网页头部背景、网页底部背景、网页整体背景等；宽度为100%）-->
+            <div class="wrapper" id="frame_wrapper">
+                <!--
+                    主体部分框架搭建注意事项：
+                    一、数据块和模块外框不能与框架frame同级，从外到内框架布局ID依此为：布局规范（layout） > 特殊布局（layout_自定义标识） > 普通框架（frame_自定义标识） > 数据块（data_自定义标识）/模块（mod_自定义标识）；
+                    二、只有需要横向左右浮动的框架可以添加浮动float样式；
+                    三、需要浮动的框架的外层添加清除浮动的样式名clearfix；
+                    四、框架的横向和纵向排列要严格区分，左右栏外框要添加；
+                    五、每个框架、模块及数据块的ID名，必须保证唯一性
+                    六、不加ID的模块样式名为系统指定样式名，有各自的作用，不可写错，如modhead,modtitle,modmore,modcon,tab,tabtitle,tabmore等等
+                -->
+                <!--公共内容框架include（非必写项；调用公共页include文件名以便统一维护公共部分，并保证与公共页include被调用部分DIV的ID名保持一致）-->
+                <!--页面头部-->
+                <div class="header" id="frame_header" include="include.html">
+                    <!--头部 toolbar-->
+                    <div class="tool-bar" id="frame_tool_bar">
+                        <div class="tool-wrapper" id="frame_tool_wrapper">
+                            <!--数据块风格规范data_自定义标识（独立数据块调用，保证ID的唯一性）-->
+                            <div class="fleft" id="data_toolbarleft">
+                                <div class="drop-bar drop-bar-home" id="drop-bar1">
+                                    <a class="drop-bar-tit" href="#">党员e家首页</a>
+                                </div>
+                                <div class="drop-bar drop-bar-mobile" id="drop-bar2">
+                                    <a class="drop-bar-tit" href="#">手机APP</a>
+                                </div>
+                            </div>
+                            <div class="fright" id="data_toolbarright">
+                                <div class="drop-bar" id="drop-bar3">
+                                    <a href="#" class="drop-bar-tit click-block" reveal-model-id="loginbox">登录</a>
+                                </div>
+                                <div class="drop-bar drop-bar-user drop-bar-dropdown" id="drop-bar3">
+                                    <a class="drop-bar-tit p-color" href="#">
+                                        <img src="images/user_head.png" alt=""/>
+                                    	党员XXX
+                                    </a>
+                                    <div class="drop-bar-con user-inter">
+                                        <ul>
+                                            <li><a href="#" title="账户管理">账户管理</a></li>
+                                            <li><a href="#" title="退出">退出</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="drop-bar drop-bar-help" id="drop-bar4">
+                                    <a class="drop-bar-tit" href="#">帮助中心</a>
+                                </div>
+                                <div class="drop-bar drop-bar-site" id="drop-bar5">
+                                    <a class="drop-bar-tit" href="#">站点地图</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					<!--数据模板标识func:头部banner-->
+                    <div class="banner" id="frame_head"><span class="logo" id="data_logo" func="banner"></span></div>
+                    <!--头部 topbar-->
+                    <div class="top-bar clearfix" id="frame_top-bar">
+                        <div id="data_nav">
+                            <ul class="clearfix">
+                                <li><a href="index.html" target="_self">首页</a></li>
+                                <li><a href="list.html" target="_self">机构简介</a></li>
+                                <li><a href="list.html" target="_self">机构成员</a></li>
+                                <li><a href="list.html" target="_self">学习专栏</a></li>
+                                <li><a href="list.html" target="_self">争先创优</a></li>
+                                <li><a href="list.html" target="_self">活动</a></li>
+                                <li><a href="list.html" target="_self">论坛</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--页面头部 end-->
+
+                <!--页面内容-->
+                <div class="main" id="frame_main">
+                    <div class="row1 clearfix" id="frame_row_1">
+                        <div class="per-45 fleft" id="frame_row_11">
+                            <!--数据模板标识func:幻灯片ppt-->
+                            <div id="frame_c_flash" func="ppt">
+                                <div class="flash mEdit" id="data_c_flash">
+                                    <div id="Focus_pic">
+                                        <div id="dplayer4" style="padding-right:0px;padding-left:0px;padding-bottom:0px;margin:0px auto;width:500px;padding-top:0px;height:321px;">
+                                            <object codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" height="290" width="500" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
+                                                <param value="flash/focusv1.0.1.swf" name="movie" />
+                                                <param value="Transparent" name="wmode" />
+                                                <param value="high" name="quality" />
+                                                <param value="true" name="allowFullScreen" />
+                                                <param value="always" name="allowScriptAccess" />
+                                            </object>
+                                        </div>
+                                        <div id="swfUsefulObj" style="display:none">
+                                            <p>永远跟党走青春促跨越|为民办事维护稳定|市领导来县调研回归工程工作|县法院五四开放日邀请中学生参观法庭</p>
+                                            <p>images/01.gif|images/02.gif|images/03.gif|images/04.gif</p>
+                                            <p>http://www.baidu.com|#|#|#</p>
+                                        </div>
+                                        <script language="javascript" type="text/javascript">
+                                        var titles ='';
+                                        var imgs ='';
+                                        var urls  ='';
+                                        var domianUrl = "";
+                                        var pw = 500;
+                                        var ph = 321;
+                                        var Times = 4000;
+                                        var sizes = 14;
+                                        var isbold="yes";
+                                        var txtcolor =0xFFFFFF;
+                                        var txtLeft = 4;
+                                        var umcolor = 0xFFFFFF;
+                                        var nubtouming = 100;
+                                        var hovertouming = 100;
+                                        var btnbg =0xe20701;
+                                        var bgnub = 0x666666;
+                                        var hovercolor =0xFFFFFF;
+                                        var rname="榕基软件";
+                                        var rlink="http://www.i-task.com.cn/";
+                                        focusHandler.initSystems("dplayer4");
+                                    </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="per-55 fright" id="frame_row_12">
+                            <div class="hot-info auto_list mEdit" id="data_hotinfo">
+                                <div class="hot-title title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">中共中央召开党外人士座谈会 征求对经济工作的意见和建议</a></div>
+                                <div class="hot-des"><p href="#" target="_self" title="中共中央召开党外人士座谈会">中共中央召开党外人士座谈会 征求对经济工作的意见和建议中共中央召开党外人士座谈会 征求对经济工作的意见和建议中共中央召开党外人士座谈会...</p></div>
+                                <div class="hot-list">
+                                    <ul class="s-listyle">
+                                        <li><span class="time">[10-16]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">"全国统战系统信息化工作交流会"在北京召开</a></span></li>
+                                        <li><span class="time">[10-15]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">第五届孔子学院大会在京举行 李长春出席开幕式</a></span></li>
+                                        <li><span class="time">[10-15]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">杜青林向非中共人士通报中央经济工作会议精神</a></span></li>
+                                        <li><span class="time">[10-15]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">凝心谋和谐 聚力促发展——我国统一战线工作蓬勃发展</a></span></li>
+                                        <li><span class="time">[10-15]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">汇智聚力 合力共赢——党外代表人士队伍建设取得丰硕成果</a></span></li>
+                                        <li><span class="time">[10-15]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">贾庆林会见中国天主教第八次代表会议代表</a></span></li>
+                                        <li><span class="time">[10-16]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">"全国统战系统信息化工作交流会"在北京召开</a></span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row2 mart10 clearfix" id="frame_row_2">
+                        <div class="per-70 fright" id="frame_row_21">
+                            <div class="row2" id="frame_row_211">
+                                <div id="data_mid_banner" class="mEdit">
+                                    <div class="container" id="idContainer2">
+                                        <ul id="idNum" class="num">
+                                        </ul>
+                                        <ul id="idSlider2">
+                                            <li><a href="#" target="_blank"><img src="images/midbanner_01.png"  /></a></li>
+                                            <li><a href="#" target="_blank"><img src="images/midbanner_01.png"  /></a></li>
+                                        </ul>
+                                    </div>
+                                    <script type="text/javascript">
+                                    var container = document.getElementById("idContainer2");
+                                    var Slider = document.getElementById("idSlider2");
+
+
+                                    var linum = Slider.getElementsByTagName("li").length;
+                                    Slider.style.width = (container.offsetWidth * linum) +"px";
+                                    //alert(document.getElementById("idSlider2").offsetWidth);
+
+                                    var forEach = function(array, callback, thisObject){
+                                        if(array.forEach){
+                                            array.forEach(callback, thisObject);
+                                        }else{
+                                            for (var i = 0, len = array.length; i < len; i++) { callback.call(thisObject, array[i], i, array); }
+                                        }
+                                    }
+                                    var st = new SlideTrans("idContainer2", "idSlider2", linum, { Vertical: false });
+
+                                    var nums = [];
+                                    //插入数字
+                                    for(var i = 0, n = st._count - 1; i <= n;){
+                                        (nums[i] = sid("idNum").appendChild(document.createElement("li"))).innerHTML = ++i;
+                                    }
+
+                                    forEach(nums, function(o, i){
+                                        o.onmouseover = function(){ o.className = "on"; st.Auto = false; st.Run(i); }
+                                        o.onmouseout = function(){ o.className = ""; st.Auto = true; st.Run(); }
+                                    })
+
+                                    //设置按钮样式
+                                    st.onStart = function(){
+                                        forEach(nums, function(o, i){ o.className = st.Index == i ? "on" : ""; })
+                                    }
+                                    st.Run();
+                                    </script>
+                                </div>
+                            </div>
+                            <div class="row4 mart10 clearfix" id="frame_row_212">
+                                <div class="per-50 fleft" id="frame_row_2121">
+                                    <!--此模块为单独栏目模块-->
+                                    <div class="mod-rec-m1 mEdit" id="mod_rec_m11">
+                                        <!--模块栏目外框样式名modhead；不需要ID，系统可自动识别；用clearfix清除浮动-->
+                                        <div class="modhead clearfix">
+                                            <!--模块栏目标题样式名modtitle；不需要ID，系统可自动识别；向左浮动-->
+                                            <div class="modtitle"><a href="#" target="_blank">通知公告</a></div>
+                                            <!--模块栏目更多链接样式名modmore；不需要ID，系统可自动识别；向右浮动-->
+                                            <div class="modmore"><a href="#" target="_blank">更多</a></div>
+                                        </div>
+                                        <!--此模块内容modcon-->
+                                        <div class="modcon">
+                                            <!--定义当前栏目内容块data_自定义标识-->
+                                            <div id="data_notice42">
+                                                <ul class="p-listyle auto_list">
+                                                    <!--
+                                                    一、设置为标题类型field：text为标题，length为截取字符数，data为日期，format为日期格式;
+                                                    二、设置循环读取列表loop：设置属性 loop="1" 注意这个参数只加在第一个需要被循环的元素上;from为从第几条开始，to为第几条结束
+                                                    三、注意以上的标签只在动态数据的地址添加即可
+                                                    -->
+                                                    <li loop="1" from="1" to="7"><span class="time" field="date" format="[MM-dd]">[10-16]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">“全国统战系统信息化工作交流会”在北京召开</a></span></li>
+                                                    <li><span class="time">[10-15]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">第五届孔子学院大会在京举行 李长春出席开幕式</a></span></li>
+                                                    <li><span class="time">[10-15]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">杜青林向非中共人士通报中央经济工作会议精神</a></span></li>
+                                                    <li><span class="time">[10-15]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">凝心谋和谐 聚力促发展——我国统一战线工作蓬勃发展</a></span></li>
+                                                    <li><span class="time">[10-15]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">汇智聚力 合力共赢——党外代表人士队伍建设取得丰硕成果</a></span></li>
+                                                    <li><span class="time">[10-15]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">贾庆林会见中国天主教第八次代表会议代表</a></span></li>
+                                                    <li><span class="time">[10-15]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">贾庆林会见台湾金融代表团</a></span></li>
+                                                    <li><span class="time">[10-16]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">"全国统战系统信息化工作交流会"在北京召开</a></span></li>
+                                                    <li><span class="time">[10-15]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">第五届孔子学院大会在京举行 李长春出席开幕式</a></span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="per-50 fright" id="frame_row_2122">
+                                    <div class="mod-rec-m1 mEdit" id="mod_rec_m12">
+                                        <div class="modhead clearfix">
+                                          <div class="modtitle"><a href="#" target="_blank">论坛</a></div>
+                                          <div class="modmore"><a href="#" target="_blank">更多</a></div>
+                                        </div>
+                                        <div class="modcon">
+                                            <div id="data_notice52">
+                                                <ul class="p-listyle auto_list">
+                                                    <li><span class="time">[10-16]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">"全国统战系统信息化工作交流会"在北京召开</a></span></li>
+                                                    <li><span class="time">[10-15]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">第五届孔子学院大会在京举行 李长春出席开幕式</a></span></li>
+                                                    <li><span class="time">[10-15]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">杜青林向非中共人士通报中央经济工作会议精神</a></span></li>
+                                                    <li><span class="time">[10-15]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">凝心谋和谐 聚力促发展——我国统一战线工作蓬勃发展</a></span></li>
+                                                    <li><span class="time">[10-15]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">汇智聚力 合力共赢——党外代表人士队伍建设取得丰硕成果</a></span></li>
+                                                    <li><span class="time">[10-15]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">贾庆林会见中国天主教第八次代表会议代表</a></span></li>
+                                                    <li><span class="time">[10-15]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">贾庆林会见台湾金融代表团</a></span></li>
+                                                    <li><span class="time">[10-16]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">"全国统战系统信息化工作交流会"在北京召开</a></span></li>
+                                                    <li><span class="time">[10-15]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">第五届孔子学院大会在京举行 李长春出席开幕式</a></span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row4 mart10 clearfix" id="frame_row_213">
+                                <!--
+                                    模块样式定义规范：
+                                    一、系统风格模块库，可入系统模块风格库，整个系统内的项目都共用，模块ID命名:sys_mod_变量名；
+                                    二、同项目（模板包）风格模块，可入当前项目（模块包）模块风格库，当前项目（模块包）都共用，模块ID命名:custom_mod_变量名；
+                                    三、独立设计的模块风格，不可入库，模块ID命名:mod_变量名
+                                -->
+                                <!--此模块为tab菜单宽度可自动延伸的子栏目切换模块-->
+                                <div class="tab-rec-1 clearfix mEdit" id="mod_tab_rec_11">
+                                    <!--模块栏目切换栏外框样式名tab；不需要ID，系统可自动识别；用clearfix清除浮动-->
+                                    <div class="tab clearfix">
+                                        <!--模块主栏目切换栏目标题样式名tabtitle；不需要ID，系统可自动识别；向左浮动-->
+                                        <!--<div class="tabtitle"><a href="#" target="_blank">会议议程</a></div>-->
+                                        <!--模块子栏目切换外框ul；定义ID以便设置JS切换效果；向右浮动-->
+                                        <ul class="clearfix" id="catalogs">
+                                            <!--当前显示tab块；不需要ID，系统可自动识别；用定义样式名当前子栏目样式，以便设置JS切换效果-->
+                                            <li class="on">
+                                                <!--当前tab块；不需要ID，系统可自动识别；菜单左边背景样式-->
+                                                <div class="tl">
+                                                    <!--当前tab块；不需要ID，系统可自动识别；菜单右边样式-->
+                                                    <div class="tr">
+                                                        <!--当前tab块；不需要ID，系统可自动识别；菜单中间背景平铺-->
+                                                        <div class="tc"><a href="#" target="_blank">学习专栏</a></div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <!--非当前显示tab块；不需要ID，系统可自动识别-->
+                                            <li>
+                                                <div class="tl">
+                                                    <div class="tr">
+                                                        <div class="tc"><a href="#" target="_blank">创先争优</a></div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!--模块栏目tab块内容modcon；不需要ID，系统可自动识-->
+                                    <div class="modcon">
+                                        <!--
+                                            当前显示tab块内容；
+                                            定义数据块id（data_自定义标识+从1开始的整数字），以便设置JS切换效果;
+                                            也可以外部再套一层DIV定义独立ID名（自定义标识+从1开始的整数字）做为调用JS切换效果，里面定义数据块（data_自定义标识），这两种方式二选一；
+                                            设置当前样式为显示状态（style="display:block;"）或者放空
+                                        -->
+                                        <div id="data_catalogs_con_1">
+                                            <ul class="p-listyle auto_list">
+                                                <li><span class="time">[10-16]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">“全国统战系统信息化工作交流会”在北京召开在北京召开在北京召开在北京召开在北京召开</a></span></li>
+                                                <li><span class="time">[10-15]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">第五届孔子学院大会在京举行 李长春出席开幕式李长春出席开幕式李长春出席开幕式李长春出席开幕式</a></span></li>
+                                                <li><span class="time">[10-15]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">杜青林向非中共人士通报中央经济工作会议精神杜青林向非中共人士通报中央经济工作会议精神</a></span></li>
+                                                <li><span class="time">[10-15]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">凝心谋和谐 聚力促发展——我国统一战线工作蓬勃发展我国统一战线工作蓬勃发展</a></span></li>
+                                                <li><span class="time">[10-15]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">汇智聚力 合力共赢——党外代表人士队伍建设取得丰硕成果党外代表人士队伍建设取得丰硕成果</a></span></li>
+                                                <li><span class="time">[10-15]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">贾庆林会见中国天主教第八次代表会议代表贾庆林会见中国天主教第八次代表会议代表贾庆林会见中国天主教第八次代表会议代表</a></span></li>
+                                                <li><span class="time">[10-15]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">贾庆林会见台湾金融代表团贾庆林会见台湾金融代表团贾庆林会见台湾金融代表团</a></span></li>
+                                                <li><span class="time">[10-16]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">"全国统战系统信息化工作交流会"在北京召开在北京召开在北京召开在北京召开在北京召开</a></span></li>
+                                                <li><span class="time">[10-15]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">第五届孔子学院大会在京举行 李长春出席开幕式李长春出席开幕式李长春出席开幕式李长春出席开幕式</a></span></li>
+                                            </ul>
+                                        </div>
+                                        <!--非当前tab块内容；续上面定义id方式，数字加1；设置当前样式为隐藏状态（style="display:none;"）-->
+                                        <div id="data_catalogs_con_2" style="display:none;">
+                                            <ul class="p-listyle auto_list">
+                                                <li><span class="time">[10-15]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">第五届孔子学院大会在京举行 李长春出席开幕式李长春出席开幕式李长春出席开幕式李长春出席开幕式</a></span></li>
+                                                <li><span class="time">[10-16]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">“全国统战系统信息化工作交流会”在北京召开在北京召开在北京召开在北京召开在北京召开</a></span></li>
+                                                <li><span class="time">[10-15]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">杜青林向非中共人士通报中央经济工作会议精神杜青林向非中共人士通报中央经济工作会议精神</a></span></li>
+                                                <li><span class="time">[10-15]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">凝心谋和谐 聚力促发展——我国统一战线工作蓬勃发展我国统一战线工作蓬勃发展</a></span></li>
+                                                <li><span class="time">[10-15]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">汇智聚力 合力共赢——党外代表人士队伍建设取得丰硕成果党外代表人士队伍建设取得丰硕成果</a></span></li>
+                                                <li><span class="time">[10-15]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">贾庆林会见中国天主教第八次代表会议代表贾庆林会见中国天主教第八次代表会议代表贾庆林会见中国天主教第八次代表会议代表</a></span></li>
+                                                <li><span class="time">[10-15]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">贾庆林会见台湾金融代表团贾庆林会见台湾金融代表团贾庆林会见台湾金融代表团</a></span></li>
+                                                <li><span class="time">[10-16]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">"全国统战系统信息化工作交流会"在北京召开在北京召开在北京召开在北京召开在北京召开</a></span></li>
+                                                <li><span class="time">[10-15]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">第五届孔子学院大会在京举行 李长春出席开幕式李长春出席开幕式李长春出席开幕式李长春出席开幕式</a></span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="per-30 fleft" id="frame_row_22">
+                            <div id="frame_row_221">
+                                <div class="mod-rec-l1 mEdit" id="mod_rec_l11">
+                                    <div class="modhead clearfix">
+                                      <div class="modtitle"><a href="#" target="_blank">机构简介</a></div>
+                                      <div class="modmore"><a href="#" target="_blank">更多</a></div>
+                                    </div>
+                                    <div class="modcon">
+                                        <div id="data_notice61">
+                                            <div class="text_info">
+                                                <div class="auto_list text-center"><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会"><strong>中共中央召开党外人士座谈会中共中央召开党外人士座谈会</strong></a></span></div>
+                                                <span class="text-indent">&nbsp;&nbsp;新华网北京１２月３日电 中共中央１１月３０日在中南海召开党外人士座谈会，就当前经济形势和明年经济工作听取各民主党派中央、全国工商联领导人和无党派人士意见和建议。</span>
+                                                <a class="p-color" href="" target="_blank" title="查看更多详细内容">[详细]</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="frame_row_222">
+                                <div class="mod-rec-l1 mart10 mEdit" id="mod_rec_l12">
+                                    <div class="modhead clearfix">
+                                      <div class="modtitle"><a href="#" target="_blank">机构成员</a></div>
+                                      <div class="modmore"><a href="#" target="_blank">更多</a></div>
+                                    </div>
+                                    <div class="modcon">
+                                        <div class="gun_scene clearfix" id="data_gun_scene">
+                                            <div class="gun_scene_l" id="gun_scene_l2" title="上一个"></div>
+                                            <div class="leader_list clearfix" id="gun_scene_con">
+                                                <ul>
+                                                    <li><a href="#" target="_blank"><p><img src="images/hornor1.jpg" /></p><p>蒋虎雄<br>2014年度优秀党员</p></a></li>
+                                                    <li><a href="#" target="_blank"><p><img src="images/hornor2.jpg" /></p><p>陈威<br>2014年度优秀党员</p></a></li>
+                                                    <li><a href="#" target="_blank"><p><img src="images/hornor3.jpg" /></p><p>林子忠<br>2014年度优秀党员</p></a></li>
+                                                    <li><a href="#" target="_blank"><p><img src="images/hornor4.jpg" /></p><p>邓松高<br>2014年度优秀党员</p></a></li>
+                                                    <li><a href="#" target="_blank"><p><img src="images/hornor5.jpg" /></p><p>肖世钡<br>2014年度优秀党员</p></a></li>
+                                                    <li><a href="#" target="_blank"><p><img src="images/hornor6.jpg" /></p><p>沈幼娟<br>2014年度优秀党员</p></a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="gun_scene_r" id="gun_scene_r2" title="下一个"></div>
+                                            <script type="text/javascript">
+                                                var scrollPic_ad = new ScrollPic();
+                                                scrollPic_ad.scrollContId   = "gun_scene_con"; //内容容器ID
+                                                scrollPic_ad.arrLeftId      = "gun_scene_l2";//左箭头ID
+                                                scrollPic_ad.arrRightId     = "gun_scene_r2"; //右箭头ID
+
+                                                scrollPic_ad.frameWidth     = 200;//显示框宽度
+                                                scrollPic_ad.pageWidth      = 200; //翻页宽度
+
+                                                scrollPic_ad.speed          = 5; //移动速度(单位毫秒，越小越快)
+                                                scrollPic_ad.space          = 10; //每次移动像素(单位px，越大越快)
+                                                scrollPic_ad.autoPlay       = false; //自动播放
+                                                scrollPic_ad.autoPlayTime   = 5; //自动播放间隔时间(秒)
+                                                scrollPic_ad.initialize(); //初始化
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="frame_row_223">
+                                <div class="mod-rec-l1 mart10 mEdit" id="mod_rec_l13">
+                                    <div class="modhead clearfix">
+                                      <div class="modtitle"><a href="#" target="_blank">活动</a></div>
+                                      <div class="modmore"><a href="#" target="_blank">更多</a></div>
+                                    </div>
+                                    <div class="modcon">
+                                        <div id="data_notice63">
+                                            <ul class="p-listyle auto_list">
+                                                <li><span class="time">[10-16]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">"全国统战系统信息化工作交流会"在北京召开</a></span></li>
+                                                <li><span class="time">[10-15]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">第五届孔子学院大会在京举行 李长春出席开幕式</a></span></li>
+                                                <li><span class="time">[10-15]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">杜青林向非中共人士通报中央经济工作会议精神</a></span></li>
+                                                <li><span class="time">[10-15]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">凝心谋和谐 聚力促发展——我国统一战线工作蓬勃发展</a></span></li>
+                                                <li><span class="time">[10-15]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">汇智聚力 合力共赢——党外代表人士队伍建设取得丰硕成果</a></span></li>
+                                                <li><span class="time">[10-15]</span><span class="title"><a href="#" target="_self" title="中共中央召开党外人士座谈会">贾庆林会见中国天主教第八次代表会议代表</a></span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mart10 clearfix" id="frame_row_3">
+                        <div class="mod-rec-l1 mEdit" id="mod_rec_l14">
+                            <div class="modhead clearfix">
+                              <div class="modtitle"><a href="#" target="_blank">友情链接</a></div>
+                              <div class="modmore"></div>
+                            </div>
+                            <div class="modcon">
+                                <div class="fdlink clearfix" id="frame_fdlink">
+                                    <div class="linkper4" id="data_fdlink_001">
+                                        <table width="100%"  border="0" cellspacing="0" cellpadding="0" align="center">
+                                          <tbody>
+                                            <tr>
+                                              <td >
+                                                    <SELECT class="leftlink">
+                                                        <OPTION  selected value="">－－各省市旅游网链接－－</OPTION>
+                                                        <OPTION value=http://www.fujian.gov.cn/ target="_blank">链接1</OPTION>
+                                                        <OPTION value=http://www.fujian.gov.cn/ target="_blank">链接1</OPTION>
+                                                        <OPTION value=http://www.fujian.gov.cn/ target="_blank">链接1</OPTION>
+                                                        <OPTION value=http://www.fujian.gov.cn/ target="_blank">链接1</OPTION>
+                                                    </SELECT>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="linkper4" id="data_fdlink_002">
+                                        <table width="100%"  border="0" cellspacing="0" cellpadding="0" align="center">
+                                          <tbody>
+                                            <tr>
+                                              <td >
+                                                    <SELECT class="leftlink">
+                                                        <OPTION  selected value="">－－各省市旅游网链接－－</OPTION>
+                                                        <OPTION value=http://www.fujian.gov.cn/ target="_blank">链接1</OPTION>
+                                                        <OPTION value=http://www.fujian.gov.cn/ target="_blank">链接1</OPTION>
+                                                        <OPTION value=http://www.fujian.gov.cn/ target="_blank">链接1</OPTION>
+                                                        <OPTION value=http://www.fujian.gov.cn/ target="_blank">链接1</OPTION>
+                                                    </SELECT>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="linkper4" id="data_fdlink_003">
+                                        <table width="100%"  border="0" cellspacing="0" cellpadding="0" align="center">
+                                          <tbody>
+                                            <tr>
+                                              <td >
+                                                    <SELECT class="leftlink">
+                                                        <OPTION  selected value="">－－各省市旅游网链接－－</OPTION>
+                                                        <OPTION value=http://www.fujian.gov.cn/ target="_blank">链接1</OPTION>
+                                                        <OPTION value=http://www.fujian.gov.cn/ target="_blank">链接1</OPTION>
+                                                        <OPTION value=http://www.fujian.gov.cn/ target="_blank">链接1</OPTION>
+                                                        <OPTION value=http://www.fujian.gov.cn/ target="_blank">链接1</OPTION>
+                                                    </SELECT>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="linkper4" id="data_fdlink_004">
+                                        <table width="100%"  border="0" cellspacing="0" cellpadding="0" align="center">
+                                          <tbody>
+                                            <tr>
+                                              <td >
+                                                    <SELECT class="leftlink">
+                                                        <OPTION  selected value="">－－各省市旅游网链接－－</OPTION>
+                                                        <OPTION value=http://www.fujian.gov.cn/ target="_blank">链接1</OPTION>
+                                                        <OPTION value=http://www.fujian.gov.cn/ target="_blank">链接1</OPTION>
+                                                        <OPTION value=http://www.fujian.gov.cn/ target="_blank">链接1</OPTION>
+                                                        <OPTION value=http://www.fujian.gov.cn/ target="_blank">链接1</OPTION>
+                                                    </SELECT>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="linkper4" id="data_fdlink_005">
+                                        <table width="100%"  border="0" cellspacing="0" cellpadding="0" align="center">
+                                          <tbody>
+                                            <tr>
+                                              <td >
+                                                    <SELECT class="leftlink">
+                                                        <OPTION  selected value="">－－各省市旅游网链接－－</OPTION>
+                                                        <OPTION value=http://www.fujian.gov.cn/ target="_blank">链接1</OPTION>
+                                                        <OPTION value=http://www.fujian.gov.cn/ target="_blank">链接1</OPTION>
+                                                        <OPTION value=http://www.fujian.gov.cn/ target="_blank">链接1</OPTION>
+                                                        <OPTION value=http://www.fujian.gov.cn/ target="_blank">链接1</OPTION>
+                                                    </SELECT>
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--页面内容 end-->
+
+                <!--页面底部-->
+                <div class="footer clearfix" id="frame_footer" include="include.html">
+                    <div class="row clearfix" id="data_footer">
+                        <div class="copyright clearfix">
+                            Copyright © 2006-2015 &nbsp;&nbsp;&nbsp;&nbsp;福建统战部版权所有&nbsp;&nbsp;&nbsp;&nbsp;
+                        </div>
+                    </div>
+                </div>
+                <!--页面底部 end-->
+
+                <!--首页设置
+                <div id="frame_homeset" class="clearfix">
+                    <div id="data_homeset" class="clearfix">
+                        <div class="home-set">
+                            <div class="item"><a class="item-set" href="#">主页设置</a></div>
+                            <div class="item"><a class="item-home" href="index.html">返回首页</a></div>
+                        </div>
+                    </div>
+                </div>-->
+
+                <!--登录弹出框-->
+                <div id="frame_model">
+                    <div id="data_model">
+                        <div id="TB_overlayBG"></div>
+                        <div class="box-content" id="loginbox">
+                            <h2>您尚未登入<a href="#" class="close-reveal-modal">×</a></h2>
+                            <iframe src="http://192.168.14.97:8080/acc/Ehome/register-login-con/login.html" frameborder="0" scrolling=no ></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="frame_js">
+                    <div id="data_js">
+                        <!--[if IE 6]>
+                        <script src="javascript/DD_belatedPNG.js" mce_src="javascript/DD_belatedPNG.js"></script>
+                        <script type="text/javascript">
+                         DD_belatedPNG.fix('.gun_scene_l,.gun_scene_r,.modtitle a,.modmore a,.logo,.p-listyle li,.s-listyle li,.drop-bar,.drop-bar-tit,.home-set .item,.home-set .item:hover,.home-set .item a');
+                        </script>
+                        <![endif]-->
+                        <!--
+                            tab切换调用的JS；
+                            每个切换效果加载一个o_tab().init函数；
+                            函数参数分别为：子栏目菜单ID名，子栏目框架html标签，子栏目内容自定义标识，当前显示内容样式名，非当前显示内容样式名，设置的子栏目ID整数的开始数（填0就从0开始，填1就从1开始，），是否鼠标滑动菜单切换（非空为是，空为否）
+                        -->
+						<script type="text/javascript">
+                            new o_tab().init( "catalogs","li","data_catalogs_con_","on","",1,"1" );
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

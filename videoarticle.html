@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh" lang="zh">
+<!--在XML里，使用“xml:lang” 方便屏幕阅读器方便阅读-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+<meta http-equiv="keywords" content="符合无障碍标准" />
+<title>闽侯概况_福建省商务厅</title>
+<link rel="stylesheet" type="text/less" href="style/themes.less" />
+<link rel="stylesheet" type="text/less" href="style/master.less"/>
+<link rel="stylesheet" type="text/less" href="style/innerpage.less" />
+<link rel="stylesheet" href="style/clearing.css" />
+<link rel="stylesheet" href="video/mediaelementplayer.min.css" />
+<!--视频播放样式-->
+<link rel="stylesheet" type="text/less" href="style/videoarticle.less" />
+<script src="javascript/vendor/modernizr.js"></script><!--Modernizr HTML5元素兼容旧版本浏览器,并为移动设备提供检测。-->
+<script src="javascript/vendor/jquery.js"></script>
+
+<script src="javascript/es5-shim-2.1.0.min.js"></script><!--LESS兼容在IE9以下下面使用JS-->
+<script src="javascript/less-1.4.2.min.js"></script><!--LESS用到的JS-->
+
+</head>
+<body>
+		<!--
+	  	<div id="progressBar" class="progressBar_bg">
+			<div  class="progressBar">
+				<p>数据加载中，请稍等...</p>
+			</div>
+		</div>
+		-->
+<!--页面切换效果代码--> 
+	<div id="layout">
+  	<div id="frame_background" class="background">
+		<!-- header -->
+		<div class="row" id="frame_header" include="include.html">
+				<div class="large-12" id="frame_header_row1">
+				 <!--头部工具条内容-->
+							<div class="tool-bar show-for-large clearfix " id="frame_header_tool">
+									<div class="tool-fl" id="data_home"><a href="index.html">www.fiet.gov.cn</a></div>
+									<div class="tool-fr" id="data_maininfo">·<a href="http://www.fiet.gov.cn/">网页版</a>·<a href="article.html">使用帮助</a></div>
+						</div>
+						<!--头部banner内容-->
+						<div id="frame_hb_banner">
+						  <div class="top_banner show-for-large" id="data_header_banner"><span class="banner"></span></div>
+						</div>
+				</div>
+				<div class="row" id="frame_header_row2">
+					<div class="large-12 columns" id="frame_header_nav">
+						<div id="data_header_nav">
+							<nav class="top-bar" data-topbar role="navigation" aria-labelledby="sp_nav">
+								<h1 class="offscreen">福建省商务厅导航栏</h1><!--无障碍标签要求:NAV中的UL前至少要包含一个H1或者H2内容，样式设置超出屏幕-->            
+									<!-- 小于768下导航 -->
+								<ul class="title-area">
+									<li class="toggle-topbar menu-icon" title="弹出主菜单"></li>
+									<li class="name">
+										<h1>福建省商务厅</h1>
+										<!--无障碍标签要求：title中的内容应包含<h1></h1>中的内容--> 
+									</li>
+									<li class="search-icon" onClick="displaysearch()" title="进行搜索栏"></li>
+								</ul>
+								<!-- END 小于768下导航 -->
+								 <!-- 大于768下导航 -->
+								<section class="top-bar-section"> 
+									<ul class="left" id="sp_nav">
+										<li class="divider"></li>
+										<li class="active"><a href="index.html">首页</a></li>
+										<li class="divider"></li>
+										<li><a href="infolist.html">走进外经贸厅</a></li>
+										<li class="divider"></li>
+										<li><a href="detail.html">信息公开</a> </li>
+										<li class="divider"></li>
+										<li><a href="piclist.html">在线办事</a></li>
+										<li class="divider"></li>
+										<li class="has-dropdown"><a href="votearticle.html">公众参与</a>
+											<ul class="dropdown">
+												<li><a href="infolist.html">通知通告</a></li>
+												<li><a href="votearticle.html">公众参与</a></li>
+											</ul>
+										</li>
+									</ul>
+								</section>
+								<!-- 大于768下导航 -->
+							</nav>
+							<!-- 头部搜索 -->
+							<div class="topsearch" id="topsearch" role="search"><!--无障碍标签：role="search定义该内容为搜索区域-->
+								<form>
+									<div class="small-9 columns">
+										<input class="top_s_input" type="text" placeholder="请输入关键字" accesskey="s" title="输入查询内容输入框" x-webkit-speech="" x-webkit-grammar="builtin:translate" lang="zh-CN"/>
+										<!--placeholder="请输入关键字"为HTML5标签,x-webkit-speech=""谷歌云搜索；builtin:search"值使得语音输入的内容尽量靠近搜索内容;lang="zh-CN"设置语言为中文--> 
+									</div>
+									<div class="small-3 columns">
+										<input class="button top_search" type="button"  onclick="window.location.href='http://192.168.14.97:8080/acc/search/searchlist.html'" value="搜 索"/>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		<!-- main -->
+		<div role="main" class="conten"  id="frame_main_article">
+			<div class="row" id="frame_breadcrumbs">
+				<div class="large-12" id="frame_bc_inner">
+					<div class="breadcrumbs article_addr" id="data_list_addr" func="curpage">当前位置：<a href="index.html">首页</a> > <a href="infolist.html">信息公开</a> > <a href="videolist.html">视频列表</a> > <a href="infolist.html">视频新闻</a></span></div>
+				</div>
+			</div>
+			<div class="conten" id="frame_conten">
+				<div class="row" id="frame_con_inner">
+					<div class="large-8 column article_small" id="frame_ci_left"><!--给区块添加role属性，说明区块的作用，查看http://www.taobaotest.com/acc/68-->
+						<div class="article-holder small" id="frame_article_con">
+							<div id="frame_mhgk">
+								<div role="main" aria-label="主体区块" id="data_mhgk">
+									<div class="article-hd">
+										<h1 class="article-tit">闽侯概况</h1>
+									</div>
+									<div class="row" id="aritcle_sec_banner" style="display:none;">
+									<div class="aritcle_sec_banner auto_list" data-magellan-expedition="fixed"><!--添加悬浮标题-->
+										<div class="article_back"><a href="javascript:history.go(-1);" title="返回上个页面"><img src="images/article_back.png"/></a></div>
+										<span class="article_titile title"><a title="闽侯概况">闽侯概况</a></span> </div>
+								</div>
+									<div class="video_box">
+									<div class="play_box" id="play_box">
+										<div id="m_player">
+											<video style="width:100%; height: 100%;" src="video/echo-hereweare.mp4" type="video/mp4" id="player1" poster="video/echo-hereweare.jpg" controls preload="none"></video>
+										</div>
+									</div>
+								</div>
+									<div class="article-aside clearfix">
+									<p class="clearfix">
+										<span class="article-desc">来源：闽侯县  2013-09-11 01:03</span>
+										<span class="article-time">播放：<span>3020次</span></span>
+									</p>
+									<p class="desc">简介：闽侯县历史悠久, 地处福建省东部，福州市西南侧，总面积2136平方公里，呈月芽形拱卫省会城市，是福建最靠近省会城市的一个县。</p>
+									<p class="desc">片长：14分50秒</p>
+									<p class="tag">标签：<a>闽侯</a></p>
+									<p class="as-tit">分享至：</p>
+									<p class="as-icon"> 
+									 <a href="http://news.3g.cn/IPNewsContentForStat.ashx?nid=2197987&title=%e3%80%8a%e7%bd%97%e5%be%b7%e6%9b%bc%e6%96%a5%e8%b4%a3%e5%a5%a5%e5%b7%b4%e9%a9%ac%e4%b8%8d%e5%a6%82%e9%87%91%e6%ad%a3%e6%81%a9%e3%80%8b&url=http%3a%2f%2fnews.3g.cn%2fipnewscontent.php%3fnid%3d2197987&pic=&type=1&act=share" class="s-sina" title="分享到新浪微博"></a> <a href="http://news.3g.cn/IPNewsContentForStat.ashx?nid=2197987&title=%e3%80%8a%e7%bd%97%e5%be%b7%e6%9b%bc%e6%96%a5%e8%b4%a3%e5%a5%a5%e5%b7%b4%e9%a9%ac%e4%b8%8d%e5%a6%82%e9%87%91%e6%ad%a3%e6%81%a9%e3%80%8b&url=http%3a%2f%2fnews.3g.cn%2fipnewscontent.php%3fnid%3d2197987&pic=&type=2&act=share" class="s-weblog" title="分享到腾讯微博"></a> <a href="http://news.3g.cn/IPNewsContentForStat.ashx?nid=2197987&title=%e3%80%8a%e7%bd%97%e5%be%b7%e6%9b%bc%e6%96%a5%e8%b4%a3%e5%a5%a5%e5%b7%b4%e9%a9%ac%e4%b8%8d%e5%a6%82%e9%87%91%e6%ad%a3%e6%81%a9%e3%80%8b&url=http%3a%2f%2fnews.3g.cn%2fipnewscontent.php%3fnid%3d2197987&pic=&type=3&act=share" class="s-QZone" title="分享到QQ空间"></a> 
+									</p>
+								</div>
+							 </div>
+							</div>
+							<div id="frame_arti_others">
+								<div class="others auto_list" id="data_article_others">
+						  		<div class="relate_tit">
+									<h4>视频新闻:</h4>
+								</div>
+						   		<ul class="title">
+									<li><a href="article.html">陈义兴厅长深入福州监狱开展调研</a></li>
+									<li><a href="article.html">省司法鉴定协会召开首次会长办公会议</a></li>
+									<li><a href="article.html">省司法厅迅速传达落实省委省政府工作检查总结会精神</a></li>
+									<li><a href="article.html">省司法厅开展关爱青少年系列活动</a></li>
+									<li><a href="article.html">我省启动依法治省"三五"规划总结验收和"六五"普法中期督导</a></li>
+								</ul>
+						  	</div>
+							</div>
+							
+							<!--评论模块调用--> 
+							<!-- <script src="javascript/jquery.comment.js"></script>  
+												<script>
+												RJCMT.config({"basePath":"http://192.168.4.147:8080/cms/","pageSize":0||10,"objId":"AR20120910556305"});
+												</script>--> 
+							<!--评论模块调用end--> 
+						</div>
+					</div>
+					<div class="large-4 column padl-large article_small"  role="complementary" aria-label="右边区域" id="frame_ci_right">
+					<!--标记右边区域-->
+					  <div id="frame_zxdt">
+						  <div  id="mod_list_1" class="mod-rec-s1 article_news">
+							<div class="modhead">
+								<div class="modtitle">
+									<h4><a  href="infolist.html">最新动态</a></h4>
+								</div>
+								<div class="modmore"><a title="查看更多最新动态" href="infolist.html">更多</a></div>
+							</div>
+							<div class="modcon">
+							  <div id="frame_box02">
+							  	<div id="data_box02" class="auto_list">
+									<ul class="newslist artclelist clearfix title">
+										<li><a href="article.html" title="刘德培副厅长会见新加坡驻厦门总领事馆罗德杰总领事" >刘德培副厅长会见新加坡驻厦门总领事馆罗德杰总领事</a></li>
+										<li><a href="article.html" title="省外经贸厅（口岸办）传达学习十八届三中全会和省委九届十次全会精神" >省外经贸厅（口岸办）传达学习十八届三中全会和省委九届十次全会精神</a></li>
+										<li><a href="article.html" title="陈少和副厅长会见新加坡企业发展局客人" >陈少和副厅长会见新加坡企业发展局客人</a></li>
+										<li><a href="article.html" title="杏林检验检疫局优化监管便利通关服务外经外贸工作举措" >杏林检验检疫局优化监管便利通关服务外经外贸工作举措</a></li>
+										<li><a href="article.html" title="我省举办《海峡两岸服务贸易协议》宣讲培训" >我省举办《海峡两岸服务贸易协议》宣讲培训</a></li>
+										<li><a href="article.html" title="省外经贸厅、财政厅联合赴福州市调研外贸形势" >省外经贸厅、财政厅联合赴福州市调研外贸形势</a></li>
+									</ul>
+								</div>
+								</div>
+								<div id="frame_btn_mr">
+								<div class="btn-more" id="data_btn_more"><a title="查看更多最新动态" href="infolist.html">查看更多</a></div>
+								</div>
+							</div>
+						</div>
+						</div>
+						<div id="frame_spxw">
+					  	<div id="mod_list_2" class="mod-rec-s1 mart10" >
+							<div class="modhead">
+								<div class="modtitle">
+									<h4><a  href="videolist.html">视频新闻</a></h4>
+								</div>
+								<div class="modmore"><a title="查看更多视频新闻" href="videolist.html">更多</a></div>
+							</div>
+							<div class="modcon">
+							  <div id="frame_pic_list2">
+							  	<div class="photo_list auto_list" id="data_photo_list">
+									<ul class="small-block-grid-2 large-block-grid-2 clearfix title">
+										<li><a href="videoarticle.html" title="送政策 解疑难 促发展—省外经贸厅积极推进" class="th radius"><img alt="" src="images/43_1.jpg"/>
+											<p>送政策 解疑难 促发展—省外经贸厅积极推进</p>
+											<span class="play_icon"></span></a></li>
+										<li><a href="videoarticle.html" title="送政策 解疑难 促发展—省外经贸厅积极推进" class="th radius"><img alt="" src="images/43_1.jpg"/>
+											<p>送政策 解疑难 促发展—省外经贸厅积极推进</p>
+											<span class="play_icon"></span></a></li>
+										<li><a href="videoarticle.html" title="送政策 解疑难 促发展—省外经贸厅积极推进" class="th radius"><img alt="" src="images/43_1.jpg"/>
+											<p>送政策 解疑难 促发展—省外经贸厅积极推进</p>
+											<span class="play_icon"></span></a></li>
+										<li><a href="videoarticle.html" title="送政策 解疑难 促发展—省外经贸厅积极推进" class="th radius"><img alt="" src="images/43_1.jpg"/>
+											<p>送政策 解疑难 促发展—省外经贸厅积极推进</p>
+											<span class="play_icon"></span></a></li>
+									</ul>
+								</div>
+								</div>
+								<div id="frame_btn_more2">
+						  		<div class="btn-more" id="data_btn_more2"><a title="查看更多视频新闻" href="videolist.html">查看更多</a></div>
+								</div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- footer -->
+		<footer class="row footer" id="frame_footer" include="include.html">
+			<div class="large-l2" id="frame_footer_inner">
+				<div id="data_row_fotter">
+					<div class="copyright clearfix">福建省商务厅<br/>
+						<span>Copyright &copy; 2004-2012</span> </div>
+					<div class="go-return"> <a title="返回顶部" class="go-top"></a> <a title="返回底部" class="go-bottom" ></a> </div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	</div>
+<script src="javascript/foundation/foundation.js"></script> 
+<script src="javascript/foundation/foundation.clearing.js"></script> 
+<script src="javascript/foundation/foundation.topbar.js"></script> 
+<script src="javascript/foundation/foundation.magellan.js"></script> 
+<script src="video/mediaelement-and-player.min.js"></script> 
+<script src="javascript/main.js"></script> 
+<script src="javascript/article_main.js"></script> 
+<script src="javascript/loading_list.js"></script> 
+<!--初始化foundation组件和视频组件--> 
+<script>
+    	$(document).foundation();
+    	$('video,audio').mediaelementplayer();
+</script>
+</body>
+</html>

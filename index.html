@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh" lang="zh">
+<!--在XML里，使用“xml:lang” 方便屏幕阅读器方便阅读-->
+
+<head>
+    <meta charset="UTF-8" />
+    <!--指定字符编码-->
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+    <!--整个页面宽度等于手机可视宽度-->
+    <meta name="keywords" content="符合无障碍标准" />
+    <title>福建省委党支部</title>
+    <!--无障碍标签要求：title中的内容应包含<h1></h1>中的内容-->
+    <link rel="stylesheet" type="text/less" href="style/themes.less" />
+    <link rel="stylesheet" type="text/css" href="style/layout.css" />
+    <link rel="stylesheet" type="text/css" href="style/master.css" />
+    <script src="javascript/vendor/modernizr.js"></script>
+    <!--Modernizr HTML5元素兼容旧版本浏览器,并为移动设备提供检测。-->
+    <script src="javascript/vendor/jquery.js"></script>
+    <script src="javascript/es5-shim-2.1.0.min.js"></script>
+    <!--LESS兼容在IE9以下下面使用JS-->
+    <script src="javascript/less-1.4.2.min.js"></script>
+    <!--LESS用到的JS-->
+</head>
+
+<body>
+    <div id="layout">
+        <!--页面切换效果代码-->
+        <div id="frame_background" class="background">
+            <!--header-->
+            <div class="row" id="frame_header" include="include.html">
+                <div class="large-12" id="frame_header_row1">
+                    <!--头部工具条内容-->
+                    <div class="tool-bar show-for-large clearfix " id="frame_header_tool">
+                        <div class="tool-fl" id="data_home"><a href="index.html">www.fiet.gov.cn</a></div>
+                        <div class="tool-fr" id="data_maininfo">·<a href="http://www.fiet.gov.cn/">网页版</a>·<a href="article.html">使用帮助</a></div>
+                    </div>
+                    <!--头部banner内容-->
+                    <div class="top_banner show-for-large" id="frame_header_banner"><span class="banner"></span></div>
+                </div>
+                <div class="row" id="frame_header_row2">
+                    <div class="large-12 columns" id="frame_header_nav">
+                        <div id="data_header_nav">
+                            <nav class="top-bar" data-topbar role="navigation" aria-labelledby="sp_nav">
+                                <h1 class="offscreen">福建省商务厅导航栏</h1>
+                                <!--无障碍标签要求:NAV中的UL前至少要包含一个H1或者H2内容，样式设置超出屏幕-->
+                                <!-- 小于768下导航 -->
+                                <ul class="title-area">
+                                    <li class="toggle-topbar menu-icon" title="弹出主菜单"></li>
+                                    <li class="name">
+                                        <h1>福建省商务厅</h1>
+                                        <!--无障碍标签要求：title中的内容应包含<h1></h1>中的内容-->
+                                    </li>
+                                    <li class="search-icon" onClick="displaysearch()" title="进行搜索栏"></li>
+                                </ul>
+                                <!-- END 小于768下导航 -->
+                                <!-- 大于768下导航 -->
+                                <section class="top-bar-section">
+                                    <ul class="left" id="sp_nav">
+                                        <li class="divider"></li>
+                                        <li class="active"><a href="index.html">首页</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="infolist.html">走进外经贸厅</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="detail.html">信息公开</a> </li>
+                                        <li class="divider"></li>
+                                        <li><a href="piclist.html">在线办事</a></li>
+                                        <li class="divider"></li>
+                                        <li class="has-dropdown"><a href="votearticle.html">公众参与</a>
+                                            <ul class="dropdown">
+                                                <li><a href="infolist.html">通知通告</a></li>
+                                                <li><a href="votearticle.html">公众参与</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </section>
+                                <!-- 大于768下导航 -->
+                            </nav>
+                            <!-- 头部搜索 -->
+                            <div class="topsearch" id="topsearch" role="search">
+                                <!--无障碍标签：role="search定义该内容为搜索区域-->
+                                <form>
+                                    <div class="small-9 columns">
+                                        <input class="top_s_input" type="text" placeholder="请输入关键字" accesskey="s" title="输入查询内容输入框" x-webkit-speech="" x-webkit-grammar="builtin:translate" lang="zh-CN" />
+                                        <!--placeholder="请输入关键字"为HTML5标签,x-webkit-speech=""谷歌云搜索；builtin:search"值使得语音输入的内容尽量靠近搜索内容;lang="zh-CN"设置语言为中文-->
+                                    </div>
+                                    <div class="small-3 columns">
+                                        <input class="button top_search" type="button" onclick="window.location.href='http://192.168.14.97:8080/acc/search/searchlist.html'" value="搜 索" />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- main -->
+            <div id="frame_main" role="main" aria-label="主体区块" class="main_con">
+                <!--无障碍标签role="main",aria-label="主体区域"，表示主体内容-->
+                <div class="row" id="frame_main_row1">
+                    <div class="large-6 columns" id="frame_r1i_left">
+                        <!--幻灯片-->
+                        <div class="slideshow-wrapper auto_list" id="data_slide_show">
+                            <!--"auto_list" "title" "a"标签为字数截取样式--><span class="preloader"></span>
+                            <ul id="featured1" data-orbit data-options="timer_speed:5000;">
+                                <li class="active"><img src="images/newimg_01.jpg" alt="幻灯片一:闽港文化产业战略合作框架协议在福州签署。" />
+                                    <div class="orbit-caption title"><a href="article.html" title="闽港文化产业战略合作框架协议在福州签署">闽港文化产业战略合作框架协议在福州签署</a></div>
+                                </li>
+                                <li> <img src="images/newimg_02.jpg" alt="幻灯片二:苏树林省长来我厅调研座谈" />
+                                    <div class="orbit-caption title"><a href="article.html" title="苏树林省长来我厅调研座谈">苏树林省长来我厅调研座谈</a></div>
+                                </li>
+                                <li><img src="images/newimg_03.jpg" alt="幻灯片三:省外经贸厅举办厅党组中心组（扩大）理论学习专题辅导讲座" />
+                                    <div class="orbit-caption title"> <a href="article.html" title="省外经贸厅举办厅党组中心组（扩大）理论学习专题辅导讲座">省外经贸厅举办厅党组中心组（扩大）理论学习专题辅导讲座</a></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--END 幻灯片-->
+                    </div>
+                    <div class="large-6 columns padl-large" id="frame_r1i_right">
+                        <!--政务动态-->
+                        <div id="mod_r1i_right" class="m_zwdt mod-rec-m1 mart10">
+                            <div class="modhead">
+                                <div class="modtitle">
+                                    <h3><a href="infolist.html">政务动态</a></h3></div>
+                                <div class="modmore"><a href="infolist.html" title="查看更多政务动态">更多</a></div>
+                            </div>
+                            <div class="modcon">
+                                <div id="data_r1i_right" class="em-dcon auto_list">
+                                    <!--字数截取"auto-list" "title" "a"/"p"  -->
+                                    <ul class="title clearfix">
+                                        <li class="em-news"><a href="article.html" title="刘德培副厅长会见新加坡驻厦门总领事馆罗德杰总领事">刘德培副厅长会见新加坡驻厦门总领事馆罗德杰总领事</a></li>
+                                        <!--文字内容有截断的，添加title属性，注明完整内容-->
+                                        <li><span class="time">12-05</span><a href="article.html" title="省外经贸厅（口岸办）传达学习十八届三中全会和省委九届十次全会精神">省外经贸厅（口岸办）传达学习十八届三中全会和省委九届十次全会精神</a> </li>
+                                        <li><span class="time">12-05</span><a href="videoarticle.html" title="杏林检验检疫局优化监管便利通关服务外经外贸工作举措(视频文章页)">杏林检验检疫局优化监管便利通关服务外经外贸工作举措</a></li>
+                                        <li><span class="time">12-05</span><a href="votearticle.html" title="陈少和副厅长会见新加坡企业发展局客人(投票文章页)">陈少和副厅长会见新加坡企业发展局客人</a></li>
+                                        <li><span class="time">12-05</span><a href="scenicarticle.html" title="我省举办《海峡两岸服务贸易协议》宣讲培训(景点文章页)">我省举办《海峡两岸服务贸易协议》宣讲培训</a></li>
+                                        <li><span class="time">12-05</span><a href="article.html" title="简化外保内贷管理，支持实体经济发展">简化外保内贷管理，支持实体经济发展</a></li>
+                                    </ul>
+                                    <div class="btn-more"><a href="infolist.html" title="查看更多政务动态">查看更多</a></div>
+                                    <!--文字内容需要结合上下文才可以知道目标页面的，添加title属性，注明链接的目标-->
+                                </div>
+                            </div>
+                        </div>
+                        <!--END 政务动态-->
+                    </div>
+                </div>
+                <div class="row" id="frame_main_row2">
+                    <div class="large-l2" id="frame_r2i_inner">
+                        <div id="mod_r2i_xxgk" class="mod-rec-l1 mart10">
+                            <div class="modhead">
+                                <div class="modtitle">
+                                    <!--大标题-->
+                                    <h2 class="head_title"><a href="infolist.html">信息公开</a></h2>
+                                </div>
+                            </div>
+                            <div class="modcon">
+                                <div class="row" id="frame_r2i_con">
+                                    <div class="large-8 columns" id="frame_r2i_cl">
+                                        <!--TAB切换1-->
+                                        <div class="tab-rec-1 col_2  g_i_box clearfix" id="mod_r2i_cl">
+                                            <div class="tab clearfix">
+                                                <ul class="clearfix" id="news">
+                                                    <li class="on">
+                                                        <div class="tl">
+                                                            <div class="tr">
+                                                                <div class="tc">
+                                                                    <h3><a href="#">市局动态</a></h3></div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="tl">
+                                                            <div class="tr">
+                                                                <div class="tc">
+                                                                    <h3><a href="#">政策法规</a></h3></div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="modcon clearfix">
+                                                <div id="frame_r2i_cl1">
+                                                    <div id="data_r2i_cl1">
+                                                        <div class="info_list auto_list">
+                                                            <ul class="title">
+                                                                <li><span class="time">12-05</span><a class="sort" href="article.html" title="更多福州区域的信息">福州</a><a href="article.html" title="福州市服务外包理论与实务培训班在榕举办">福州市服务外包理论与实务培训班在榕举办</a> </li>
+                                                                <li><span class="time">12-05</span><a class="sort" href="article.html" title="更多厦门区域的信息">厦门</a><a href="article.html" title="厦门成功入选全国城市共同配送试点城市">厦门成功入选全国城市共同配送试点城市</a> </li>
+                                                                <li><span class="time">12-05</span><a class="sort" href="article.html" title="更多厦门区域的信息">厦门</a><a href="article.html" title="厦门市会展市场进一步回暖">厦门市会展市场进一步回暖</a> </li>
+                                                                <li><span class="time">12-05</span><a class="sort" href="article.html" title="更多厦门区域的信息">厦门</a><a href="article.html" title="市商务局党组书记陈灿煌赴厦门乃尔电子公司调研">市商务局党组书记陈灿煌赴厦门乃尔电子公司调研</a> </li>
+                                                                <li><span class="time">12-05</span><a class="sort" href="article.html" title="更多厦门区域的信息">龙岩</a><a href="article.html" title="第十七届“11-8”机博会部分县（市、区）签约情况汇总">第十七届“11-8”机博会部分县（市、区）签约情况汇总</a> </li>
+                                                                <li><span class="time show-for-small">09-15</span><span class="time show-for-large"><a href="infolist.html">更 多</a></span><a class="sort" href="article.html" title="更多厦门区域的信息">厦门</a><a href="article.html" title="厦门成功入选全国城市共同配送试点城市">厦门成功入选全国城市共同配送试点城市</a> </li>
+                                                            </ul>
+                                                            <div class="btn-more"><a href="infolist.html" title="查看更多市局动态">查看更多</a></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="frame_r2i_cl2">
+                                                    <div id="data_r2i_cl2" class="hide">
+                                                        <div class="info_list auto_list">
+                                                            <ul class="title">
+                                                                <li><span class="time">12-05</span><a class="sort" href="article.html" title="更多福州区域的信息">福州</a><a href="article.html" title="2福州市服务外包理论与实务培训班在榕举办">福州市服务外包理论与实务培训班在榕举办</a> </li>
+                                                                <li><span class="time">12-05</span><a class="sort" href="article.html" title="更多厦门区域的信息">厦门</a><a href="article.html" title="厦门成功入选全国城市共同配送试点城市">厦门成功入选全国城市共同配送试点城市</a> </li>
+                                                                <li><span class="time">12-05</span><a class="sort" href="article.html" title="更多厦门区域的信息">厦门</a><a href="article.html" title="厦门市会展市场进一步回暖">厦门市会展市场进一步回暖</a> </li>
+                                                                <li><span class="time">12-05</span><a class="sort" href="article.html" title="更多厦门区域的信息">厦门</a><a href="article.html" title="市商务局党组书记陈灿煌赴厦门乃尔电子公司调研">市商务局党组书记陈灿煌赴厦门乃尔电子公司调研</a> </li>
+                                                                <li><span class="time">12-05</span><a class="sort" href="article.html" title="更多龙岩区域的信息">龙岩</a><a href="article.html" title="第十七届“11-8”机博会部分县（市、区）签约情况汇总">第十七届“11-8”机博会部分县（市、区）签约情况汇总</a> </li>
+                                                                <li><span class="time  show-for-small">09-15</span><span class="time  show-for-large"><a href="infolist.html">更 多</a></span><a class="sort" href="article.html" title="更多厦门区域的信息">厦门</a><a href="article.html" title="厦门成功入选全国城市共同配送试点城市">厦门成功入选全国城市共同配送试点城市</a> </li>
+                                                            </ul>
+                                                            <div class="btn-more"><a href="infolist.html" title="查看更多政策法规">查看更多</a></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--END TAB切换1-->
+                                    </div>
+                                    <div class="large-4 columns  padl-large" id="frame_r2i_cr">
+                                        <!--政府信息公开-->
+                                        <div id="mod_r2i_cr" class="m_xxgk mod-rec-s1 mart-small">
+                                            <div class="modhead">
+                                                <div class="modtitle">
+                                                    <h3> <a href="infolist.html">政府信息公开</a></h3></div>
+                                                <div class="modmore"> </div>
+                                            </div>
+                                            <div class="modcon">
+                                                <div id="data_r2i_cr">
+                                                    <ul>
+                                                        <li><span class="preicon"></span><a href="article.html">信息公开目录</a></li>
+                                                        <li><span class="preicon"></span><a href="article.html">信息公开指南</a></li>
+                                                        <li><span class="preicon"></span><a href="article.html">依申请公开</a></li>
+                                                        <li><span class="preicon"></span><a href="article.html">信息公开规定</a></li>
+                                                        <li><span class="preicon"></span><a href="article.html">信息公开意见箱</a></li>
+                                                        <li><span class="preicon"></span><a href="article.html">政府信息公开年度报告</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--END 政府信息公开-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--在线办事-->
+                <div class="row" id="frame_main_row3">
+                    <div class="large-l2" id="frame_r3i">
+                        <div id="mod_r3i_zxbs" class="mod-rec-l1 mart10">
+                            <div class="modhead">
+                                <div class="modtitle">
+                                    <!--大标题-->
+                                    <h2 class="head_title"><a href="infolist.html">在线办事</a></h2>
+                                </div>
+                            </div>
+                            <div class="modcon">
+                                <div class="row" id="frame_r3i_inner">
+                                    <div class="large-8 columns" id="frame_r3i_il">
+                                        <!--TAB切换2-->
+                                        <div class="tab-rec-1 col_3 g_i_box clearfix" id="mod_r3i_il">
+                                            <div class="tab clearfix">
+                                                <ul class="clearfix" id="company">
+                                                    <li class="on">
+                                                        <div class="tl">
+                                                            <div class="tr">
+                                                                <div class="tc">
+                                                                    <h3><a href="#">外贸事项</a></h3></div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="tl">
+                                                            <div class="tr">
+                                                                <div class="tc">
+                                                                    <h3><a href="">外资事项</a></h3></div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="tl">
+                                                            <div class="tr">
+                                                                <div class="tc">
+                                                                    <h3><a href="">外经事项</a></h3></div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="modcon">
+                                                <div id="frame_r3i_il1">
+                                                    <div id="data_r3i_il1">
+                                                        <div class="info_list auto_list">
+                                                            <ul class="zxbs_con title">
+                                                                <li><a href="article.html" title="自由技术进出口合同登记">自由技术进出口合同登记</a></li>
+                                                                <li><a href="article.html" title="入境审批程序">入境审批程序</a></li>
+                                                                <li><a href="article.html" titile="两用物项和技术进出口许可申请">两用物项和技术进出口许可申请</a></li>
+                                                                <li><a href="article.html" title="软件出口登记办理指南">软件出口登记办理指南</a></li>
+                                                                <li><a href="article.html" title="申领土耳其纺织品产地证方法及步骤">申领土耳其纺织品产地证方法及步骤</a></li>
+                                                                <li><a href="article.html" title="国际货代管理">国际货代管理</a></li>
+                                                                <li><a href="article.html" title="进出口许可证管理">进出口许可证管理</a></li>
+                                                                <li class="show-for-large"><a href="article.html" title="经营者备案登记">经营者备案登记</a></li>
+                                                                <li class="show-for-large"><a href="article.html" title="国际货代管理">国际货代管理</a></li>
+                                                                <li class="show-for-large"><a href="article.html" title="关于申请设立汽车品牌销售事项">关于申请设立汽车品牌销售事项</a></li>
+                                                                <li class="show-for-large"><a href="article.html" title="申请设立中外合资对外贸易公司">申请设立中外合资对外贸易公司</a></li>
+                                                                <li class="show-for-large time"><a href="infolist.html" title="查看更多外贸管理事项">更 多</a></li>
+                                                            </ul>
+                                                            <div class="btn-more"><a href="infolist.html" title="查看更多外贸管理事项">查看更多</a> </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="frame_r3i_il2">
+                                                    <div id="data_r3i_il2" class="hide">
+                                                        <div class="info_list auto_list">
+                                                            <ul class="zxbs_con  title">
+                                                                <li><a href="article.html" title="关于申请设立中外合资、合作旅行社的审批">关于申请设立中外合资、合作旅行社的审批</a></li>
+                                                                <li><a href="article.html" title="关于申请设立外商投资图书、报纸、期刊分销企业">关于申请设立外商投资图书、报纸、期刊分</a></li>
+                                                                <li><a href="article.html" title="关于申请设立外商投资电信企业事项">关于申请设立外商投资电信企业事项</a></li>
+                                                                <li><a href="article.html" title="申请设立中外合资对外贸易公司">申请设立中外合资对外贸易公司</a></li>
+                                                                <li><a href="article.html" title="关于申请设立外商投资企业城市规划服务企业事项">关于申请设立外商投资企业城市规划服务企</a></li>
+                                                                <li><a href="article.html" title="关于申请设立外商投资股份有限公司">关于申请设立外商投资股份有限公司</a></li>
+                                                                <li><a href="article.html" title="关于申请设立中外合作音像制品分销企业从">关于申请设立中外合作音像制品分销企业从申请设立中外合作音像制</a></li>
+                                                                <li class="show-for-large"><a href="article.html" title="关于申请设立汽车品牌销售事项">关于申请设立汽车品牌销售事项</a></li>
+                                                                <li class="show-for-large"><a href="article.html" title="申请设立中外合资对外贸易公司">申请设立中外合资对外贸易公司</a></li>
+                                                                <li class="show-for-large"><a href="article.html" title="关于申请设立汽车品牌销售事项">关于申请设立汽车品牌销售事项</a></li>
+                                                                <li class="show-for-large"><a href="article.html" title="申请设立中外合资对外贸易公司">申请设立中外合资对外贸易公司</a></li>
+                                                                <li class="show-for-large time"><a href="infolist.html" title="查看更多外资管理事项">更 多</a></li>
+                                                            </ul>
+                                                            <div class="btn-more"><a href="infolist.html" title="查看更多外资管理事项">查看更多</a></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="frame_r3i_il3">
+                                                    <div id="data_r3i_il3" class="hide">
+                                                        <div class="info_list auto_list">
+                                                            <ul class="zxbs_con  title">
+                                                                <li><a href="article.html" title="关于申请设立中外合资、合作旅行社的审批">关于申请设立中外合资、合作旅行社的审批</a></li>
+                                                                <li><a href="article.html" title="关于申请设立外商投资图书、报纸、期刊分销企业">关于申请设立外商投资图书、报纸、期刊分</a></li>
+                                                                <li><a href="article.html" title="关于申请设立外商投资电信企业事项">关于申请设立外商投资电信企业事项</a></li>
+                                                                <li><a href="article.html" title="申请设立中外合资对外贸易公司">申请设立中外合资对外贸易公司</a></li>
+                                                                <li><a href="article.html" title="关于申请设立外商投资企业城市规划服务企业事项">关于申请设立外商投资企业城市规划服务企</a></li>
+                                                                <li><a href="article.html" title="关于申请设立外商投资股份有限公司">关于申请设立外商投资股份有限公司</a></li>
+                                                                <li><a href="article.html" title="关于申请设立中外合作音像制品分销企业从">关于申请设立中外合作音像制品分销企业从</a></li>
+                                                                <li class="show-for-large"><a href="article.html" title="关于申请设立汽车品牌销售事项">关于申请设立汽车品牌销售事项</a></li>
+                                                                <li class="show-for-large"><a href="article.html" title="申请设立中外合资对外贸易公司">申请设立中外合资对外贸易公司</a></li>
+                                                                <li class="show-for-large"><a href="article.html" title="关于申请设立汽车品牌销售事项">关于申请设立汽车品牌销售事项</a></li>
+                                                                <li class="show-for-large"><a href="article.html" title="申请设立中外合资对外贸易公司">申请设立中外合资对外贸易公司</a></li>
+                                                                <li class="show-for-large time"><a href="infolist.html" title="查看更多外经管理事项">更 多</a></li>
+                                                            </ul>
+                                                            <div class="btn-more"><a href="infolist.html" title="查看更多外经管理事项">查看更多</a></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--END TAB切换2-->
+                                    </div>
+                                    <div class="large-4 columns  padl-large" id="frame_r3i_ir">
+                                        <!--办事结果查询与下载-->
+                                        <div id="data_r3i_ir" class="m_jgcx data-rec-1  mart-small">
+                                            <div class="head_title">当前网站共:<span>1042</span> 个服务项,<span>531</span> 个指南<span class="head_rbg"></span></div>
+                                            <div class="row dcon">
+                                                <div class="collapse">
+                                                    <form class="input_pd">
+                                                        <div class="large-12 inputcon  clearfix">
+                                                            <label for="down_bs" class="p-color">办事查询</label>
+                                                            <div class="small-8 columns">
+                                                                <input type="text" id="down_bs" placeholder="请输入关键字" title="请输入要查询内容的关键字" />
+                                                            </div>
+                                                            <div class="small-4 columns padleft10">
+                                                                <input class="button" type="button" value="查询" title="点击开始查询" onclick="location.href='infolist.html'" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="large-12  clearfix inputcon">
+                                                            <label for="down_ss" class="p-color">表格下载</label>
+                                                            <div class="small-8 columns">
+                                                                <input type="text" id="down_ss" placeholder="请输入关键字" title="请输入要搜索的关键字" />
+                                                            </div>
+                                                            <div class="small-4 columns padleft10">
+                                                                <input class="button" type="button" value="查询" title="点击查询表格" onclick="location.href='infolist.html'" />
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <button class="enter_onwork expand" onclick="location.href='article.html'">进入网上办事</button>
+                                            </div>
+                                        </div>
+                                        <!--END 办事结果查询与下载-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/互动交流/-->
+                <div class="row" id="frame_main_row4">
+                    <div class="large-l2" id="frame_row4_inner">
+                        <div id="mod_r4i_hdjl" class="mod-rec-l1 mart10">
+                            <div class="modhead">
+                                <div class="modtitle">
+                                    <!--大标题-->
+                                    <h2 class="head_title"><a href="infolist.html">互动交流</a></h2>
+                                </div>
+                            </div>
+                            <div class="modcon">
+                                <div class="row" id="frame_r4i_top">
+                                    <div class="large-8 columns" id="frame_r4i_tl">
+                                        <!--在线访谈-->
+                                        <div id="mod_r4i_tl" class="m_zxft mod-rec-s1">
+                                            <div class="modhead clearfix">
+                                                <div class="modtitle">
+                                                    <h3> <a href="http://192.168.14.97:8080/acc/interview/index.html" >在线访谈</a></h3></div>
+                                                <div class="modmore">
+                                                    <h4> <a href="http://192.168.14.97:8080/acc/interview/plan.html">年度访谈计划</a></h4></div>
+                                            </div>
+                                            <div class="modcon">
+                                                <div id="data_r4i_tl">
+                                                    <div class="large-l2 auto_list padleft10">
+                                                        <h5 class="ft_title"><span>访谈主题：</span><a href="http://192.168.14.97:8080/acc/interview/studio.html" >境外投资核准与资金支持政策</a></h5>
+                                                        <div class="row block-grid">
+                                                            <div class="small-4 columns"> <img alt="在线访谈图片信息简介" src="images/zxft.jpg" />
+                                                                <!-- 图片通过使"alt“加上文字简介-->
+                                                            </div>
+                                                            <div class="small-8 columns padleft10"> 嘉宾：<a>对外投资处陈扬处长</a>
+                                                                <Br> 时间：
+                                                                <span class="zxft_time">2013-10-17</span>
+                                                                <div class="conintro_01">
+                                                                    <div class="conintro_con">简介：<span class="desc">我厅安排对外投资就就境持政策到厅网站嘉宾室进行“在线访谈”，欢迎垂询。</span>
+                                                                        <div class="ask_button">
+                                                                            <ul>
+                                                                                <li>
+                                                                                    <button class="button" type="button" value="我要提问" onClick="location.href='http://192.168.14.97:8080/acc/interview/studio.html'"> 我要提问</button>
+                                                                                    <!--所有的 button 都已经有了一个隐含的 label，所以不再需要显示关联-->
+                                                                                </li>
+                                                                                <li>
+                                                                                    <button class="button" type="button" value="在线直播" onClick="location.href='http://192.168.14.97:8080/acc/interview/studio.html'">在线直播</button>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ft_title dborder"> <span>访谈预告:</span><a href="http://192.168.14.97:8080/acc/interview/index.html"> 下期访谈正在筹划中，敬请期待</a></div>
+                                                        <div class="ft_title"><span><a href="http://192.168.14.97:8080/acc/interview/list.html">往期访谈：</a></span></div>
+                                                        <div class="auto_list ft_list">
+                                                            <ul class="title">
+                                                                <li><span class="time">10-18</span><a href="http://192.168.14.97:8080/acc/interview/studio.html" title="加工贸易批准证变更及延期业务">加工贸易批准证变更及延期业务</a></li>
+                                                                <li><span class="time">10-18</span><a href="http://192.168.14.97:8080/acc/interview/studio.html" title="如何做好对外贸易经营者备案登记工作">如何做好对外贸易经营者备案登记工作</a> </li>
+                                                                <li><span class="time">10-18</span><a href="http://192.168.14.97:8080/acc/interview/studio.html" title="境外歧视性贸易政策调 查机制问题">境外歧视性贸易政策调查机制问题</a></li>
+                                                                <li><span class="time">10-18</span><a href="http://192.168.14.97:8080/acc/interview/studio.html" title="境外歧视性贸易政策调 查机制问题">境外歧视性贸易政策调查机制问题</a></li>
+                                                            </ul>
+                                                            <div class="btn-more"><a href="http://192.168.14.97:8080/acc/interview/list.html" title="查看更多往期访谈">查看更多</a>
+                                                                <!--文字内容需要结合上下文才可以知道目标页面的，添加title属性，注明链接的目标-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--END 在线访谈-->
+                                    </div>
+                                    <div class="large-4 columns padl-large" id="frame_r4i_tr">
+                                        <!--图文列表-->
+                                        <div id="mod_r4i_tr" class="mod_r006 mod-rec-s1 mart-small">
+                                            <div class="modhead">
+                                                <div class="modtitle">
+                                                    <h3 class="clearfix"><a href="detail.html">图文列表</a></h3></div>
+                                                <div class="modmore"><a href="detail.html" title="查看更多图文列表">更多</a></div>
+                                            </div>
+                                            <div class="modcon">
+                                                <div class="topic_list auto_list" id="data_r4i_tr">
+                                                    <div class="row">
+                                                        <div class="large-12 clearfix piclist_con">
+                                                            <a class="title" href="picarticle.html" title="省外经贸厅参观《党的生命线—群众路线档案》图片展">
+                                                                <span class="cut_out"><span class="round"></span>省外经贸厅参观《党的生命线—群众路线档案》图片展</span>
+                                                                <div class="list_con">
+                                                                    <div class="img"><img alt="" src="images/43_2.jpg" /></div>
+                                                                    <p class="des">为进一步深入开展党的群众路线教育实践活动，8月7日，省外贸厅组织机... </p>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="large-12 clearfix piclist_con">
+                                                            <a class="title" href="picarticle.html" title="省外经贸厅参观《党的生命线—群众路线档案》图片展">
+                                                                <span class="cut_out"><span class="round"></span>省外经贸厅参观《党的生命线—群众路线档案》图片展</span>
+                                                                <div class="list_con">
+                                                                    <div class="img"><img alt="" src="images/43_2.jpg" /></div>
+                                                                    <p class="des">为进一步深入开展党的群众路线教育实践活动，8月7日，省外贸厅组织机... </p>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="large-12 clearfix piclist_con no-border">
+                                                            <a class="title" href="picarticle.html" title="省外经贸厅参观《党的生命线—群众路线档案》图片展">
+                                                                <span class="cut_out"><span class="round"></span>省外经贸厅参观《党的生命线—群众路线档案》图片展</span>
+                                                                <div class="list_con">
+                                                                    <div class="img"><img alt="" src="images/43_2.jpg" /></div>
+                                                                    <p class="des">为进一步深入开展党的群众路线教育实践活动，8月7日，省外贸厅组织机... </p>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="btn-more"><a href="detail.html" title="查看更多图文列表">查看更多</a>
+                                                            <!--文字内容需要结合上下文才可以知道目标页面的，添加title属性，注明链接的目标-->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--END 图文列表-->
+                                    </div>
+                                </div>
+                                <div class="row" id="frame_r4i_bottom">
+                                    <div class="large-8 columns" id="frame_r4i_bl">
+                                        <!--办事结果-->
+                                        <div id="mod_r4i_bl" class="mod_jgcx mod-rec-s1 mart10">
+                                            <div class="modhead">
+                                                <div class="modtitle">
+                                                    <h3> <a href="infolist.html" >办事结果</a></h3></div>
+                                                <div class="modmore"><a href="infolist.html" title="查看更多办事结果">更多</a></div>
+                                            </div>
+                                            <div class="modcon">
+                                                <div id="data_r4i_bl" class="table_cons">
+                                                    <table summary="福建省企业办事情况信息表格">
+                                                        <!--给table添加summary属性，输入表格的概要；-->
+                                                        <caption class="offscreen">
+                                                            办事情况信息表
+                                                        </caption>
+                                                        <!--表格中必须包含caption标签，caption可以显示或隐藏；-->
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col" class="row00">企业名称</th>
+                                                                <!--标题使用th-->
+                                                                <th scope="col" class="row01">办理事项</th>
+                                                                <th scope="col" class="row02">申报日期</th>
+                                                                <th scope="col" class="row02">办件状态</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <!--使用THEAD，TFOOT，和TBODY来为行分组-->
+                                                        <tbody class="auto_list">
+                                                            <tr>
+                                                                <td class="title"><a href="article.html" title="福建福华纺织有限公司">福建福华纺织有限公司</a></td>
+                                                                <td>联网监管…</td>
+                                                                <td>2013-08-15</td>
+                                                                <td>办理中 </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="title"><a href="article.html" title="华映光电股份有限公司">华映光电股份有限公司</a></td>
+                                                                <td>联网监管…</td>
+                                                                <td>2013-08-15</td>
+                                                                <td>办结 </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="title"><a href="article.html" title="博能特（福州）工业有限公司">博能特（福州）工业有限公司</a></td>
+                                                                <td>联网监管…</td>
+                                                                <td>2013-08-15</td>
+                                                                <td>办结 </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="title"><a href="article.html" title="日立数字映像（福建）有限公司">日立数字映像（福建）有限公司</a></td>
+                                                                <td>联网监管…</td>
+                                                                <td>2013-08-15</td>
+                                                                <td>办结 </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="title"><a href="article.html" title="福建嘉达纺织股份有限公司">福建嘉达纺织股份有限公司</a></td>
+                                                                <td>加工贸易…</td>
+                                                                <td>2013-08-15</td>
+                                                                <td>办结 </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="title"><a href="article.html" title="福建华闽进出口有限公司">福建华闽进出口有限公司</a></td>
+                                                                <td>加工贸易…</td>
+                                                                <td>2013-08-15</td>
+                                                                <td>办结 </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--END 办事结果-->
+                                    </div>
+                                    <div class="large-4 columns  padl-large" id="frame_r4i_br">
+                                        <!--网上调查-->
+                                        <div id="mod_r4i_br" class="mod_r007 mod-rec-s1 mart10">
+                                            <div class="modhead clearfix">
+                                                <div class="modtitle">
+                                                    <h3><a href="votearticle.html">网上调查</a></h3></div>
+                                            </div>
+                                            <div class="modcon clearfix">
+                                                <div class="row" id="frame_r4i_br_inner">
+                                                    <div class="large-12" id="frame_r4i_i2">
+                                                        <div class="investigate" id="data_investigate_info">
+                                                            <div class="title">您认为福建省司法厅政务内网的改版，页面效果如何？</div>
+                                                            <form>
+                                                                <ul>
+                                                                    <li>
+                                                                        <input type="radio" id="ask1" name="myddc" role="radio" aria-label="单选一" value="" aria-checked="false" />
+                                                                        <!--aria-label="单选一" ,读屏软件可以读出所指向的为第几个选项-->
+                                                                        <label for="ask1">非常好，很专业！</label>
+                                                                        <!--使用和id一致label的标签可以扩大表单控件元素的点击区域-->
+                                                                    </li>
+                                                                    <li>
+                                                                        <input type="radio" id="ask2" name="myddc" role="radio" aria-label="单选二" value="" aria-checked="false" />
+                                                                        <label for="ask2">很好了，比旧版漂亮。</label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <input type="radio" id="ask3" name="myddc" role="radio" aria-label="单选三" value="" aria-checked="false" />
+                                                                        <label for="ask3">一般吧，可以接受。</label>
+                                                                    </li>
+                                                                    <li>
+                                                                        <input type="radio" id="ask4" name="myddc" role="radio" aria-label="单选四" value="" aria-checked="false" />
+                                                                        <label for="ask4">很差劲，不如旧版！</label>
+                                                                    </li>
+                                                                </ul>
+                                                                <div class="investigate-button clearfix">
+                                                                    <button type="button" class="button" onclick="location.href='votearticle.html'">投&nbsp;票</button>
+                                                                    <button type="button" class="button" onclick="location.href='votearticle.html'">查&nbsp;看</button>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--网上调查-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="frame_main_row5">
+                    <div class="large-8 columns" id="frame_row5_left">
+                        <!--图片列表-->
+                        <div id="mod_row5_photo_list" class="m_piclist  mod-rec-s1  mart10">
+                            <div class="modhead">
+                                <div class="modtitle">
+                                    <h3><a href="piclist.html">图片列表</a></h3></div>
+                                <div class="modmore"><a href="piclist.html" title="查看更多图片列表">更多</a></div>
+                            </div>
+                            <div class="modcon">
+                                <div id="frame_r5l_pl1">
+                                    <div class="photo_list auto_list" id="data_r5l_pl1">
+                                        <ul class="small-block-grid-2 large-block-grid-4 clearfix title" id="cms_piclist_con">
+                                            <li>
+                                                <a href="picarticle.html" class="th radius" title="送政策 解疑难 促发展—省外经贸厅积极推进"><img alt="" src="images/43_1.jpg" />
+                                                    <p>送政策 解疑难 促发展—省外经贸厅积极推进</p>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="picarticle.html" class="th radius" title="省外经贸厅参观《党的生命线—群众路线档案》图片展"><img alt="" src="images/43_2.jpg" />
+                                                    <p>省外经贸厅参观《党的生命线—群众路线档案》图片展</p>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="picarticle.html" class="th radius" title="省外经贸厅召开党的群众路线教育实践活动动员大会"><img alt="" src="images/43_3.jpg" />
+                                                    <p>省外经贸厅召开党的群众路线教育实践活动动员大会</p>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="picarticle.html" class="th radius" title="送政策 解疑难 促发展—省外经贸厅积极推进"><img alt="" src="images/43_1.jpg" />
+                                                    <p>送政策 解疑难 促发展—省外经贸厅积极推进</p>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div id="frame_r5l_pl2">
+                                    <div class="btn-more" id="data_r5l_pl2"><a href="piclist.html" title="查看更多图片列表">查看更多</a>
+                                        <!--文字内容需要结合上下文才可以知道目标页面的，添加title属性，注明链接的目标-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--END 图片列表-->
+                    </div>
+                    <div class="large-4 columns padl-large" id="frame_row5_right">
+                        <!--图片链接-->
+                        <div id="data_r5r_link">
+                            <div class="link_ad">
+                                <a href="article.html" title="点击进入福建省国际商务应用平台"><img alt="福建省国际商务应用平台" src="images/banner02.jpg" /></a>
+                                <a href="article.html" title="进入外经贸厅企业基本信息更新维护系统"><img alt="外经贸厅企业基本信息更新维护系统" src="images/banner01.jpg"></a>
+                            </div>
+                        </div>
+                        <!--END 图片链接-->
+                    </div>
+                </div>
+                <div class="row" id="frame_main_row6">
+                    <div class="large-8 columns" id="frame_row6_left">
+                        <!--视频列表-->
+                        <div id="mod_r6l_video_list" class="mod-rec-s1  mart10 video_box">
+                            <div class="modhead">
+                                <div class="modtitle">
+                                    <h3 class="clearfix"><a href="videolist.html">视频列表</a></h3></div>
+                                <div class="modmore"><a href="videolist.html" title="查看更多视频列表">更多</a></div>
+                            </div>
+                            <div class="modcon">
+                                <div class="photo_list auto_list" id="data_r6l_vl1">
+                                    <ul class="small-block-grid-2 large-block-grid-4 clearfix title" id="cms_videolist_con">
+                                        <li>
+                                            <a href="videoarticle.html" title="送政策 解疑难 促发展—省外经贸厅积极推进" class="th radius"><img alt="" src="images/43_1.jpg" />
+                                                <p>送政策 解疑难 促发展—省外经贸厅积极推进</p><span class="play_icon"></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="videoarticle.html" title="省外经贸厅参观《党的生命线—群众路线档案》图片展" class="th radius"><img alt="" src="images/43_2.jpg" />
+                                                <p>省外经贸厅参观《党的生命线—群众路线档案》图片展</p><span class="play_icon"></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="videoarticle.html" title="省外经贸厅召开党的群众路线教育实践活动动员大会" class="th radius"><img alt="" src="images/43_3.jpg" />
+                                                <p>省外经贸厅召开党的群众路线教育实践活动动员大会</p><span class="play_icon"></span></a>
+                                        </li>
+                                        <li>
+                                            <a href="videoarticle.html" title="送政策 解疑难 促发展—省外经贸厅积极推进" class="th radius"><img alt="" src="images/43_1.jpg" />
+                                                <p>送政策 解疑难 促发展—省外经贸厅积极推进</p><span class="play_icon"></span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="btn-more" id="data_r6l_vl2"><a href="videolist.html" title="查看更多视频列表">查看更多</a>
+                                    <!--文字内容需要结合上下文才可以知道目标页面的，添加title属性，注明链接的目标-->
+                                </div>
+                            </div>
+                        </div>
+                        <!--END 视频列表-->
+                    </div>
+                    <div class="large-4 columns padl-large" id="frame_row6_right">
+                        <!--热门景点-->
+                        <div class="mod_r062 mod-rec-s1  mart10" id="mod_r6r_rmjd">
+                            <div class="modhead">
+                                <div class="modtitle">
+                                    <h3><a href="infolist.html">热门景点</a> </h3></div>
+                                <div class="modmore"><a href="infolist.html" title="查看更多排行信息">更多</a> </div>
+                            </div>
+                            <div class="modcon">
+                                <div id="data_r6r_rmjd">
+                                    <ul class="auto_list list-info">
+                                        <li>
+                                            <div class="top-num top_01">1</div>
+                                            <div class="clearfix title"><span class="count">98745</span> <a href="scenicarticle.html" title="开拓资金">昙石山文化遗址博物馆昙石山文化遗址博物馆</a></div>
+                                        </li>
+                                        <li>
+                                            <div class="top-num top_02">2</div>
+                                            <div class="clearfix title"><span class="count">98745</span> <a href="scenicarticle.html" title="预警提示">万佛寺</a></div>
+                                        </li>
+                                        <li>
+                                            <div class="top-num top_03">3</div>
+                                            <div class="clearfix title"><span class="count">98745</span> <a href="scenicarticle.html" title="自由贸易区服务网">兔耳山</a></div>
+                                        </li>
+                                        <li>
+                                            <div class="top-num top_04">4</div>
+                                            <div class="clearfix title"><span class="count">98745</span> <a href="scenicarticle.html" title="出口基地建设">白沙湾</a></div>
+                                        </li>
+                                    </ul>
+                                    <div class="btn-more"><a href="infolist.html" title="查看更多热门排行">查看更多</a>
+                                        <!--文字内容需要结合上下文才可以知道目标页面的，添加title属性，注明链接的目标-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--END 热门景点-->
+                    </div>
+                </div>
+            </div>
+            <!--footer-->
+            <footer class="row footer" role="contentinfo" id="frame_footer">
+                <div class="large-l2" id="frame_footer_inner">
+                    <div id="data_footer_inner">
+                        <div class="copyright clearfix">福建省商务厅
+                            <br/>
+                            <span>Copyright &copy; 2004-2012</span> </div>
+                        <div class="footer_img clearfix">
+                            <ul>
+                                <li class="html5_bg"></li>
+                                <li class="w3c_bg">
+                                    <a href="http://www.w3.org/WAI/WCAG2AA-Conformance" title="2A无障碍说明" rel="external"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="go-return">
+                            <a title="返回顶部" class="go-top"></a>
+                            <a title="返回底部" class="go-bottom"></a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="javascript/foundation/foundation.js"></script>
+    <!--foundation框架用到的JS-->
+    <script src="javascript/foundation/foundation.orbit.js"></script>
+    <!--foundation幻灯片-->
+    <script src="javascript/foundation/foundation.topbar.js"></script>
+    <!--foundation头部菜单nav-->
+    <script src="javascript/foundation/foundation.dropdown.js"></script>
+    <!--foundation显示下拉-->
+    <script src="javascript/tab.exam.js" type="text/javascript"></script>
+    <script src="javascript/main.js"></script>
+    <!--页面共用JS-->
+    <script type="text/javascript">
+    new o_tab().init("company", "li", "data_r3i_il", "on", "", 1, "");
+    new o_tab().init("news", "li", "data_r2i_cl", "on", "", 1, "");
+    </script>
+    <script>
+    $(document).foundation(); /*foundation JS*/
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,716 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!--PC端访问优先使用IE最新版本和Chrome-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui" />
+    <meta name="apple-mobile-web-app-title" content="" />
+    <!--添加到主屏后的标题-->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!--WebApp全屏模式-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <!--设置状态栏颜色,content的值为default | black | black-translucent-->
+    <meta content="telephone=no" name="format-detection" />
+    <!--忽略数字自动识别为电话号码-->
+    <meta name="renderer" content="webkit" />
+    <!--优先采用webkit内核渲染-->
+    <meta name="keywords" content=" " />
+    <meta name="description" content="" />
+    <title>plugin</title>
+    <link rel="stylesheet" href="style/foundation.css" />
+    <link rel="stylesheet" href="style/foundation-flex-grid.css" />
+</head>
+
+<body>
+<div class="off-canvas-wrapper">
+  <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+    <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas>
+      <p>左侧弹出内容块</p>
+      <p>默认是从左侧弹出，如果在这个容器外面加上属性data-position="right"，那就会从右侧弹出</p>
+      <p>这个容器的class名为position-left或者position-right分别代表从左侧弹出和从右侧弹出</p>
+      <p>这个容器的id要和触发按钮的data-toggle="offCanvasLeft"值要一样</p>
+    </div>
+    <div class="off-canvas position-right" id="offCanvasRight" data-off-canvas data-position="right">
+      <p>右侧弹出内容块</p>
+      <p>默认是从左侧弹出，如果在这个容器外面加上属性data-position="right"，那就会从右侧弹出</p>
+      <p>这个容器的class名为position-left或者position-right分别代表从左侧弹出和从右侧弹出</p>
+      <p>这个容器的id要和触发按钮的data-toggle="offCanvasLeft"值要一样</p>
+    </div>
+    <div class="off-canvas-content" data-off-canvas-content>
+      <div class="row">
+          <h1>toggler切换操作</h1>
+      </div>
+      <div class="row">
+        <div class="small-12 columns">
+          <p>触发节点上要加data-toggle="menuBar",里面的值是要切换样式名的div的id名</p>
+          <p>要切换样式名的div要加上属性data-toggler=".expanded"，expanded为要切换的样式名</p>
+          <a class="button" data-toggle="menuBar">给列表添加或删除expanded样式名!</a>
+          <ul class="menu" id="menuBar" data-toggler=".expanded">
+            <li><a href="#">列表1</a></li>
+            <li><a href="#">列表2</a></li>
+            <li><a href="#">列表3</a></li>
+            <li><a href="#">列表4</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-12 columns">
+          <a class="button" data-toggle="panel">给面板添加或删除动画</a>
+          <div class="callout" id="panel" data-toggler data-animate="hinge-in-from-top spin-out">
+            <h4>动画切换</h4>
+            <p>需要引入animation的动画插件</p>
+            <p>要切换状态的面板上，要加data-toggler和data-animate="hinge-in-from-top spin-out"这2个属性</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-12 columns">
+          <div class="callout" data-closable="slide-out-right">
+            <button class="close-button" data-close>&times;</button>
+            <p>按钮加上属性data-close</p>
+            <p>外层容器要加上属性data-closable="slide-out-right"的动画效果</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+          <h1>tooltip提示框</h1>
+      </div>
+      <div class="row">
+        <div class="small-3 columns">
+          <span data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover='false' tabindex=1 title="默认提示框出现位置为下面">提示框出现在下面</span>
+        </div>
+        <div class="small-3 columns">
+          <span data-tooltip aria-haspopup="true" class="has-tip top" data-disable-hover="false" tabindex="3" title="提示框在右侧">提示框出现在上面</span>
+        </div>
+        <div class="small-3 columns">
+          <span data-tooltip aria-haspopup="true" class="has-tip right" data-disable-hover="false" tabindex="3" title="提示框在右侧">提示框出现在右边</span>
+        </div>
+        <div class="small-3 columns">
+          <span data-tooltip aria-haspopup="true" class="has-tip left" data-disable-hover="false" tabindex="4" title="提示框在左侧">提示框出现在左边</span>
+        </div>
+      </div>
+      <div class="row">
+          <h1>dropdown下拉</h1>
+      </div>
+      <div class="row">
+        <div class="small-12 columns">
+          <button class="button" type="button" data-toggle="example-dropdown">点击下拉</button>
+          <div class="dropdown-pane" id="example-dropdown" data-dropdown data-auto-focus="true">
+            <p>按钮配上data-toggle="example-dropdown"</p>
+            <p>弹出框的id="example-dropdown"，并配上属性data-dropdown和data-auto-focus="true"</p>
+          </div>
+          <button class="button" type="button" data-toggle="example-dropdown-1">经过下拉</button>
+          <div class="dropdown-pane" id="example-dropdown-1" data-dropdown data-hover="true">
+            Just some junk that needs to be said. Or not. Your choice.
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-4 columns">
+          <button class="button" type="button" data-toggle="example-dropdown2">点击上拉</button>
+          <div class="dropdown-pane top" id="example-dropdown2" data-dropdown>
+            在弹出层面板dropdown-pane里加样式名top
+          </div>
+        </div>
+        <div class="small-4 columns">
+          <button class="button" type="button" data-toggle="example-dropdown3">点击右拉</button>
+          <div class="dropdown-pane right" id="example-dropdown3" data-dropdown>
+            在弹出层面板dropdown-pane里加样式名right
+          </div>
+        </div>
+        <div class="small-4 columns">
+          <button class="button" type="button" data-toggle="example-dropdown4">点击左拉</button>
+          <div class="dropdown-pane left" id="example-dropdown4" data-dropdown>
+            在弹出层面板dropdown-pane里加样式名left
+          </div>
+        </div>
+      </div>
+      <div class="row">
+          <h1>dropdown menus下拉导航</h1>
+      </div>
+      <div class="row">
+          <div class="small-12 columns">水平方向的导航
+              <ul class="dropdown menu" data-dropdown-menu>
+                  <li>
+                      <a href="#">导航 1</a>
+                      <ul class="menu">
+                          <li><a href="#">导航 1A</a></li>
+                          <li><a href="#">导航 1B</a></li>
+                          <li><a href="#">导航 1C</a></li>
+                          <li><a href="#">导航 1D</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="#">导航 2</a></li>
+                  <li><a href="#">导航 3</a></li>
+                  <li><a href="#">导航 4</a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="row">
+          <div class="small-12 columns">垂直方向的导航
+            <ul class="vertical dropdown menu" data-dropdown-menu style="max-width: 300px;">
+              <li>
+                <a href="#">导航 1</a>
+                <ul class="menu">
+                  <li><a href="#">导航 1A Loooong</a></li>
+                  <li><a href="#">导航 1B</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">导航 2</a>
+                <ul class="menu">
+                  <li><a href="#">导航 2A</a></li>
+                  <li><a href="#">导航 2B</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">导航 3</a>
+                <ul class="menu">
+                  <li><a href="#">导航 3A</a></li>
+                  <li><a href="#">导航 3B</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">导航 1</a>
+                <ul class="menu">
+                  <li><a href="#">导航 1A Loooong</a></li>
+                  <li>
+                    <a href="#">导航 1 sub</a>
+                    <ul class="menu">
+                      <li><a href="#">导航 1 subA</a></li>
+                      <li><a href="#">导航 1 subB</a></li>
+                      <li>
+                        <a href="#"> 导航 1 sub</a>
+                        <ul class="menu">
+                          <li><a href="#">导航 1 subA</a></li>
+                          <li><a href="#">导航 1 subB</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#">导航 1 sub</a>
+                        <ul class="menu">
+                          <li><a href="#">导航 1 subA</a></li>
+                          <li><a href="#">导航 1 subB</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a href="#">导航 1B</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+      </div>
+      <div class="row">
+          <h1>drilldown menu侧滑导航</h1>
+      </div>
+      <div class="row">
+          <div class="small-12 columns">从右侧方向滑出的二级导航
+            <ul class="vertical menu" data-drilldown style="width: 200px" id="m1">
+              <li>
+                <a href="#">导航 1</a>
+                <ul class="vertical menu">
+                  <li>
+                    <a href="#">导航 1A</a>
+                    <ul class="vertical menu">
+                      <li><a href="#">导航 1Aa</a></li>
+                      <li><a href="#">导航 1Ba</a></li>
+                      <li><a href="#">导航 1Ca</a></li>
+                      <li><a href="#">导航 1Da</a></li>
+                      <li><a href="#">导航 1Ea</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">导航 1B</a></li>
+                  <li><a href="#">导航 1C</a></li>
+                  <li><a href="#">导航 1D</a></li>
+                  <li><a href="#">导航 1E</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">导航 2</a>
+                <ul class="vertical menu">
+                  <li><a href="#">导航 2A</a></li>
+                  <li><a href="#">导航 2B</a></li>
+                  <li><a href="#">导航 2C</a></li>
+                  <li><a href="#">导航 2D</a></li>
+                  <li><a href="#">导航 2E</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">导航 3</a>
+                <ul class="vertical menu">
+                  <li><a href="#">导航 3A</a></li>
+                  <li><a href="#">导航 3B</a></li>
+                  <li><a href="#">导航 3C</a></li>
+                  <li><a href="#">导航 3D</a></li>
+                  <li><a href="#">导航 3E</a></li>
+                </ul>
+              </li>
+              <li><a href="#">导航 4</a></li>
+            </ul>
+          </div>
+      </div>
+      <div class="row">
+          <h1>accordion menu折叠导航</h1>
+      </div>
+      <div class="row">
+          <div class="small-12 columns">折叠导航
+            <ul class="vertical menu" data-accordion-menu>
+              <li>
+                <a href="#">导航 1</a>
+                <ul class="menu vertical nested is-active">
+                  <li>
+                    <a href="#">导航 1A</a>
+                    <ul class="menu vertical nested">
+                      <li><a href="#">导航 1Ai</a></li>
+                      <li><a href="#">导航 1Aii</a></li>
+                      <li><a href="#">导航 1Aiii</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">导航 1B</a></li>
+                  <li><a href="#">导航 1C</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">导航 2</a>
+                <ul class="menu vertical nested">
+                  <li><a href="#">导航 2A</a></li>
+                  <li><a href="#">导航 2B</a></li>
+                </ul>
+              </li>
+              <li><a href="#">导航 3</a></li>
+            </ul>
+          </div>
+      </div>
+      <div class="row">
+          <h1>responsive menu响应式导航</h1>
+      </div>
+      <div class="row">
+        <div class="small-12 columns">小屏是vertical竖直方向，中大屏是medium-horizontal水平方向
+          <ul class="vertical medium-horizontal menu">
+            <li><a href="#">导航 1</a></li>
+            <li><a href="#">导航 2</a></li>
+            <li><a href="#">导航 3</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-12 columns">小屏是drilldown右侧侧滑弹出，中大屏是medium-dropdown经过下拉弹出
+          <ul class="vertical menu" data-responsive-menu="drilldown medium-dropdown" style="width: 300px;">
+            <li class="has-submenu">
+              <a href="#">导航 1</a>
+              <ul class="vertical submenu menu" data-submenu id="m2">
+                <li class="has-submenu">
+                  <a href="#">导航 1A</a>
+                  <ul class="vertical submenu menu" data-submenu id="m3">
+                    <li><a href="#">导航 1A</a></li>
+                    <li><a href="#">导航 1B</a></li>
+                    <li><a href="#">导航 1C</a></li>
+                    <li><a href="#">导航 1D</a></li>
+                    <li><a href="#">导航 1E</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">导航 1B</a></li>
+              </ul>
+            </li>
+            <li class="has-submenu">
+              <a href="#">导航 2</a>
+              <ul class="vertical submenu menu" data-submenu>
+                <li><a href="#">导航 2A</a></li>
+                <li><a href="#">导航 2B</a></li>
+              </ul>
+            </li>
+            <li class="has-submenu">
+              <a href="#">导航 3</a>
+              <ul class="vertical submenu menu" data-submenu>
+                <li><a href="#">导航 3A</a></li>
+                <li><a href="#">导航 3B</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-12 columns">大屏下是正常显示，中小屏下变成按钮触发下拉
+          <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle></button>
+            <div class="title-bar-title">导航</div>
+          </div>
+          <div class="top-bar" id="example-menu">
+            <div class="top-bar-left">
+              <ul class="dropdown menu" data-dropdown-menu>
+                <li class="menu-text">站点标题</li>
+                <li class="has-submenu">
+                  <a href="#">导航 1</a>
+                  <ul class="submenu menu vertical" data-submenu>
+                    <li><a href="#">导航 1A</a></li>
+                    <li><a href="#">导航 1B</a></li>
+                    <li><a href="#">导航 1C</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">导航 2</a></li>
+                <li><a href="#">导航 3</a></li>
+              </ul>
+            </div>
+            <div class="top-bar-right">
+              <ul class="menu">
+                <li><input type="search" placeholder="请输入..."></li>
+                <li><button type="button" class="button">搜索</button></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+          <h1>magellan悬浮跟踪定位</h1>
+      </div>
+      <div class="row">
+        <div class="small-12 columns">
+          <ul class="horizontal menu" data-magellan>
+            <li><a href="#first">标题一</a></li>
+            <li><a href="#second">标题二</a></li>
+            <li><a href="#third">标题三</a></li>
+          </ul>
+          <div class="sections">
+            <section id="first" data-magellan-target="first">标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一标题一</section>
+            <section id="second" data-magellan-target="second">标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二标题二</section>
+            <section id="third" data-magellan-target="third">标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三标题三</section>
+          </div>
+        </div>
+      </div>
+  <!--     <div class="row">
+        <div class="small-12 columns">
+          <div class="large-3 columns" data-sticky-container>
+            <nav class="columns" data-sticky data-anchor="exampleId" data-sticky-on="large">
+              <ul class="vertical menu" data-magellan>
+                <li><a href="#first">标题一</a></li>
+                <li><a href="#second">标题二</a></li>
+                <li><a href="#third">标题三</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div data-sticky-container>
+            <div class="sticky" id="example" data-sticky data-margin-top="0" style="width:100%;" data-margin-bottom="0" data-top-anchor="topAnchorExample" data-btm-anchor="bottomOfContentId:bottom">
+              <nav data-magellan>
+                <ul class="horizontal menu expanded">
+                <li><a href="#first">标题一</a></li>
+                <li><a href="#second">标题二</a></li>
+                <li><a href="#third">标题三</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <div class="row">
+          <h1>accordion折叠列表</h1>
+      </div>
+      <div class="row">
+        <div class="small-4 columns">默认
+          <ul class="accordion" data-accordion>
+            <li class="accordion-item is-active">
+              <a href="#" class="accordion-title">列表1</a>
+              <div class="accordion-content" data-tab-content >
+                <p>在要默认展开的列表上加is-active样式名，默认就变成展开。</p>
+                <p>默认只有一个li是展开的，另外一个展开，当前那个就消失。</p>
+                <a href="#">喜欢我不？</a>
+              </div>
+            </li>
+            <li class="accordion-item">
+              <a href="#" class="accordion-title">列表2</a>
+              <div class="accordion-content" data-tab-content>
+                <textarea></textarea>
+                <button class="button">还在等什么？</button>
+              </div>
+            </li>
+            <li class="accordion-item">
+              <a href="#" class="accordion-title">列表3</a>
+              <div class="accordion-content" data-tab-content>
+                挑个时间表白吧！
+                <input type="date"></input>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="small-4 columns">允许同时展开多个，data-multi-expand="true"
+          <ul class="accordion" data-accordion data-multi-expand="true">
+            <li class="accordion-item is-active">
+              <a href="#" class="accordion-title">列表1</a>
+              <div class="accordion-content" data-tab-content >
+                <p>加上data-multi-expand="true"，另外一个展开，当前那个不会消失。</p>
+                <a href="#">喜欢我不？</a>
+              </div>
+            </li>
+            <li class="accordion-item">
+              <a href="#" class="accordion-title">列表2</a>
+              <div class="accordion-content" data-tab-content>
+                <textarea></textarea>
+                <button class="button">还在等什么？</button>
+              </div>
+            </li>
+            <li class="accordion-item">
+              <a href="#" class="accordion-title">列表3</a>
+              <div class="accordion-content" data-tab-content>
+                挑个时间表白吧！
+                <input type="date"></input>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="small-4 columns">允许将所有列表都关闭，data-allow-all-closed="true"
+          <ul class="accordion" data-accordion data-allow-all-closed="true">
+            <li class="accordion-item is-active">
+              <a href="#" class="accordion-title">列表1</a>
+              <div class="accordion-content" data-tab-content >
+                <p>加上data-allow-all-closed="true"，可以实现所有列表都关闭。</p>
+                <a href="#">喜欢我不？</a>
+              </div>
+            </li>
+            <li class="accordion-item">
+              <a href="#" class="accordion-title">列表2</a>
+              <div class="accordion-content" data-tab-content>
+                <textarea></textarea>
+                <button class="button">还在等什么？</button>
+              </div>
+            </li>
+            <li class="accordion-item">
+              <a href="#" class="accordion-title">列表3</a>
+              <div class="accordion-content" data-tab-content>
+                挑个时间表白吧！
+                <input type="date"></input>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+          <h1>off-canvas屏幕左右弹出块</h1>
+      </div>
+      <div class="row">
+        <div class="small-12 columns">
+          <button type="button" class="button" data-toggle="offCanvasLeft">左侧弹出</button>
+          <button type="button" class="button" data-toggle="offCanvasRight">右侧弹出</button>
+        </div>
+      </div>
+      <div class="row">
+          <h1>reveal模态窗口</h1>
+      </div>
+      <div class="row">
+        <div class="small-4 columns">
+          <p><a data-open="exampleModal1">点击弹出模态窗口</a></p>
+          <div class="reveal" id="exampleModal1" data-reveal>
+            <h1>最基本的模态窗口</h1>
+            <p class="lead">最基本的模态窗口</p>
+            <p>最基本的模态窗口!</p>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
+        <div class="small-4 columns">
+          <p><a data-toggle="exampleModal11">点击弹出模态窗口，在模态窗口中可以再次弹出模态窗口</a></p>
+          <div class="reveal" id="exampleModal11" data-reveal>
+            <h1>可以再次弹出模态窗口!</h1>
+            <p class="lead">可以再次弹出模态窗口!</p>
+            <a class="button" data-toggle="exampleModal111">可以再次弹出模态窗口!</a>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="reveal" id="exampleModal111" data-reveal>
+            <h2>内层的模态窗口!!!</h2>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
+        <div class="small-4 columns">
+          <p><a data-toggle="exampleModal12">点击弹出视频模态窗口</a></p>
+          <div class="reveal" id="exampleModal12" data-reveal data-reset-on-close="true">
+            <h2 id="videoModalTitle">视频模态窗口</h2>
+            <div class="flex-video widescreen vimeo">
+              <iframe width="1280" height="720" src="mov/sugar.mp4" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-4 columns">
+          <p><a data-toggle="exampleModal2" aria-controls="exampleModal2">点击弹出tiny模态窗口</a></p>
+          <div class="tiny reveal" id="exampleModal2" data-reveal>
+            <p>tiny模态窗口!</p>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
+        <div class="small-4 columns">
+          <p><a data-toggle="exampleModal21">点击弹出small模态窗口</a></p>
+          <div class="small reveal" id="exampleModal21" data-reveal>
+            <p>small模态窗口!</p>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
+        <div class="small-4 columns">
+          <p><a data-toggle="exampleModal22">点击弹出large模态窗口</a></p>
+          <div class="large reveal" id="exampleModal22" data-reveal>
+            <p>large模态窗口!</p>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-4 columns">
+          <p><a data-toggle="exampleModal3">点击弹出full-screen模态窗口</a></p>
+          <div class="full reveal" id="exampleModal3" data-reveal>
+            <p>full-screen模态窗口!</p>
+            <img src="images/large.jpg" height="300" width="1000" alt="Intropsective Cage">
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
+        <div class="small-4 columns">
+          <p><a data-toggle="exampleModal4">点击弹出没有背景模态窗口，配置data-overlay="false"</a></p>
+          <div class="reveal" id="exampleModal4" data-reveal data-overlay="false">
+            <p>overlay-lacking模态窗口!</p>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
+        <div class="small-4 columns">
+          <p><a data-toggle="animatedModal1">点击弹出动画模态窗口，在模态窗口上配置data-animation-in="spin-in" data-animation-out="spin-out"，需要引入动画js文件</a></p>
+          <div class="reveal" id="animatedModal1" data-reveal data-close-on-click="true" data-animation-in="spin-in" data-animation-out="spin-out">
+            <h1>动画模态窗口!</h1>
+            <p class='lead'>动画模态窗口</p>
+            <button class="close-button" data-close aria-label="Close reveal" type="button">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+          <h1>tabs切换</h1>
+      </div>
+      <div class="row">
+        <div class="small-12 columns">
+          <ul class="tabs" id="example-vert-tabs1" data-tabs>
+            <li class="tabs-title is-active"><a href="#panel11v" aria-selected="true">Tab 1</a></li>
+            <li class="tabs-title"><a href="#panel12v">Tab 2</a></li>
+            <li class="tabs-title"><a href="#panel13v">Tab 3</a></li>
+            <li class="tabs-title"><a href="#panel14v">Tab 4</a></li>
+            <li class="tabs-title"><a href="#panel15v">Tab 5</a></li>
+            <li class="tabs-title"><a href="#panel16v">Tab 6</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-12 columns">
+          <div class="tabs-content" data-tabs-content="example-vert-tabs1">
+            <div class="tabs-panel is-active" id="panel11v">
+              <p>tabs上要加data-tabs属性</p>
+              <p>tabs上的id要和tabs-content的data-tabs-content="example-vert-tabs"值一致</p>
+              <p>tabs-title和tabs-panel上加is-active，标记显示的tab块</p>
+              <p>tabs-title里a标签的href名要和tabs-panel的id名要一一对应</p>
+            </div>
+            <div class="tabs-panel" id="panel12v">
+              <p>tabs上要加data-tabs属性</p>
+              <p>tabs上的id要和tabs-content的data-tabs-content="example-vert-tabs"值一致</p>
+              <p>tabs-title和tabs-panel上加is-active，标记显示的tab块</p>
+              <p>tabs-title里a标签的href名要和tabs-panel的id名要一一对应</p>
+            </div>
+            <div class="tabs-panel" id="panel13v">
+              <img class="thumbnail" src="images/large.jpg">
+            </div>
+            <div class="tabs-panel" id="panel14v">
+              <p>tabs上要加data-tabs属性</p>
+              <p>tabs上的id要和tabs-content的data-tabs-content="example-vert-tabs"值一致</p>
+              <p>tabs-title和tabs-panel上加is-active，标记显示的tab块</p>
+              <p>tabs-title里a标签的href名要和tabs-panel的id名要一一对应</p>
+            </div>
+            <div class="tabs-panel" id="panel15v">
+              <p>tabs上要加data-tabs属性</p>
+              <p>tabs上的id要和tabs-content的data-tabs-content="example-vert-tabs"值一致</p>
+              <p>tabs-title和tabs-panel上加is-active，标记显示的tab块</p>
+              <p>tabs-title里a标签的href名要和tabs-panel的id名要一一对应</p>
+            </div>
+            <div class="tabs-panel" id="panel16v">
+              <img class="thumbnail" src="images/large.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <h3>水平方向的tabs切换，在tabs和tabs-content上都加上vertical样式名即可</h3>
+      </div>
+      <div class="row collapse">
+        <div class="small-3 columns">
+          <ul class="tabs vertical" id="example-vert-tabs2" data-tabs>
+            <li class="tabs-title is-active"><a href="#panel21v" aria-selected="true">Tab 1</a></li>
+            <li class="tabs-title"><a href="#panel22v">Tab 2</a></li>
+            <li class="tabs-title"><a href="#panel23v">Tab 3</a></li>
+            <li class="tabs-title"><a href="#panel24v">Tab 4</a></li>
+            <li class="tabs-title"><a href="#panel25v">Tab 5</a></li>
+            <li class="tabs-title"><a href="#panel26v">Tab 6</a></li>
+          </ul>
+        </div>
+        <div class="small-9 columns">
+          <div class="tabs-content vertical" data-tabs-content="example-vert-tabs2">
+            <div class="tabs-panel is-active" id="panel21v">
+              <p>tabs上要加data-tabs属性</p>
+              <p>tabs上的id要和tabs-content的data-tabs-content="example-vert-tabs"值一致</p>
+              <p>tabs-title和tabs-panel上加is-active，标记显示的tab块</p>
+              <p>tabs-title里a标签的href名要和tabs-panel的id名要一一对应</p>
+            </div>
+            <div class="tabs-panel" id="panel22v">
+              <p>tabs上要加data-tabs属性</p>
+              <p>tabs上的id要和tabs-content的data-tabs-content="example-vert-tabs"值一致</p>
+              <p>tabs-title和tabs-panel上加is-active，标记显示的tab块</p>
+              <p>tabs-title里a标签的href名要和tabs-panel的id名要一一对应</p>
+            </div>
+            <div class="tabs-panel" id="panel23v">
+              <img class="thumbnail" src="images/large.jpg">
+            </div>
+            <div class="tabs-panel" id="panel24v">
+              <p>tabs上要加data-tabs属性</p>
+              <p>tabs上的id要和tabs-content的data-tabs-content="example-vert-tabs"值一致</p>
+              <p>tabs-title和tabs-panel上加is-active，标记显示的tab块</p>
+              <p>tabs-title里a标签的href名要和tabs-panel的id名要一一对应</p>
+            </div>
+            <div class="tabs-panel" id="panel25v">
+              <p>tabs上要加data-tabs属性</p>
+              <p>tabs上的id要和tabs-content的data-tabs-content="example-vert-tabs"值一致</p>
+              <p>tabs-title和tabs-panel上加is-active，标记显示的tab块</p>
+              <p>tabs-title里a标签的href名要和tabs-panel的id名要一一对应</p>
+            </div>
+            <div class="tabs-panel" id="panel26v">
+              <img class="thumbnail" src="images/large.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    </div>
+  </div>
+</div>
+<script src="javascript/vendor/jquery.min.js"></script>
+<script src="javascript/vendor/what-input.min.js"></script>
+<script src="javascript/foundation.js"></script>
+<script>
+$(document).foundation();
+</script>
+</body>
+
+</html>

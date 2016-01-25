@@ -1,0 +1,25 @@
+@charset "utf-8";
+/*首页布局*/
+.row{margin:0 auto; max-width:1000px;}
+.main{ margin:0 auto; width:1000px; padding:10px 0;}
+.main .row1 .per-45{ width:500px; overflow:hidden;}
+.main .row1 .per-55{ width:490px; overflow:hidden;}
+.main .row2 .per-70{ width:744px; overflow:hidden;}
+.main .row2 .per-30{ width:246px; overflow:hidden;}
+.main .row4 .per-50{ width:367px; overflow:hidden;}
+/*工具栏*/
+.tool-wrapper{ width:1000px; margin:0 auto;}
+/*banner*/
+.banner { width: 1000px; height: 164px; margin: 0 auto;}
+/*导航栏*/
+.top-bar { width:970px; margin: 0 auto;}
+/*底部*/
+.footer .row { width:1000px; margin:0 auto;}
+
+/*列表页左右框架*/
+.list_l{width:230px;}
+.list_r{width:758px;}
+
+/*文章页左右框架*/
+.channel_l {width:680px;float: left;}
+.channel_r {width:290px;float: right;}

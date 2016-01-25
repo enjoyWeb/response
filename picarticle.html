@@ -1,0 +1,251 @@
+<!DOCTYPE>
+<html class="no-js" xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh" lang="zh">
+<!--在XML里，使用"xml:lang" 方便屏幕阅读器方便阅读-->
+<head>
+<title>甘蔗风貌_福建省商务厅</title>
+<meta charset="UTF-8" />
+<!--指定字符编码-->
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+<title>图片文章页</title>
+<link rel="stylesheet" type="text/less" href="style/themes.less" />
+<link rel="stylesheet" type="text/less" href="style/master.less"/>
+<link rel="stylesheet" href="style/clearing.css" />
+<link rel="stylesheet" type="text/less" href="style/picarticle.less"/>
+<!--组图样式-->
+<script src="javascript/vendor/modernizr.js"></script><!--Modernizr HTML5元素兼容旧版本浏览器,并为移动设备提供检测。-->
+<script src="javascript/vendor/jquery.js"></script>
+
+<script src="javascript/es5-shim-2.1.0.min.js"></script><!--LESS兼容在IE9以下下面使用JS-->
+<script src="javascript/less-1.4.2.min.js"></script><!--LESS用到的JS-->
+
+</head>
+<body>
+  <!--
+    <div id="progressBar" class="progressBar_bg">
+  <div  class="progressBar">
+    <p>数据加载中，请稍等...</p>
+  </div>
+</div>
+  -->
+<!--页面切换效果代码-->
+	<div id="layout">
+		<div id="frame_background" class="background">
+		<!--header-->
+		<div class="row" id="frame_header" include="include.html">
+			<div class="large-12" id="frame_header_con">
+				<div class="tool-bar show-for-large clearfix " id="frame_tool">
+			<!--头部工具条内容-->
+					<div class="tool-fl" id="data_home"><a href="index.html">www.fiet.gov.cn</a></div>
+					<div class="tool-fr" id="data_maininfo">·<a href="http://www.fiet.gov.cn/">网页版</a>·<a href="article.html">使用帮助</a></div>
+			</div>
+			<!--头部banner内容-->
+				<div id="frame_banner">
+				<div class="top_banner show-for-large" id="data_hd_banner"><span class="banner"></span></div></div>
+			</div>
+			</div>
+		</div>
+		
+		<!-- main -->
+		<div role="main" class="conten" id="frame_main_article" aria-label="主体区块">
+			<div  class="row" id="frame_main_row1">
+				<div class="large-12" id="frame_mr1_inner">
+					<div class="breadcrumbs article_addr" id="data_list_addr" func="curpage">当前位置：<a href="index.html">首页</a> > <a href="piclist.html">图片列表</a> > <a href="picarticle.html">图片新闻</a></span></div>
+				</div>
+			</div>
+			<div class="row" id="frame_main_row2">
+				<div class="large-12" id="frame_mr2_inner">
+					<div class="article-holder small" id="frame_article_con">
+						<div class="article-hd" id="data_header">
+							<div class="article_back">
+							<a href="javascript:history.go(-1);" title="返回上个页面">
+							  <img alt="" src="images/article_back.png">
+							</a>
+						</div>
+							<div class="article-tit">
+								<h1>甘蔗风貌-图说甘蔗</h1>
+							</div>
+						</div>
+						<div class="article-byline clearfix" id="data_qpgk"> 
+						  <span class="time">2013-09-11 <span>01:03</span></span> 
+							<span  class="fullview" onClick="test()">全屏观看</span> 
+						</div>
+						<div id="data_article_con">
+							<div class="box-a"  id="cms_article_con" >
+							<div class="bigpic">
+								<div class="btn pre"></div>
+								<div class="btn next"></div>
+								<img alt="昙石山博物馆" class="bpic" src="images/img01.jpg" />
+								<div class="intro">
+									<div class="bg"></div>
+									<!--<b class="bclose">隐藏</b>-->
+									<div class="txt">
+										<h2>昙石山博物馆</h2>
+										<p>博物馆是福建省第一座大型考古遗址博物苑，它将昙石山第八次考古遗址现场保护并直接展示给观众</p>
+									</div>
+								</div>
+							</div>
+							<div id="ztbox">
+								<div class="spic">
+									<div id="left"></div>
+									<div id="conter">
+										<ul>
+											<li  class="on"><img alt="昙石山博物馆"  class="smallpic" src="images/img01.jpg" /><span class="snum"><b></b>/<strong></strong></span>
+												<div class="txt">
+													<h2>昙石山博物馆</h2>
+													<p>博物馆是福建省第一座大型考古遗址博物苑，它将昙石山第八次考古遗址现场保护并直接展示给观众</p>
+												</div>
+											</li>
+											<li><img alt="昙石山博物馆"  class="smallpic" src="images/img02.jpg" /><span class="snum"><b></b>/<strong></strong></span>
+												<div class="txt">
+													<h2>昙石山博物馆</h2>
+													<p>博物馆是福建省第一座大型考古遗址博物苑，它将昙石山第八次考古遗址现场保护并直接展示给观众</p>
+												</div>
+											</li>
+											<li><img alt="昙石山博物馆"  class="smallpic" src="images/img03.jpg" /><span class="snum"><b></b>/<strong></strong></span>
+												<div class="txt">
+													<h2>昙石山博物馆</h2>
+													<p>博物馆是福建省第一座大型考古遗址博物苑，它将昙石山第八次考古遗址现场保护并直接展示给观众</p>
+												</div>
+											</li>
+											<li><img alt="昙石山博物馆"  class="smallpic" src="images/img04.jpg" /><span class="snum"><b></b>/<strong></strong></span>
+												<div class="txt">
+													<h2>昙石山博物馆</h2>
+													<p>博物馆是福建省第一座大型考古遗址博物苑，它将昙石山第八次考古遗址现场保护并直接展示给观众</p>
+												</div>
+											</li>
+											<li><img alt="昙石山博物馆"  class="smallpic" src="images/img02.jpg" /><span class="snum"><b></b>/<strong></strong></span>
+												<div class="txt">
+													<h2>昙石山博物馆</h2>
+													<p>博物馆是福建省第一座大型考古遗址博物苑，它将昙石山第八次考古遗址现场保护并直接展示给观众</p>
+												</div>
+											</li>
+											<li><img alt="昙石山博物馆"  class="smallpic" src="images/img04.jpg" /><span class="snum"><b></b>/<strong></strong></span>
+												<div class="txt">
+													<h2>昙石山博物馆</h2>
+													<p>博物馆是福建省第一座大型考古遗址博物苑，它将昙石山第八次考古遗址现场保护并直接展示给观众</p>
+												</div>
+											</li>
+											<li><img alt="昙石山博物馆"  class="smallpic" src="images/img03.jpg" /><span class="snum"><b></b>/<strong></strong></span>
+												<div class="txt">
+													<h2>昙石山博物馆</h2>
+													<p>博物馆是福建省第一座大型考古遗址博物苑，它将昙石山第八次考古遗址现场保护并直接展示给观众</p>
+												</div>
+											</li>
+											<li><img alt="昙石山博物馆" class="smallpic" src="images/img02.jpg" /><span class="snum"><b></b>/<strong></strong></span>
+												<div class="txt">
+													<h2>昙石山博物馆</h2>
+													<p>博物馆是福建省第一座大型考古遗址博物苑，它将昙石山第八次考古遗址现场保护并直接展示给观众</p>
+												</div>
+											</li>
+											<li><img alt="昙石山博物馆"  class="smallpic" src="images/img01.jpg" /><span class="snum"><b></b>/<strong></strong></span>
+												<div class="txt">
+													<h2>昙石山博物馆</h2>
+													<p>博物馆是福建省第一座大型考古遗址博物苑，它将昙石山第八次考古遗址现场保护并直接展示给观众</p>
+												</div>
+											</li>
+											<li><img alt="昙石山博物馆"  class="smallpic" src="images/img02.jpg" /><span class="snum"><b></b>/<strong></strong></span>
+												<div class="txt">
+													<h2>昙石山博物馆</h2>
+													<p>博物馆是福建省第一座大型考古遗址博物苑，它将昙石山第八次考古遗址现场保护并直接展示给观众</p>
+												</div>
+											</li>
+											<li><img alt="昙石山博物馆"  class="smallpic" src="images/img03.jpg" /><span class="snum"><b></b>/<strong></strong></span>
+												<div class="txt">
+													<h2>昙石山博物馆</h2>
+													<p>博物馆是福建省第一座大型考古遗址博物苑，它将昙石山第八次考古遗址现场保护并直接展示给观众</p>
+												</div>
+											</li>
+											<li><img alt="昙石山博物馆"  class="smallpic" src="images/img02.jpg" /><span class="snum"><b></b>/<strong></strong></span>
+												<div class="txt">
+													<h2>昙石山博物馆</h2>
+													<p>博物馆是福建省第一座大型考古遗址博物苑，它将昙石山第八次考古遗址现场保护并直接展示给观众</p>
+												</div>
+											</li>
+											<li><img alt="昙石山博物馆"  class="smallpic" src="images/img05.jpg" /><span class="snum"><b></b>/<strong></strong></span>
+												<div class="txt">
+													<h2>昙石山博物馆</h2>
+													<p>博物馆是福建省第一座大型考古遗址博物苑，它将昙石山第八次考古遗址现场保护并直接展示给观众</p>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<div id="right"></div>
+								</div>
+								<div id="scroll"><span></span></div>
+							</div>
+						</div>
+						</div>
+						<div id="data_pic_con">
+							<div class="box-b"  id="cms_article_piccon" > 
+							<!-- 图片文章内容 start --> 
+							<span class="silde-tit" slide-type="summaryTit">
+							<h2>图集详情：</h2>
+							</span>
+							<div class="swps-cont" slide-type="summaryCont">
+								<p>　　博物馆内展出1954年以来昙石山遗址八次考古发掘的珍贵文物和图片资料，是福建省原始社会昙石山人劳动生息的缩影；黄土文化展览厅，展现奴隶社会先秦闽族精美的仿铜印纹陶器和丰富多彩的历史文化；考古遗址厅，第八次发掘的30余座墓葬、陶窑和壕沟等考古遗迹和文物按原貌展出，让观众有亲临考古现场之感。</p>
+							</div>
+						</div>
+						</div>
+					</div>
+					<div id="frame_share">
+						<div class="article-share clearfix" id="data_share">
+						<p class="as-tit">分享至：</p>
+						<p class="as-icon"> <a href="http://news.3g.cn/IPNewsContentForStat.ashx?nid=2197987&title=%e3%80%8a%e7%bd%97%e5%be%b7%e6%9b%bc%e6%96%a5%e8%b4%a3%e5%a5%a5%e5%b7%b4%e9%a9%ac%e4%b8%8d%e5%a6%82%e9%87%91%e6%ad%a3%e6%81%a9%e3%80%8b&url=http%3a%2f%2fnews.3g.cn%2fipnewscontent.php%3fnid%3d2197987&pic=&type=1&act=share" class="s-sina" title="分享到新浪微博"></a> <a href="http://news.3g.cn/IPNewsContentForStat.ashx?nid=2197987&title=%e3%80%8a%e7%bd%97%e5%be%b7%e6%9b%bc%e6%96%a5%e8%b4%a3%e5%a5%a5%e5%b7%b4%e9%a9%ac%e4%b8%8d%e5%a6%82%e9%87%91%e6%ad%a3%e6%81%a9%e3%80%8b&url=http%3a%2f%2fnews.3g.cn%2fipnewscontent.php%3fnid%3d2197987&pic=&type=2&act=share" class="s-weblog" title="分享到腾讯微博"></a> <a href="http://news.3g.cn/IPNewsContentForStat.ashx?nid=2197987&title=%e3%80%8a%e7%bd%97%e5%be%b7%e6%9b%bc%e6%96%a5%e8%b4%a3%e5%a5%a5%e5%b7%b4%e9%a9%ac%e4%b8%8d%e5%a6%82%e9%87%91%e6%ad%a3%e6%81%a9%e3%80%8b&url=http%3a%2f%2fnews.3g.cn%2fipnewscontent.php%3fnid%3d2197987&pic=&type=3&act=share" class="s-QZone" title="分享到QQ空间"></a> </p>
+						<p class="as-num">已有<span class="col-r">15</span>人分享</p>
+					</div>
+					</div>
+				</div>
+			</div>
+			<div id="frame_fullv">
+			<div id="data_fullv">
+				<div id="fullv" style="display:none"></div></div>
+			</div>
+		</div>
+		
+		<!-- footer -->
+		<footer class="row footer" id="frame_footer" include="include.html">
+			<div class="large-l2" id="frame_footer_inner">
+				<div id="data_row_footer">
+					<div class="copyright clearfix">福建省对外贸易经济合作厅<br/>
+						<span>Copyright &copy; 2004-2012</span> </div>
+					<div class="go-return"> <a title="返回顶部" class="go-top"></a> <a title="返回底部" class="go-bottom" ></a> </div>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+	</div>
+	<script src="javascript/foundation/foundation.js"></script> 
+			<script src="javascript/main.js"></script> 
+			<script src="javascript/foundation/foundation.clearing.js"></script> 
+			<script type="text/javascript" src="javascript/picarticle_silde.js"></script><!--组图JS--> 
+			<script>
+						$(document).foundation();
+						
+						$(document).ready(function () {
+								var html="";
+										 $("#conter").find("li").each(function(i){
+												 var dd=$(this).find("img");
+												 var dt= $(this).find("div");
+												 var a=$(dt[0]).children();
+												
+															html=html+"  <li ><a  class='th' href='"+$(dd[0]).attr("src")+"'><img alt='"+$(a[0]).text()+"' data-caption='"+$(a[1]).text()+"'  src='"+$(dd[0]).attr("src")+"'></a></li>";
+											 });
+									html= "  <ul   id='pic2' class='clearing-feature clearing-thumbs' data-clearing>" +html+"</ul>"  ;
+									$("#fullv").after(html);
+										$(document).foundation();/*foundation JS*/	
+									
+								})
+								function test() {
+						$("#pic2 img:first").click();
+						}
+						
+						//图片UL宽度
+						$(function(){ 
+						$("#conter ul").width($("#conter ul" ).find("li").length*86);
+						$(window).resize(function() {
+										$("#conter ul").width($("#conter ul" ).find("li").length*86);
+								});})
+		</script> 
+</body>
+</html>
