@@ -23,12 +23,7 @@ NEWS小图标：news
 */
 
 /*字体*/
-/*手机与PAD版默认字体大小与样式*/
-body{font-size: @spbody-font-size;font-family:@spbody-font-family}
-@media only screen and (min-width: 769px) {
-	/*PC版默认字体大小与样式*/
-	body{font-size: @body-font-size;font-family:@body-font-family}
-}
+body{font-size: @base-font-size;font-family:@base-font-family}
 
 /*链接*/
 a {color:@base-font-color;font-size: @base-font-size;font-weight:@base-font-weight;line-height: @base-line-height;}
@@ -95,27 +90,26 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,.part a,.more a{ color:@primary-color;}
   padding-right: @margin; }
 
 /*wrapper*/
-.wrapper { background: @body-bg-img;background-color:@body-bg-color;background-repeat:@background-repeat;background-attachment: @background-attachment;
-background-position:@background-position;}
-
-/*logo*/
-.logo { display:block;background: @t-logo;width: 100%;height: 100%;background-position: 200px center;}
+.wrapper { background: @bg-img;background-color:@bg-color;background-repeat:@bg-repeat;background-attachment: @bg-attachment;
+background-position:@bg-position;}
 
 /*banner*/
-.banner { background: @t-banner-pc; background-size: cover; background-color: @t-banner-color;}
+.banner { position: relative; background-color: lighten(@primary-color,24%);height: 164px;}
+.banner-img { position: absolute;}
+
+/*logo*/
+.logo { position: absolute;left:200px;top:30px;}
 
 /*main*/
 .main { background: @white-color}
 
 /*footer*/
 .footer {
-	border-top: @base-border-width @base-border-style @base-border-color;
-	background-color: #f6f6f6;
-	background: -webkit-gradient(linear, 0 0, 0 100%, from(#f6f6f6), to(#ffffff));
-	background: -moz-linear-gradient(#f6f6f6, #ffffff);
-	background: -o-linear-gradient(#f6f6f6, #ffffff);
-	background: linear-gradient(#f6f6f6, #ffffff);
-	filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#f6f6f6, endColorStr=#ffffff);
+  text-align: center;
+  border-top: 3px @base-border-style @primary-color;
+  font-family: Helvetica, Arial, sans-serif;
+  padding: @padding 0;
+  margin-top: @margin;
 }
 
 /*tool-bar*/
@@ -130,7 +124,8 @@ background-position:@background-position;}
 	background-image: linear-gradient(top, @white-color, darken(@panel-color,10%));
 	filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr=@white-color, endColorStr=darken(@panel-color,10%));
 }
-.tool-bar a {color: @gray-color;}
+.tool-bar a {color: @secondary-color;}
+.tool-bar a:hover {color: @primary-color;}
 
 /*top-bar*/
 .top-bar {
@@ -179,7 +174,7 @@ background-position:@background-position;}
     width: 0;
     height: 0;
     border: inset 6px;
-    border-color: transparent transparent transparent #2199e8;
+    border-color: transparent transparent transparent @gray-color;
     border-left-style: solid;
     position: absolute;
     top: 50%;
@@ -192,7 +187,7 @@ background-position:@background-position;}
   width: 0;
   height: 0;
   border: inset 6px;
-  border-color: transparent #2199e8 transparent transparent;
+  border-color: transparent @gray-color transparent transparent;
   border-right-style: solid;
   float: left;
   margin-right: 0.75rem;
@@ -230,38 +225,42 @@ background-position:@background-position;}
     float: right;
     margin-top: 3px;
     margin-left: 10px; }
-  .dropdown.menu .is-dropdown-submenu-parent.is-down-arrow a {
+  .dropdown.menu .is-dropdown-submenu-parent.is-down-arrow h1 > a,
+  .dropdown.menu .is-dropdown-submenu-parent.is-down-arrow > a {
     padding-right: 1.5rem;
     position: relative; }
+  .dropdown.menu .is-dropdown-submenu-parent.is-down-arrow h1 > a::after,
   .dropdown.menu .is-dropdown-submenu-parent.is-down-arrow > a::after {
     content: '';
     display: block;
     width: 0;
     height: 0;
     border: inset 5px;
-    border-color: #2199e8 transparent transparent;
+    border-color: @gray-color transparent transparent;
     border-top-style: solid;
     position: absolute;
-    top: 12px;
-    right: 5px; }
+    top: 1rem;
+    right: 0.5rem; }
+  .dropdown.menu .is-dropdown-submenu-parent.is-left-arrow h1 > a::after,
   .dropdown.menu .is-dropdown-submenu-parent.is-left-arrow > a::after {
     content: '';
     display: block;
     width: 0;
     height: 0;
     border: inset 5px;
-    border-color: transparent #2199e8 transparent transparent;
+    border-color: transparent @gray-color transparent transparent;
     border-right-style: solid;
     float: left;
     margin-left: 0;
     margin-right: 10px; }
+  .dropdown.menu .is-dropdown-submenu-parent.is-right-arrow h1 > a::after,
   .dropdown.menu .is-dropdown-submenu-parent.is-right-arrow > a::after {
     content: '';
     display: block;
     width: 0;
     height: 0;
     border: inset 5px;
-    border-color: transparent transparent transparent #2199e8;
+    border-color: transparent transparent transparent @gray-color;
     border-left-style: solid; }
   .dropdown.menu .is-dropdown-submenu-parent.is-left-arrow.opens-inner .submenu {
     right: 0;
@@ -280,7 +279,7 @@ background-position:@background-position;}
   position: absolute;
   top: 0;
   left: 100%;
-  min-width: 200px;
+  min-width: 100%;
   z-index: 1;
   background: #fefefe;
   border: 1px solid #cacaca; }
@@ -292,6 +291,13 @@ background-position:@background-position;}
     right: auto; }
   .dropdown.menu .submenu:not(.js-dropdown-nohover) > .is-dropdown-submenu-parent:hover > .dropdown.menu .submenu, .dropdown.menu .submenu.js-dropdown-active {
     display: block; }
+    .dropdown.menu .submenu a {
+      color: @secondary-color;
+    }
+    .dropdown.menu .submenu a:hover {
+      color: @white-color;
+      background: @primary-color;
+    }
 
 .dropdown.menu .is-dropdown-submenu-parent.opens-left .submenu {
   left: auto;
@@ -339,7 +345,20 @@ background-position:@background-position;}
   .menu > li {
     display: table-cell; }
   .menu.vertical > li {
-    display: block; }
+    display: block;
+    float: inherit; }
+  .menu.vertical:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border: 5px inset;
+    border-color: transparent transparent #fff;
+    border-top-style: solid;
+    position: absolute;
+    top: -10px;
+    right: 0.5rem;
+  }
   @media screen and (min-width: 640px) {
     .menu.medium-horizontal > li {
       display: table-cell; }
@@ -373,6 +392,18 @@ background-position:@background-position;}
     .menu.expanded > li:nth-last-child(6):first-child,
     .menu.expanded > li:nth-last-child(6):first-child ~ li {
       width: 16.66667%; }
+    .menu.expanded > li:nth-last-child(7):first-child,
+    .menu.expanded > li:nth-last-child(7):first-child ~ li {
+      width: 14.28571%; }
+    .menu.expanded > li:nth-last-child(8):first-child,
+    .menu.expanded > li:nth-last-child(8):first-child ~ li {
+      width: 12.5%; }
+    .menu.expanded > li:nth-last-child(9):first-child,
+    .menu.expanded > li:nth-last-child(9):first-child ~ li {
+      width: 11.11111%; }
+    .menu.expanded > li:nth-last-child(10):first-child,
+    .menu.expanded > li:nth-last-child(10):first-child ~ li {
+      width: 10%; }
     .menu.expanded > li:first-child:last-child {
       width: 100%; }
   .menu.icon-top > li > a {
@@ -462,12 +493,16 @@ background-position:@background-position;}
     float: right; } }
 
 /*默认模块样式*/
-.modhead {
+div[class^="mod-"] {
+  border: @base-border-width @base-border-style @base-border-color;
+  border-width: 0 1px;
+}
+div[class^="mod-"] .modhead {
 	border:@base-border-color @base-border-width @base-border-style;
-	border-width: 1px 0 1px 0;
+	border-width: 1px 0;
 	padding:0 @padding;
 }
-.modcon {
+div[class^="mod-"] .modcon {
 	background:@panel-color;
 	padding:@padding;
 }
@@ -1633,7 +1668,7 @@ ul.s-listyle li {
   .breadcrumbs .disabled {
     color: #cacaca; }
 
- /*---侧栏导航--*/
+/*---侧栏导航--*/
 .sidenav{ border-top:1px solid @primary-color;}
 .sidenav .modhead {
 	box-shadow: 0 1px 2px #ddd;

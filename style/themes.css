@@ -25,30 +25,16 @@ mix(@color1, @color2);  返回的颜色是@color1和@color2两者的混合色
 /* 白色 */
 /*************** end 色调 ************************/
 /*************** 字体 ************************/
-/* 大于768下基础字体 */
-/* 小于768下基础字体 */
 /* 基础字体大小,行高，宽度，字体颜色,字体链接色，链接背景颜色  */
 /* 强调的文字字体大小，行高，宽度 */
 /*************** end 字体 ************************/
 /*************** 背景 ************************/
-/* 背景色(可与主色一致) */
 /* 背景色 */
 /* 背景图片 */
 /* 背景图片 重复方式 */
 /* 背景图片 展示方式 */
 /* 背景图片 对齐方式 */
 /*************** end 背景 ************************/
-/*************** logo图片 ************************/
-/* PC版的头部logo */
-/* 手机版的头部logo */
-/* PAD版的头部logo */
-/*************** end LOGO图片 ************************/
-/*************** top-banner图片 ************************/
-/* 头部banner背景颜色 */
-/* PC版的头部banner */
-/* 手机版的头部banner */
-/* PAD版的头部banner */
-/*************** end top-banner图片 ************************/
 /*************** 模块 ************************/
 /* 模块外框颜色 */
 /* 模块面板颜色 */
@@ -95,22 +81,14 @@ HOT小图标：hot
 NEWS小图标：news
 */
 /*字体*/
-/*手机与PAD版默认字体大小与样式*/
 body {
-  font-size: 1rem;
-  font-family: "微软雅黑", Helvetica;
-}
-@media only screen and (min-width: 769px) {
-  /*PC版默认字体大小与样式*/
-  body {
-    font-size: 0.75rem;
-    font-family: "微软雅黑", Verdana;
-  }
+  font-size: 0.75rem;
+  font-family: "微软雅黑", Verdana;
 }
 /*链接*/
 a {
   color: #333;
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-weight: normal;
   line-height: 2rem;
 }
@@ -238,25 +216,26 @@ h6 a,
 }
 /*wrapper*/
 .wrapper {
-  background: url(../images/body-bg-img.png);
+  background: url(../images/bg.gif);
   background-color: #fff;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center top;
 }
-/*logo*/
-.logo {
-  display: block;
-  background: url(../images/logo.png) no-repeat;
-  width: 100%;
-  height: 100%;
-  background-position: 200px center;
-}
 /*banner*/
 .banner {
-  background: url(../images/banner-pc.png) no-repeat;
-  background-size: cover;
+  position: relative;
   background-color: #fe6946;
+  height: 164px;
+}
+.banner-img {
+  position: absolute;
+}
+/*logo*/
+.logo {
+  position: absolute;
+  left: 200px;
+  top: 30px;
 }
 /*main*/
 .main {
@@ -264,13 +243,11 @@ h6 a,
 }
 /*footer*/
 .footer {
-  border-top: 1px solid #e6e6e6;
-  background-color: #f6f6f6;
-  background: -webkit-gradient(linear, 0 0, 0 100%, from(#f6f6f6), to(#ffffff));
-  background: -moz-linear-gradient(#f6f6f6, #ffffff);
-  background: -o-linear-gradient(#f6f6f6, #ffffff);
-  background: linear-gradient(#f6f6f6, #ffffff);
-  filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#f6f6f6, endColorStr=#ffffff);
+  text-align: center;
+  border-top: 3px solid #C92701;
+  font-family: Helvetica, Arial, sans-serif;
+  padding: 10px 0;
+  margin-top: 10px;
 }
 /*tool-bar*/
 .tool-bar {
@@ -285,7 +262,10 @@ h6 a,
   filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#fff, endColorStr=#e6e6e6);
 }
 .tool-bar a {
-  color: #aaa;
+  color: #333;
+}
+.tool-bar a:hover {
+  color: #C92701;
 }
 /*top-bar*/
 .top-bar {
@@ -342,7 +322,7 @@ h6 a,
   width: 0;
   height: 0;
   border: inset 6px;
-  border-color: transparent transparent transparent #2199e8;
+  border-color: transparent transparent transparent #aaa;
   border-left-style: solid;
   position: absolute;
   top: 50%;
@@ -355,7 +335,7 @@ h6 a,
   width: 0;
   height: 0;
   border: inset 6px;
-  border-color: transparent #2199e8 transparent transparent;
+  border-color: transparent #aaa transparent transparent;
   border-right-style: solid;
   float: left;
   margin-right: 0.75rem;
@@ -396,41 +376,45 @@ h6 a,
   margin-top: 3px;
   margin-left: 10px;
 }
-.dropdown.menu .is-dropdown-submenu-parent.is-down-arrow a {
+.dropdown.menu .is-dropdown-submenu-parent.is-down-arrow h1 > a,
+.dropdown.menu .is-dropdown-submenu-parent.is-down-arrow > a {
   padding-right: 1.5rem;
   position: relative;
 }
+.dropdown.menu .is-dropdown-submenu-parent.is-down-arrow h1 > a::after,
 .dropdown.menu .is-dropdown-submenu-parent.is-down-arrow > a::after {
   content: '';
   display: block;
   width: 0;
   height: 0;
   border: inset 5px;
-  border-color: #2199e8 transparent transparent;
+  border-color: #aaa transparent transparent;
   border-top-style: solid;
   position: absolute;
-  top: 12px;
-  right: 5px;
+  top: 1rem;
+  right: 0.5rem;
 }
+.dropdown.menu .is-dropdown-submenu-parent.is-left-arrow h1 > a::after,
 .dropdown.menu .is-dropdown-submenu-parent.is-left-arrow > a::after {
   content: '';
   display: block;
   width: 0;
   height: 0;
   border: inset 5px;
-  border-color: transparent #2199e8 transparent transparent;
+  border-color: transparent #aaa transparent transparent;
   border-right-style: solid;
   float: left;
   margin-left: 0;
   margin-right: 10px;
 }
+.dropdown.menu .is-dropdown-submenu-parent.is-right-arrow h1 > a::after,
 .dropdown.menu .is-dropdown-submenu-parent.is-right-arrow > a::after {
   content: '';
   display: block;
   width: 0;
   height: 0;
   border: inset 5px;
-  border-color: transparent transparent transparent #2199e8;
+  border-color: transparent transparent transparent #aaa;
   border-left-style: solid;
 }
 .dropdown.menu .is-dropdown-submenu-parent.is-left-arrow.opens-inner .submenu {
@@ -452,7 +436,7 @@ h6 a,
   position: absolute;
   top: 0;
   left: 100%;
-  min-width: 200px;
+  min-width: 100%;
   z-index: 1;
   background: #fefefe;
   border: 1px solid #cacaca;
@@ -468,6 +452,13 @@ h6 a,
 .dropdown.menu .submenu:not(.js-dropdown-nohover) > .is-dropdown-submenu-parent:hover > .dropdown.menu .submenu,
 .dropdown.menu .submenu.js-dropdown-active {
   display: block;
+}
+.dropdown.menu .submenu a {
+  color: #333;
+}
+.dropdown.menu .submenu a:hover {
+  color: #fff;
+  background: #C92701;
 }
 .dropdown.menu .is-dropdown-submenu-parent.opens-left .submenu {
   left: auto;
@@ -527,6 +518,19 @@ h6 a,
 }
 .menu.vertical > li {
   display: block;
+  float: inherit;
+}
+.menu.vertical:before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border: 5px inset;
+  border-color: transparent transparent #fff;
+  border-top-style: solid;
+  position: absolute;
+  top: -10px;
+  right: 0.5rem;
 }
 @media screen and (min-width: 640px) {
   .menu.medium-horizontal > li {
@@ -574,6 +578,22 @@ h6 a,
 .menu.expanded > li:nth-last-child(6):first-child,
 .menu.expanded > li:nth-last-child(6):first-child ~ li {
   width: 16.66667%;
+}
+.menu.expanded > li:nth-last-child(7):first-child,
+.menu.expanded > li:nth-last-child(7):first-child ~ li {
+  width: 14.28571%;
+}
+.menu.expanded > li:nth-last-child(8):first-child,
+.menu.expanded > li:nth-last-child(8):first-child ~ li {
+  width: 12.5%;
+}
+.menu.expanded > li:nth-last-child(9):first-child,
+.menu.expanded > li:nth-last-child(9):first-child ~ li {
+  width: 11.11111%;
+}
+.menu.expanded > li:nth-last-child(10):first-child,
+.menu.expanded > li:nth-last-child(10):first-child ~ li {
+  width: 10%;
 }
 .menu.expanded > li:first-child:last-child {
   width: 100%;
@@ -681,12 +701,16 @@ h6 a,
   }
 }
 /*默认模块样式*/
-.modhead {
+div[class^="mod-"] {
+  border: 1px solid #e6e6e6;
+  border-width: 0 1px;
+}
+div[class^="mod-"] .modhead {
   border: #e6e6e6 1px solid;
-  border-width: 1px 0 1px 0;
+  border-width: 1px 0;
   padding: 0 10px;
 }
-.modcon {
+div[class^="mod-"] .modcon {
   background: #fff;
   padding: 10px;
 }

@@ -1,0 +1,202 @@
+@charset "utf-8";
+/**
+ * PgwMenu - Version 2.0
+ *
+ * Copyright 2014, Jonathan M. Piat
+ * http://pgwjs.com - http://pagawa.com
+ *
+ * Released under the GNU GPLv3 license - http://opensource.org/licenses/gpl-3.0
+ */
+/*
+lighten(@color, 10%);  返回的颜色在@color基础上变亮10% *
+darken(@color, 10%);  返回的颜色在@color基础上变暗10%*
+saturate(@color, 10%);   返回的颜色在@color基础上饱和度增加10% *
+desaturate(@color, 10%); 返回的颜色在@color基础上饱和度降低10%*
+spin(@color, 10);  返回的颜色在@color基础上色调增加10*
+spin(@color, -10);  返回的颜色在@color基础上色调减少10
+mix(@color1, @color2);  返回的颜色是@color1和@color2两者的混合色
+*/
+/*
+	RJ-CMS CSS Variables
+	其中的注释说明：
+	simple configuration 表示简易配置sponsive unique 响应试特有
+*/
+/*************** 色调 ************************/
+/* 主色调 */
+/* 辅色调（文字颜色） */
+/* 成功色调（与成功相关色调） */
+/* 信息色调（与信息相关色调） */
+/* 警告色调（与警告相关色调） */
+/* 温暖色调（与暖和相关色调） */
+/* 灰色 */
+/* 黑色 */
+/* 白色 */
+/*************** end 色调 ************************/
+/*************** 字体 ************************/
+/* 基础字体大小,行高，宽度，字体颜色,字体链接色，链接背景颜色  */
+/* 强调的文字字体大小，行高，宽度 */
+/*************** end 字体 ************************/
+/*************** 背景 ************************/
+/* 背景色 */
+/* 背景图片 */
+/* 背景图片 重复方式 */
+/* 背景图片 展示方式 */
+/* 背景图片 对齐方式 */
+/*************** end 背景 ************************/
+/*************** 模块 ************************/
+/* 模块外框颜色 */
+/* 模块面板颜色 */
+/*************** end 模块 ************************/
+/*************** 边框 ************************/
+/* 基础边框宽度 样式 颜色 */
+/* 辅助边框 宽度 颜色 */
+/* 辅助边框 样式1 样式2 */
+/*************** end 边框 ************************/
+/****************** 间距 *********************/
+/* 通用间距 */
+/* 通用边距 */
+/*************** end 间距 ************************/
+/*************** end 标题 ************************/
+/* 主标题 */
+/* 主标题字体颜色 鼠标经过颜色 字体大小 行高 字体风格 字体宽度 */
+/* 副标题 */
+/* 副标题字体颜色 鼠标经过颜色 字体大小 行高 字体风格 字体宽度 */
+/*************** end 标题 ************************/
+/*************** 小图标 ************************/
+/* 热点小图标 */
+/* 最新消息小图标 */
+/* 排行小图标 */
+/*************** end 小图标 ************************/
+.pgwMenu {
+  background: #C92701;
+  position: relative;
+  list-style: none;
+}
+.pgwMenu ul {
+  list-style: none;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+}
+.pgwMenu li {
+  float: left;
+}
+.pgwMenu li a:hover {
+  background: #961d01;
+  text-decoration: none;
+}
+.pgwMenu a {
+  display: block;
+  color: #fff;
+  line-height: 40px;
+  padding: 0 12px;
+  text-decoration: none;
+}
+.pgwMenu a.selected {
+  background: #961d01;
+}
+.pgwMenu .pm-links.mobile,
+.pgwMenu .pm-viewMore > ul {
+  background: #C92701;
+  box-shadow: 2px 2px 4px #961d01;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 1000;
+}
+.pgwMenu .pm-viewMore {
+  display: none;
+  position: relative;
+}
+.pgwMenu .pm-viewMore > a {
+  display: inline-block;
+}
+.pgwMenu .pm-viewMore > ul {
+  left: auto;
+  right: 0;
+}
+.pgwMenu .pm-viewMore li {
+  float: none;
+}
+.pgwMenu .pm-viewMore span.icon,
+.pgwMenu .pm-viewMore span.white {
+  border-color: #fff transparent;
+  border-style: solid;
+  border-width: 8px 6px 0;
+  margin-left: 3px;
+  display: inline-block;
+}
+.pgwMenu.light .pm-viewMore span.icon,
+.pgwMenu .pm-viewMore span.black {
+  border-color: #000 transparent;
+  border-style: solid;
+  border-width: 8px 6px 0;
+  margin-left: 3px;
+  display: inline-block;
+}
+.pgwMenu .pm-links.mobile li,
+.pgwMenu .pm-viewMore > ul > li {
+  display: block;
+  clear: both;
+  width: 175px;
+}
+.pgwMenu .pm-dropDown,
+.pgwMenu .pm-viewMore,
+.pgwMenu .pm-viewMore > ul {
+  display: none;
+}
+.pgwMenu .pm-dropDown a {
+  display: inline-block;
+  background: #961d01;
+}
+.pgwMenu .pm-dropDown a.active,
+.pgwMenu .pm-viewMore a.active {
+  background: #666;
+}
+.pgwMenu .pm-dropDown span.icon,
+.pgwMenu .pm-dropDown span.white {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwQAADsEBuJFr7QAAABZ0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMDvo9WkAAABKSURBVEhL7ZOxDQAwCMN6O4/T0tmjsxHJDB4yROJ0dz3s1BRHEi2OTREBpQFKA5QGKA3m7IP8RKeIgNIApQFKA5QGc/ZBfkJTdF0oUafLBAFNbAAAAABJRU5ErkJggg==) no-repeat;
+  display: block;
+  height: 22px;
+  width: 22px;
+  margin: 9px 5px;
+}
+.pgwMenu.light .pm-dropDown span.icon,
+.pgwMenu .pm-dropDown span.black {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvgAADr4B6kKxwAAAABZ0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMDvo9WkAAABpSURBVEhL7ZPLCcAwDEM9jefI/ks1Hyj2QbiGSLcKHggl8sEktjTc/WGyZxo6YKAbrFzFoav3/hdhmsrlijBN5XJFmKZyuSJMU7lcsfV/kIN0FRJgyACGDGDIAIYMpK8CHt6iG6xZhY0JIJ+6AHGbUFsAAAAASUVORK5CYII=) no-repeat;
+  display: block;
+  height: 22px;
+  width: 22px;
+  margin: 9px 5px;
+}
+.pgwMenu.light {
+  background: #ddd;
+}
+.pgwMenu.light .pm-viewMore > ul {
+  background-color: #ddd;
+}
+.pgwMenu.light .pm-links.mobile {
+  background: #ddd;
+}
+.pgwMenu.light li a:hover {
+  background: #d0d0d0;
+}
+.pgwMenu.light a {
+  color: #000;
+}
+.pgwMenu.light a.selected {
+  background: #c5c5c5;
+}
+.pgwMenu.light .pm-dropDown a {
+  background: #c5c5c5;
+}
+.pgwMenu.light .pm-dropDown a.active,
+.pgwMenu.light .pm-viewMore a.active {
+  background: #d0d0d0;
+}
+.pgwMenu.light .pm-dropDown a.active {
+  background: #bbb;
+}
+.pgwMenuCustom {
+  background-color: #fff;
+}

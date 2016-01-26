@@ -49,16 +49,9 @@ mix(@color1, @color2);  返回的颜色是@color1和@color2两者的混合色
 
 /*************** 字体 ************************/
 
-/* 大于768下基础字体 */
-@body-font-family: "微软雅黑", Verdana;
-@body-font-size: 0.75rem;
-
-/* 小于768下基础字体 */
-@spbody-font-family: "微软雅黑", Helvetica;
-@spbody-font-size: 1rem;
-
 /* 基础字体大小,行高，宽度，字体颜色,字体链接色，链接背景颜色  */
-@base-font-size: 1rem;
+@base-font-family: "微软雅黑", Verdana;
+@base-font-size: 0.75rem;
 @base-line-height: 2rem;
 @base-font-weight: normal;
 @base-font-color: @secondary-color;
@@ -76,58 +69,22 @@ mix(@color1, @color2);  返回的颜色是@color1和@color2两者的混合色
 
 /*************** 背景 ************************/
 
-/* 背景色(可与主色一致) */
-@background-color: #fff;
-
 /* 背景色 */
-@body-bg-color: @background-color;
+@bg-color: #fff;
 
 /* 背景图片 */
-@body-bg-img: url(../images/body-bg-img.png);
+@bg-img: url(../images/bg.gif);
 
 /* 背景图片 重复方式 */
-@background-repeat: no-repeat;
+@bg-repeat: no-repeat;
 
 /* 背景图片 展示方式 */
-@background-attachment: scroll;
+@bg-attachment: scroll;
 
 /* 背景图片 对齐方式 */
-@background-position: center top;
+@bg-position: center top;
 
 /*************** end 背景 ************************/
-
-
-
-/*************** logo图片 ************************/
-
-/* PC版的头部logo */
-@t-logo: url(../images/logo.png) no-repeat;
-
-/* 手机版的头部logo */
-@t-logo-phone: url(../images/logo-pc.png) no-repeat;
-
-/* PAD版的头部logo */
-@t-logo-pad: url(../images/logo-pad.png) no-repeat;
-
-/*************** end LOGO图片 ************************/
-
-
-
-/*************** top-banner图片 ************************/
-
-/* 头部banner背景颜色 */
-@t-banner-color: lighten(@primary-color,24%);
-
-/* PC版的头部banner */
-@t-banner-pc: url(../images/banner-pc.png) no-repeat;
-
-/* 手机版的头部banner */
-@t-banner-phone: url(../images/banner-pc.png) no-repeat;
-
-/* PAD版的头部banner */
-@t-banner-pad: url(../images/banner-pad.png) no-repeat;
-
-/*************** end top-banner图片 ************************/
 
 
 
@@ -182,7 +139,7 @@ mix(@color1, @color2);  返回的颜色是@color1和@color2两者的混合色
 @header-font-hover-color: @secondary-color;
 @header-font-size: 1.8rem;
 @header-line-height: 2rem;
-@header-font-family: @body-font-family;
+@header-font-family: @base-font-family;
 @header-font-weight: 700;
 
 /* 副标题 */
@@ -191,7 +148,7 @@ mix(@color1, @color2);  返回的颜色是@color1和@color2两者的混合色
 @subtitle-font-hover-color: lighten(@header-font-color, 30%);
 @subtitle-font-size: 1.428rem;
 @subtitle-line-height: 2rem;
-@subtitle-font-family: @body-font-family;
+@subtitle-font-family: @base-font-family;
 @subtitle-font-weight: 700;
 
 /*************** end 标题 ************************/
