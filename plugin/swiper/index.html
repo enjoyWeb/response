@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1">
+	<title>焦点图滚动</title>
+	<link rel="stylesheet" href="css/swiper-thumbs.css">
+	<style type="text/css">
+	.row {
+	    width: 100%;
+	    padding: 50px 0;
+	    margin: 0;
+	    display: block;
+    	float: left;
+	}
+	.width2  {
+		float: left;
+	    width: 20%;
+	    margin: 0;
+	    padding: 0;
+	    text-align: center;
+	}
+	.width8  {
+		float: left;
+	    width: 70%;
+	    margin: 0;
+	    padding: 0;
+	    text-align: center;
+    	background-color: #eee;
+	}
+	@media only screen and (max-width: 768px) {
+	.row {
+		display: block;
+	}
+	.width2,.width8 {
+		width: 100%;
+	}
+	}
+	</style>
+</head>
+<body>
+<div class="row">
+	<div class="width2">
+		<h1>缩略图在右侧</h1>
+	</div>
+	<div class="width8">
+		<div class="swiper-container dirVertical" id="swiper-container1">
+			<a class="arrow-left" href="javascript:void(0)"></a>
+			<a class="arrow-right" href="javascript:void(0)"></a>
+			<div class="swiper-content">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/1.jpg" target="_blank" title="图片1">查看原图</a>
+							<img class="movie-pic" src="img/1.jpg" height="150" width="150" alt="">
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/2.jpg" title="图片2">查看原图</a>
+							<img class="movie-pic" src="img/2.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/3.jpg" title="图片3">查看原图</a>
+							<img class="movie-pic" src="img/3.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/4.jpg" title="图片4">查看原图</a>
+							<img class="movie-pic" src="img/4.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/5.jpg" title="图片5">查看原图</a>
+							<img class="movie-pic" src="img/5.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/6.jpg" title="图片6">查看原图</a>
+							<img class="movie-pic" src="img/6.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/7.jpg" title="图片7">查看原图</a>
+							<img class="movie-pic" src="img/7.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/8.jpg" title="图片8">查看原图</a>
+							<img class="movie-pic" src="img/8.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/1.jpg" title="图片1">查看原图</a>
+							<img class="movie-pic" src="img/1.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/2.jpg" title="图片2">查看原图</a>
+							<img class="movie-pic" src="img/2.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/3.jpg" title="图片3">查看原图</a>
+							<img class="movie-pic" src="img/3.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/4.jpg" title="图片4">查看原图</a>
+							<img class="movie-pic" src="img/4.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/5.jpg" title="图片5">查看原图</a>
+							<img class="movie-pic" src="img/5.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/6.jpg" title="图片6">查看原图</a>
+							<img class="movie-pic" src="img/6.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/7.jpg" title="图片7">查看原图</a>
+							<img class="movie-pic" src="img/7.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/8.jpg" title="图片8">查看原图</a>
+							<img class="movie-pic" src="img/8.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/1.jpg" title="图片1">查看原图</a>
+							<img class="movie-pic" src="img/1.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/2.jpg" title="图片2">查看原图</a>
+							<img class="movie-pic" src="img/2.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/3.jpg" title="图片3">查看原图</a>
+							<img class="movie-pic" src="img/3.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/4.jpg" title="图片4">查看原图</a>
+							<img class="movie-pic" src="img/4.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/5.jpg" title="图片5">查看原图</a>
+							<img class="movie-pic" src="img/5.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/6.jpg" title="图片6">查看原图</a>
+							<img class="movie-pic" src="img/6.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/7.jpg" title="图片7">查看原图</a>
+							<img class="movie-pic" src="img/7.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/8.jpg" title="图片8">查看原图</a>
+							<img class="movie-pic" src="img/8.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-nav">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide active-nav">
+						<span class="angle"></span>
+						<img num="1" src="img/1.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="2" src="img/2.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="3" src="img/3.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="4" src="img/4.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="5" src="img/5.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="6" src="img/6.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="7" src="img/7.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="8" src="img/8.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="9" src="img/1.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="10" src="img/2.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="11" src="img/3.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="12" src="img/4.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="13" src="img/5.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="14" src="img/6.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="15" src="img/7.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="16" src="img/8.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="17" src="img/1.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="18" src="img/2.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="19" src="img/3.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="20" src="img/4.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="21" src="img/5.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="22" src="img/6.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="23" src="img/7.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="24" src="img/8.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="width2">
+		<h1>缩略图在底部</h1>
+	</div>
+	<div class="width8">
+		<div class="swiper-container" id="swiper-container2">
+			<a class="arrow-left" href="javascript:void(0)"></a>
+			<a class="arrow-right" href="javascript:void(0)"></a>
+			<div class="swiper-content">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/1.jpg" target="_blank" title="图片1">查看原图</a>
+							<img class="movie-pic" src="img/1.jpg" height="150" width="150" alt="">
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/2.jpg" title="图片2">查看原图</a>
+							<img class="movie-pic" src="img/2.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/3.jpg" title="图片3">查看原图</a>
+							<img class="movie-pic" src="img/3.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/4.jpg" title="图片4">查看原图</a>
+							<img class="movie-pic" src="img/4.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/5.jpg" title="图片5">查看原图</a>
+							<img class="movie-pic" src="img/5.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/6.jpg" title="图片6">查看原图</a>
+							<img class="movie-pic" src="img/6.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/7.jpg" title="图片7">查看原图</a>
+							<img class="movie-pic" src="img/7.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/8.jpg" title="图片8">查看原图</a>
+							<img class="movie-pic" src="img/8.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/1.jpg" title="图片1">查看原图</a>
+							<img class="movie-pic" src="img/1.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/2.jpg" title="图片2">查看原图</a>
+							<img class="movie-pic" src="img/2.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/3.jpg" title="图片3">查看原图</a>
+							<img class="movie-pic" src="img/3.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/4.jpg" title="图片4">查看原图</a>
+							<img class="movie-pic" src="img/4.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/5.jpg" title="图片5">查看原图</a>
+							<img class="movie-pic" src="img/5.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/6.jpg" title="图片6">查看原图</a>
+							<img class="movie-pic" src="img/6.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/7.jpg" title="图片7">查看原图</a>
+							<img class="movie-pic" src="img/7.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/8.jpg" title="图片8">查看原图</a>
+							<img class="movie-pic" src="img/8.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/1.jpg" title="图片1">查看原图</a>
+							<img class="movie-pic" src="img/1.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/2.jpg" title="图片2">查看原图</a>
+							<img class="movie-pic" src="img/2.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/3.jpg" title="图片3">查看原图</a>
+							<img class="movie-pic" src="img/3.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/4.jpg" title="图片4">查看原图</a>
+							<img class="movie-pic" src="img/4.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/5.jpg" title="图片5">查看原图</a>
+							<img class="movie-pic" src="img/5.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/6.jpg" title="图片6">查看原图</a>
+							<img class="movie-pic" src="img/6.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/7.jpg" title="图片7">查看原图</a>
+							<img class="movie-pic" src="img/7.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="img/8.jpg" title="图片8">查看原图</a>
+							<img class="movie-pic" src="img/8.jpg" height="150" width="150" alt="">
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-nav">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide active-nav">
+						<span class="angle"></span>
+						<img num="1" src="img/1.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="2" src="img/2.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="3" src="img/3.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="4" src="img/4.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="5" src="img/5.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="6" src="img/6.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="7" src="img/7.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="8" src="img/8.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="9" src="img/1.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="10" src="img/2.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="11" src="img/3.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="12" src="img/4.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="13" src="img/5.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="14" src="img/6.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="15" src="img/7.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="16" src="img/8.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="17" src="img/1.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="18" src="img/2.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="19" src="img/3.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="20" src="img/4.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="21" src="img/5.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="22" src="img/6.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="23" src="img/7.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<span class="angle"></span>
+						<img num="24" src="img/8.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/idangerous.swiper-2.0.min.js"></script>
+<script src="js/swiper-thumbs.js"></script>
+<script type="text/javascript">
+    $("#swiper-container1").swiperThumbs({
+        direction : 'vertical',
+        navSlidesPerView : 10
+    });
+    $("#swiper-container2").swiperThumbs({
+    	direction : 'horizontal',
+        navSlidesPerView : 15
+    });
+</script>
+</body>
+</html>

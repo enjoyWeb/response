@@ -1,0 +1,8 @@
+/* Text link style */
+#scrollUp-active {
+    display: none;
+}
+#scrollUp {
+    bottom: 20px;
+    right: 20px;
+}
